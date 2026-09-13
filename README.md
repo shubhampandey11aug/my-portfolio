@@ -15,12 +15,14 @@ Featuring:
 - 📄 **Resume Integration**: Work experience timeline, academic background, technical skills matrix, and verified certifications.
 - ⚡ **Zero Framework Dependencies**: Pure modern semantic HTML5, CSS3 (CSS Variables & Glassmorphism), and Vanilla ES6+ JavaScript. Fast load times, 100 Lighthouse performance score, zero build tools needed (`npm run build` not required).
 - 🧩 **100% Data-Driven**: Update your entire portfolio (resume, projects, skills, contacts, deep-dive writeups) simply by editing `data.js`!
+- 🛡️ **Jekyll-Free Deployment**: Includes `.nojekyll` to bypass Jekyll compilation and prevent GitHub Pages build errors.
 
 ---
 
 ## 📁 Project Structure
 
 ```
+├── .nojekyll          # Crucial: Tells GitHub Pages to skip Jekyll build & serve static files directly
 ├── index.html         # Main landing page (Hero, About, Skills, Projects Grid, Timeline)
 ├── project.html       # Dedicated case study page (Writeup, Methodology, Steps, Gallery)
 ├── style.css          # Master stylesheet, CSS design tokens, dark/light themes, animations
@@ -38,7 +40,7 @@ Deploying this portfolio to GitHub Pages takes less than 2 minutes:
 
 ### Option A: Via GitHub Web Interface
 1. Create a new public repository on GitHub (e.g., `my-portfolio` or `username.github.io`).
-2. Upload all the files (`index.html`, `project.html`, `style.css`, `data.js`, `app.js`, and `assets` folder) directly into the repository root.
+2. Upload all the files (`.nojekyll`, `index.html`, `project.html`, `style.css`, `data.js`, `app.js`, and `assets` folder) directly into the repository root.
 3. Go to **Settings** in your GitHub repository.
 4. In the left sidebar, click on **Pages**.
 5. Under **Build and deployment**:
@@ -58,6 +60,13 @@ git remote add origin https://github.com/<your-username>/<your-repo-name>.git
 git push -u origin main
 ```
 Then go to **Settings > Pages** and enable GitHub Pages on the `main` branch.
+
+---
+
+## 🛠️ Resolving Jekyll Errors on GitHub Pages
+If you ever encounter an error like `Error: Is a directory @ apply2files - /github/workspace/_site/assets` or Jekyll build failures:
+- GitHub Pages runs Jekyll by default and tries to compile theme assets, which conflicts with custom static assets folders.
+- The `.nojekyll` file included in this repository tells GitHub Pages to **completely bypass Jekyll** and serve your static HTML/CSS/JS files directly without any build step.
 
 ---
 
