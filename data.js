@@ -91,8 +91,7 @@ const portfolioData = {
       "Building practical data-engineering capability with ETL/ELT, Bronze/Silver/Gold architecture, Delta Lake and PySpark."
     ]
   },
-
-  // ================================================================
+// ================================================================
 // SKILLS
 // ================================================================
 
@@ -103,22 +102,18 @@ skills: [
     items: [
       {
         name: "Power BI",
-        level: "Advanced",
         logo: "https://cdn.simpleicons.org/powerbi"
       },
       {
         name: "Excel",
-        level: "Advanced",
         logo: "https://cdn.simpleicons.org/microsoftexcel"
       },
       {
         name: "Power Query",
-        level: "Advanced",
         logo: "https://cdn.simpleicons.org/microsoft"
       },
       {
         name: "DAX",
-        level: "Advanced",
         logo: "https://cdn.simpleicons.org/powerbi"
       }
     ]
@@ -130,54 +125,45 @@ skills: [
     items: [
       {
         name: "Python",
-        level: "Intermediate",
         logo: "https://cdn.simpleicons.org/python"
       },
       {
         name: "SQL",
-        level: "Intermediate",
         logo: "https://cdn.simpleicons.org/mysql"
       },
       {
         name: "Pandas",
-        level: "Intermediate",
         logo: "https://cdn.simpleicons.org/pandas"
       },
       {
         name: "NumPy",
-        level: "Intermediate",
         logo: "https://cdn.simpleicons.org/numpy"
       }
     ]
   },
 
   {
-    category: "Fabric & Data Engineering",
+    category: "Data Engineering",
     icon: "database",
     items: [
       {
         name: "Microsoft Fabric",
-        level: "Hands-on",
         logo: "https://cdn.simpleicons.org/microsoftfabric"
       },
       {
         name: "Databricks",
-        level: "Hands-on",
         logo: "https://cdn.simpleicons.org/databricks"
       },
       {
         name: "PySpark",
-        level: "Hands-on",
         logo: "https://cdn.simpleicons.org/apachespark"
       },
       {
         name: "Delta Lake",
-        level: "Hands-on",
         logo: "https://cdn.simpleicons.org/delta"
       },
       {
         name: "Lakehouse",
-        level: "Hands-on",
         logo: "https://cdn.simpleicons.org/microsoftfabric"
       }
     ]
@@ -189,22 +175,18 @@ skills: [
     items: [
       {
         name: "Forecasting & Scheduling",
-        level: "Advanced",
         logo: "⚡"
       },
       {
         name: "DSM Analytics",
-        level: "Advanced",
         logo: "⚡"
       },
       {
         name: "Open Access",
-        level: "Advanced",
         logo: "⚡"
       },
       {
         name: "Power Trading / IEX",
-        level: "Advanced",
         logo: "⚡"
       }
     ]
