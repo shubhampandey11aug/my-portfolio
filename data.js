@@ -11,8 +11,9 @@
  *     ...
  *
  * Image paths use the exact filenames found in the supplied assets archive.
- * Picture1 is the main/title image for every case study. Remaining PictureN
- * files are used as the project gallery in numeric order.
+ * Picture1 is used ONLY as the project-card thumbnail on the portfolio homepage.
+ * Picture1 is NOT displayed on individual case-study pages.
+ * Remaining PictureN files are used as the project gallery in numeric order.
  */
 
 const ASSET_ROOT = "assets";
@@ -304,6 +305,7 @@ const portfolioData = {
       role: "Lead Data Engineer",
       timeline: "Microsoft Fabric Case Study",
       image: asset(ASSET_FOLDERS.case01, "Picture1.jpg"),
+      showHero: false,
       demoUrl: "",
       githubUrl: "https://github.com/shubhampandey11aug/my-portfolio/tree/main/assets/Case%20Study%2001%20The%20Global%20Listing%20Intelligence%20Initiative",
       metrics: "24–48h manual consolidation replaced by automated nightly ingestion",
@@ -402,7 +404,6 @@ const portfolioData = {
       ],
 
       gallery: [
-        { url: asset(ASSET_FOLDERS.case01, "Picture1.jpg"), caption: "Case Study Overview", description: "Global Listing Intelligence Initiative." },
         { url: asset(ASSET_FOLDERS.case01, "Picture2.png"), caption: "Pipeline Architecture", description: "Three-activity Microsoft Fabric ingestion, archive and delete flow." },
         { url: asset(ASSET_FOLDERS.case01, "Picture3.png"), caption: "Copy Data Source", description: "Nightly office-file ingestion configuration." },
         { url: asset(ASSET_FOLDERS.case01, "Picture4.png"), caption: "Copy Data Destination", description: "Governed Silver destination configuration." },
@@ -435,6 +436,7 @@ const portfolioData = {
       role: "Lead Data Engineer",
       timeline: "Microsoft Fabric Case Study",
       image: asset(ASSET_FOLDERS.case02, "Picture1.jpg"),
+      showHero: false,
       demoUrl: "",
       githubUrl: "https://github.com/shubhampandey11aug/my-portfolio/tree/main/assets/Case%20Study%2002%20Logistics%20Data%20Modernization",
       metrics: "Incremental, state-aware ingestion with auditable Delta Lake history",
@@ -526,7 +528,6 @@ const portfolioData = {
       ],
 
       gallery: [
-        { url: asset(ASSET_FOLDERS.case02, "Picture1.jpg"), caption: "Logistics Data Modernization", description: "Incremental shipment-log ingestion case study." },
         { url: asset(ASSET_FOLDERS.case02, "Picture2.png"), caption: "Incremental Pipeline", description: "State-aware Microsoft Fabric pipeline." },
         { url: asset(ASSET_FOLDERS.case02, "Picture3.png"), caption: "Watermark Table Creation", description: "Delta table used for durable pipeline state." },
         { url: asset(ASSET_FOLDERS.case02, "Picture4.png"), caption: "Watermark Value", description: "Setting the processing watermark." },
@@ -557,6 +558,7 @@ const portfolioData = {
       role: "Data Engineer",
       timeline: "Microsoft Fabric Case Study",
       image: asset(ASSET_FOLDERS.case03, "Picture1.jpg"),
+      showHero: false,
       demoUrl: "",
       githubUrl: "https://github.com/shubhampandey11aug/my-portfolio/tree/main/assets/Case%20Study%2003%20Workforce%20Intelligence.From%20Azure%20SQL%20to%20Lakehouse(Technology%20Consulting)",
       metrics: "Bronze 332 → Silver 307 | Quarantine 20 | Duplicates 5",
@@ -658,7 +660,6 @@ const portfolioData = {
       ],
 
       gallery: [
-        { url: asset(ASSET_FOLDERS.case03, "Picture1.jpg"), caption: "Workforce Intelligence", description: "Azure SQL to Lakehouse case study." },
         { url: asset(ASSET_FOLDERS.case03, "Picture2.png"), caption: "Target Tables", description: "Target structure for workforce processing." },
         { url: asset(ASSET_FOLDERS.case03, "Picture3.png"), caption: "Azure SQL Source", description: "Source extraction configuration." },
         { url: asset(ASSET_FOLDERS.case03, "Picture4.png"), caption: "Pipeline Design", description: "Bronze-to-Silver pipeline orchestration." },
@@ -699,6 +700,7 @@ const portfolioData = {
       role: "Data Engineer",
       timeline: "Microsoft Fabric Case Study",
       image: asset(ASSET_FOLDERS.case04, "Picture1.jpg"),
+      showHero: false,
       demoUrl: "",
       githubUrl: "https://github.com/shubhampandey11aug/my-portfolio/tree/main/assets/Case%20Study%2004%20Financial%20Data%20Transformation%20using%20Pyspark%20and%20Delta%20Lake",
       metrics: "2+ hours → few-minute target processing pattern",
@@ -799,7 +801,6 @@ const portfolioData = {
       ],
 
       gallery: [
-        { url: asset(ASSET_FOLDERS.case04, "Picture1.jpg"), caption: "Financial Data Transformation", description: "PySpark optimisation and Delta Lake case study." },
         { url: asset(ASSET_FOLDERS.case04, "Picture2.png"), caption: "Schema Setup", description: "Notebook and schema preparation." },
         { url: asset(ASSET_FOLDERS.case04, "Picture3.PNG"), caption: "Transaction Table", description: "Financial transaction dataset." },
         { url: asset(ASSET_FOLDERS.case04, "Picture4.PNG"), caption: "Transaction Data", description: "Transaction-table preparation." },
@@ -838,6 +839,7 @@ const portfolioData = {
       role: "Lead Data Engineer",
       timeline: "Microsoft Fabric Case Study",
       image: asset(ASSET_FOLDERS.case05, "Picture1.jpg"),
+      showHero: false,
       demoUrl: "",
       githubUrl: "https://github.com/shubhampandey11aug/my-portfolio/tree/main/assets/Case%20Study%2005%20Unified%20Commerce%20Analytics%20(Global%20Freight%20Forwarders)",
       metrics: "Bronze → Silver → Gold → Power BI",
@@ -939,7 +941,6 @@ const portfolioData = {
       ],
 
       gallery: [
-        { url: asset(ASSET_FOLDERS.case05, "Picture1.jpg"), caption: "Unified Commerce Analytics", description: "Modern retail analytics architecture." },
         { url: asset(ASSET_FOLDERS.case05, "Picture2.png"), caption: "Bronze-Silver-Gold Architecture", description: "Three-layer Lakehouse architecture." },
         { url: asset(ASSET_FOLDERS.case05, "Picture3.png"), caption: "Lookup Activity", description: "Pipeline lookup configuration." },
         { url: asset(ASSET_FOLDERS.case05, "Picture4.png"), caption: "For Loop Activity", description: "Iterative table ingestion pattern." },
@@ -977,6 +978,7 @@ const portfolioData = {
       role: "Data Engineer",
       timeline: "Microsoft Fabric Case Study",
       image: asset(ASSET_FOLDERS.case06, "Picture1.jpg"),
+      showHero: false,
       demoUrl: "",
       githubUrl: "https://github.com/shubhampandey11aug/my-portfolio/tree/main/assets/Case%20Study%2006%20Market%20Risk%20Intelligence%20Feed",
       metrics: "Daily FX feed with idempotent historical backfill",
@@ -1075,7 +1077,6 @@ const portfolioData = {
       ],
 
       gallery: [
-        { url: asset(ASSET_FOLDERS.case06, "Picture1.jpg"), caption: "Market Risk Intelligence Feed", description: "Daily FX ingestion case study." },
         { url: asset(ASSET_FOLDERS.case06, "Picture2.png"), caption: "Create Schema", description: "Warehouse schema setup." },
         { url: asset(ASSET_FOLDERS.case06, "Picture3.png"), caption: "Create FX Table", description: "Target table creation." },
         { url: asset(ASSET_FOLDERS.case06, "Picture4.png"), caption: "JSON Parsing", description: "OPENJSON transformation." },
@@ -1111,6 +1112,7 @@ const portfolioData = {
       role: "Data Engineer",
       timeline: "Microsoft Fabric Case Study",
       image: asset(ASSET_FOLDERS.case07, "Picture1.png"),
+      showHero: false,
       demoUrl: "",
       githubUrl: "https://github.com/shubhampandey11aug/my-portfolio/tree/main/assets/Case%20Study%2007%20The%20Accountability%20Gap%20.Regulatory%20Data%20Governance%20%26%20Historical%20Accountability",
       metrics: "Five-level accountability chain + SCD Type 2 history",
@@ -1204,7 +1206,6 @@ const portfolioData = {
       ],
 
       gallery: [
-        { url: asset(ASSET_FOLDERS.case07, "Picture1.png"), caption: "The Accountability Gap", description: "Regulatory data governance case study." },
         { url: asset(ASSET_FOLDERS.case07, "Picture2.PNG"), caption: "Create Schema", description: "Warehouse schema setup." },
         { url: asset(ASSET_FOLDERS.case07, "Picture3.PNG"), caption: "Copy Data to Warehouse", description: "Warehouse ingestion." },
         { url: asset(ASSET_FOLDERS.case07, "Picture4.PNG"), caption: "Governed Gold View", description: "Defensive governed view." },
@@ -1244,6 +1245,7 @@ const portfolioData = {
       role: "Data Engineer",
       timeline: "Microsoft Fabric Case Study",
       image: asset(ASSET_FOLDERS.case08, "Picture1.jpg"),
+      showHero: false,
       demoUrl: "",
       githubUrl: "https://github.com/shubhampandey11aug/my-portfolio/tree/main/assets/Case%20Study%2008%20Inventory%20Data%20Migration%20to%20Microsoft%20Fabric%20Lakehouse",
       metrics: "12 warehouses | up to 22,000 transactions/day",
@@ -1344,7 +1346,6 @@ const portfolioData = {
       ],
 
       gallery: [
-        { url: asset(ASSET_FOLDERS.case08, "Picture1.jpg"), caption: "Inventory Data Migration", description: "On-premises PostgreSQL to Fabric Lakehouse." },
         { url: asset(ASSET_FOLDERS.case08, "Picture2.png"), caption: "On-premises Data Gateway", description: "Secure source connectivity." },
         { url: asset(ASSET_FOLDERS.case08, "Picture3.png"), caption: "Source Schema and Table", description: "Inventory source setup." },
         { url: asset(ASSET_FOLDERS.case08, "Picture4.png"), caption: "Inventory Table", description: "Source inventory snapshot." },
@@ -1377,6 +1378,7 @@ const portfolioData = {
       role: "Data Analyst / Data Engineer",
       timeline: "Microsoft Fabric Case Study",
       image: asset(ASSET_FOLDERS.case09, "Picture1.jpg"),
+      showHero: false,
       demoUrl: "",
       githubUrl: "https://github.com/shubhampandey11aug/my-portfolio/tree/main/assets/Case%20Study%2009%20Customer%20Data%20Trust%20Transformation",
       metrics: "Customer_Silver as the trusted analytical contract",
@@ -1477,7 +1479,6 @@ const portfolioData = {
       ],
 
       gallery: [
-        { url: asset(ASSET_FOLDERS.case09, "Picture1.jpg"), caption: "Customer Data Trust Transformation", description: "Customer 360 data-quality case study." },
         { url: asset(ASSET_FOLDERS.case09, "Picture2.png"), caption: "Bronze Customer Table", description: "Source customer dataset." },
         { url: asset(ASSET_FOLDERS.case09, "Picture3.png"), caption: "Promote Reference Data", description: "Reference-data preparation." },
         { url: asset(ASSET_FOLDERS.case09, "Picture4.png"), caption: "Merge State and Customer", description: "Reference-data lookup integration." },
@@ -1513,6 +1514,7 @@ const portfolioData = {
       role: "Data Engineer / Analytics Engineer",
       timeline: "Microsoft Fabric Real-Time Intelligence Case Study",
       image: asset(ASSET_FOLDERS.case10, "Picture1.jpg"),
+      showHero: false,
       demoUrl: "",
       githubUrl: "https://github.com/shubhampandey11aug/my-portfolio/tree/main/assets/Case%20Study%2010%20Live%20Market%20Intelligence",
       metrics: "30-second dashboard refresh + automated drawdown alerting",
@@ -1615,7 +1617,6 @@ const portfolioData = {
       ],
 
       gallery: [
-        { url: asset(ASSET_FOLDERS.case10, "Picture1.jpg"), caption: "Live Market Intelligence", description: "Real-time market-data case study." },
         { url: asset(ASSET_FOLDERS.case10, "Picture2.png"), caption: "Workspace & Eventhouse", description: "Real-time environment provisioning." },
         { url: asset(ASSET_FOLDERS.case10, "Picture3.png"), caption: "KQL Schema Definition", description: "Schema defined before event arrival." },
         { url: asset(ASSET_FOLDERS.case10, "Picture4.png"), caption: "Governed Eventstream", description: "Continuous event routing into KQL." },
