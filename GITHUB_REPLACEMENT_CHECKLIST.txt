@@ -1,32 +1,43 @@
-GITHUB REPLACEMENT CHECKLIST
-============================
+GITHUB PAGES DEPLOYMENT — IMPORTANT
 
-1. Replace these root files in shubhampandey11aug/my-portfolio:
-   - index.html
-   - project.html
-   - app.js
-   - project.js
-   - data.js
-   - style.css
-   - portfolio-preview.html
-   - README.md
-   - .nojekyll
+1. Open the repository:
+   https://github.com/shubhampandey11aug/my-portfolio
 
-2. Replace the ENTIRE assets/ folder with the assets/ folder in this package.
-   Do not upload the supplied RAR as-is. This package already normalizes the archive's
-   misspelled "assest" root folder to "assets".
+2. The contents of THIS ZIP must go directly into the repository root.
+   Do NOT upload the enclosing ZIP/folder as a subfolder.
 
-3. Do not keep the old Alex Morgan data.js / app.js / project.html / style.css files.
+   Repository root must contain:
+   index.html
+   project.html
+   project.js
+   app.js
+   data.js
+   style.css
+   .nojekyll
+   assets/
 
-4. Commit to the main branch and wait for GitHub Pages to rebuild.
+3. Delete/replace the old website files:
+   index.html, project.html, app.js, data.js, style.css
+   and the old assets folder.
 
-IMAGE RULE (DO NOT CHANGE)
---------------------------
-Homepage:
-  Picture1 = project card image only.
+4. Make sure style.css is visible beside index.html in GitHub.
+   If style.css is missing from the root, the page will look exactly like
+   the unstyled screenshot (plain text/default browser links).
 
-Case-study page:
-  Picture1 = NEVER rendered as hero/main image.
-  Picture2, Picture3, Picture4, ... = case-study visual gallery.
+5. Keep the assets folder name exactly:
+   assets
 
-The rule is enforced in both data.js and project.js.
+6. Picture rule:
+   - Picture1 = homepage project card ONLY
+   - Picture2 onward = case-study gallery
+   - No Picture1 case-study hero/main image
+
+7. After committing, wait for GitHub Pages to rebuild, then hard-refresh:
+   Ctrl + F5
+
+8. If the old page still appears, check:
+   Settings -> Pages -> Source/Branch and confirm GitHub Pages is publishing
+   the main branch from the repository root.
+
+This package includes cache-busted CSS/JS references to avoid stale browser/CDN
+assets after the replacement.
