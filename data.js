@@ -95,103 +95,52 @@ const portfolioData = {
 // SKILLS
 // ================================================================
 
-skills: [
-  {
-    category: "BI & Analytics",
-    icon: "bar-chart",
-    items: [
-      {
-        name: "Power BI",
-        logo: "https://cdn.simpleicons.org/powerbi"
-      },
-      {
-        name: "Excel",
-        logo: "https://cdn.simpleicons.org/microsoftexcel"
-      },
-      {
-        name: "Power Query",
-        logo: "https://cdn.simpleicons.org/microsoft"
-      },
-      {
-        name: "DAX",
-        logo: "https://cdn.simpleicons.org/powerbi"
-      }
-    ]
-  },
+$('#skills-grid').innerHTML = d.skills.map((g,i) => `
+  <article class="skill-card">
 
-  {
-    category: "Programming & Data",
-    icon: "code",
-    items: [
-      {
-        name: "Python",
-        logo: "https://cdn.simpleicons.org/python"
-      },
-      {
-        name: "SQL",
-        logo: "https://cdn.simpleicons.org/mysql"
-      },
-      {
-        name: "Pandas",
-        logo: "https://cdn.simpleicons.org/pandas"
-      },
-      {
-        name: "NumPy",
-        logo: "https://cdn.simpleicons.org/numpy"
-      }
-    ]
-  },
+    <div class="skill-no">
+      0${i+1}
+    </div>
 
-  {
-    category: "Data Engineering",
-    icon: "database",
-    items: [
-      {
-        name: "Microsoft Fabric",
-        logo: "https://cdn.simpleicons.org/microsoftfabric"
-      },
-      {
-        name: "Databricks",
-        logo: "https://cdn.simpleicons.org/databricks"
-      },
-      {
-        name: "PySpark",
-        logo: "https://cdn.simpleicons.org/apachespark"
-      },
-      {
-        name: "Delta Lake",
-        logo: "https://cdn.simpleicons.org/delta"
-      },
-      {
-        name: "Lakehouse",
-        logo: "https://cdn.simpleicons.org/microsoftfabric"
-      }
-    ]
-  },
+    <h3>${escapeHtml(g.category)}</h3>
 
-  {
-    category: "Energy Analytics",
-    icon: "zap",
-    items: [
-      {
-        name: "Forecasting & Scheduling",
-        logo: "⚡"
-      },
-      {
-        name: "DSM Analytics",
-        logo: "⚡"
-      },
-      {
-        name: "Open Access",
-        logo: "⚡"
-      },
-      {
-        name: "Power Trading / IEX",
-        logo: "⚡"
-      }
-    ]
-  }
-],
+    <div class="skill-items">
+
+      ${g.items.map(x => `
+        <div class="skill-item">
+
+          <span class="skill-tool">
+
+            ${
+              x.logo && x.logo.startsWith('http')
+              ? `
+                <img
+                  src="${x.logo}"
+                  alt="${escapeHtml(x.name)}"
+                  class="skill-logo"
+                  loading="lazy"
+                >
+              `
+              : `
+                <span class="skill-emoji">
+                  ${x.logo || ''}
+                </span>
+              `
+            }
+
+            <span class="skill-name">
+              ${escapeHtml(x.name)}
+            </span>
+
+          </span>
+
+        </div>
+      `).join('')}
+
+    </div>
+
+  </article>
+`).join('');
 
   // ================================================================
   // EXPERIENCE
