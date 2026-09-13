@@ -51,14 +51,14 @@ const portfolioData = {
     name: "Shubham Pandey",
     role: "Data Analyst | BI Analyst | Energy Analyst | Data Engineer",
     tagline: "Turning energy and operational data into reliable analytics, governed data pipelines, and decision-ready insights.",
-    location: "India | Open to Data & Analytics Opportunities",
+    location: "India | Open to Data & AI Enginnering Opportunities",
     email: "shubhampandey11aug@gmail.com",
     phone: "+91-9794963499",
     github: "https://github.com/shubhampandey11aug",
     linkedin: "https://linkedin.com/in/shubhampandey08",
     twitter: "",
     resumePdf: "assets/Resume_Shubham Pandey(Energy Analyst).pdf",
-    availability: "Open to Data Analyst, BI Analyst, Energy Analytics, Data Engineering, Freelance & Consulting opportunities",
+    availability: "",
     avatar: "assets/Photo_Shubham Pandey.jpg",
 
     stats: [
@@ -93,76 +93,123 @@ const portfolioData = {
   },
 
   // ================================================================
-  // SKILLS
-  // ================================================================
+// SKILLS
+// ================================================================
 
-  skills: [
-    {
-      category: "Data Analytics & BI",
-      icon: "bar-chart",
-      items: [
-        { name: "Power BI & Data Visualization", level: "Advanced" },
-        { name: "KPI Development", level: "Advanced" },
-        { name: "Business Intelligence & Reporting", level: "Advanced" },
-        { name: "Data Storytelling", level: "Advanced" },
-        { name: "Trend & Root Cause Analysis", level: "Advanced" },
-        { name: "Forecasting & Performance Analytics", level: "Advanced" }
-      ]
-    },
-    {
-      category: "Programming & Data",
-      icon: "code",
-      items: [
-        { name: "Python / Pandas / NumPy", level: "Intermediate" },
-        { name: "SQL — Extraction & Transformation", level: "Intermediate" },
-        { name: "Advanced Excel", level: "Advanced" },
-        { name: "Power Query", level: "Advanced" },
-        { name: "Data Cleaning & Validation", level: "Advanced" },
-        { name: "Data Modelling", level: "Intermediate" }
-      ]
-    },
-    {
-      category: "Microsoft Fabric & Data Engineering",
-      icon: "database",
-      items: [
-        { name: "Microsoft Fabric", level: "Hands-on Learning" },
-        { name: "Lakehouse Architecture", level: "Hands-on" },
-        { name: "Fabric Data Pipelines", level: "Hands-on" },
-        { name: "Delta Lake", level: "Hands-on" },
-        { name: "PySpark", level: "Hands-on" },
-        { name: "Dataflows Gen2", level: "Hands-on" },
-        { name: "Fabric Warehouse / T-SQL", level: "Hands-on" },
-        { name: "Real-Time Intelligence / KQL", level: "Hands-on" }
-      ]
-    },
-    {
-      category: "Energy Domain Analytics",
-      icon: "zap",
-      items: [
-        { name: "Forecasting & Scheduling", level: "Advanced" },
-        { name: "DSM Settlement & Deviation Analytics", level: "Advanced" },
-        { name: "Open Access", level: "Advanced" },
-        { name: "Energy Banking", level: "Advanced" },
-        { name: "Power Trading / IEX", level: "Advanced" },
-        { name: "Captive Power Allocation", level: "Advanced" },
-        { name: "Renewable Asset Analytics", level: "Advanced" },
-        { name: "Regulatory & Grid Connectivity Analytics", level: "Advanced" }
-      ]
-    },
-    {
-      category: "Domain & Engineering Tools",
-      icon: "settings",
-      items: [
-        { name: "EMS", level: "Experienced" },
-        { name: "SCADA", level: "Experienced" },
-        { name: "ETAP", level: "Experienced" },
-        { name: "PV-Syst", level: "Experienced" },
-        { name: "AutoCAD", level: "Experienced" },
-        { name: "MATLAB", level: "Experienced" },
-        { name: "Databricks", level: "Learning" }
-      ]
-    }
-  ],
+skills: [
+  {
+    category: "BI & Analytics",
+    icon: "bar-chart",
+    items: [
+      {
+        name: "Power BI",
+        level: "Advanced",
+        logo: "https://cdn.simpleicons.org/powerbi"
+      },
+      {
+        name: "Excel",
+        level: "Advanced",
+        logo: "https://cdn.simpleicons.org/microsoftexcel"
+      },
+      {
+        name: "Power Query",
+        level: "Advanced",
+        logo: "https://cdn.simpleicons.org/microsoft"
+      },
+      {
+        name: "DAX",
+        level: "Advanced",
+        logo: "https://cdn.simpleicons.org/powerbi"
+      }
+    ]
+  },
+
+  {
+    category: "Programming & Data",
+    icon: "code",
+    items: [
+      {
+        name: "Python",
+        level: "Intermediate",
+        logo: "https://cdn.simpleicons.org/python"
+      },
+      {
+        name: "SQL",
+        level: "Intermediate",
+        logo: "https://cdn.simpleicons.org/mysql"
+      },
+      {
+        name: "Pandas",
+        level: "Intermediate",
+        logo: "https://cdn.simpleicons.org/pandas"
+      },
+      {
+        name: "NumPy",
+        level: "Intermediate",
+        logo: "https://cdn.simpleicons.org/numpy"
+      }
+    ]
+  },
+
+  {
+    category: "Fabric & Data Engineering",
+    icon: "database",
+    items: [
+      {
+        name: "Microsoft Fabric",
+        level: "Hands-on",
+        logo: "https://cdn.simpleicons.org/microsoftfabric"
+      },
+      {
+        name: "Databricks",
+        level: "Hands-on",
+        logo: "https://cdn.simpleicons.org/databricks"
+      },
+      {
+        name: "PySpark",
+        level: "Hands-on",
+        logo: "https://cdn.simpleicons.org/apachespark"
+      },
+      {
+        name: "Delta Lake",
+        level: "Hands-on",
+        logo: "https://cdn.simpleicons.org/delta"
+      },
+      {
+        name: "Lakehouse",
+        level: "Hands-on",
+        logo: "https://cdn.simpleicons.org/microsoftfabric"
+      }
+    ]
+  },
+
+  {
+    category: "Energy Analytics",
+    icon: "zap",
+    items: [
+      {
+        name: "Forecasting & Scheduling",
+        level: "Advanced",
+        logo: "⚡"
+      },
+      {
+        name: "DSM Analytics",
+        level: "Advanced",
+        logo: "⚡"
+      },
+      {
+        name: "Open Access",
+        level: "Advanced",
+        logo: "⚡"
+      },
+      {
+        name: "Power Trading / IEX",
+        level: "Advanced",
+        logo: "⚡"
+      }
+    ]
+  }
+],
 
   // ================================================================
   // EXPERIENCE
@@ -208,7 +255,7 @@ const portfolioData = {
     },
 
     {
-      role: "Project Engineer (Contract)",
+      role: "Project Engineer",
       company: "NTPC / IOCL Projects (NBPPL & EIL)",
       period: "2017 – 2019",
       location: "India",
