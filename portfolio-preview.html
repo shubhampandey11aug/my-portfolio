@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Preview</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      --bg-primary: #0b0f19;
+      --bg-secondary: #111827;
+      --bg-card: rgba(17, 24, 39, 0.85);
+      --bg-card-hover: rgba(31, 41, 55, 0.95);
+      --bg-glass: rgba(15, 23, 42, 0.85);
+      --bg-tag: rgba(99, 102, 241, 0.15);
+      --bg-modal: #0f172a;
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --text-accent: #818cf8;
+      --accent-primary: #6366f1;
+      --accent-secondary: #06b6d4;
+      --accent-gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #06b6d4 100%);
+      --accent-glow: rgba(99, 102, 241, 0.25);
+      --border-color: rgba(255, 255, 255, 0.1);
+      --border-hover: rgba(99, 102, 241, 0.5);
+      --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+      --card-shadow-hover: 0 20px 40px -15px rgba(99, 102, 241, 0.3);
+      --modal-backdrop: rgba(3, 7, 18, 0.85);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+    }
+
+    [data-theme="light"] {
+      --bg-primary: #f8fafc;
+      --bg-secondary: #ffffff;
+      --bg-card: rgba(255, 255, 255, 0.95);
+      --bg-card-hover: #ffffff;
+      --bg-glass: rgba(255, 255, 255, 0.9);
+      --bg-tag: rgba(79, 70, 229, 0.08);
+      --bg-modal: #ffffff;
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --text-muted: #94a3b8;
+      --text-accent: #4f46e5;
+      --border-color: rgba(15, 23, 42, 0.1);
+      --border-hover: rgba(79, 70, 229, 0.4);
+      --card-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.08);
+      --card-shadow-hover: 0 20px 40px -15px rgba(79, 70, 229, 0.15);
+      --modal-backdrop: rgba(15, 23, 42, 0.6);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      padding-bottom: 4rem;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .container { width: 100%; max-width: 1000px; margin: 0 auto; padding: 0 1.25rem; }
+
+    /* Header & Nav */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: var(--bg-glass);
+      border-bottom: 1px solid var(--border-color);
+      padding: 0.85rem 0;
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-weight: 800; font-size: 1.15rem; display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: var(--text-primary); }
+    .logo-badge { background: var(--accent-gradient); color: #fff; padding: 0.25rem 0.55rem; border-radius: 6px; font-size: 0.85rem; font-weight: 800; }
+    .nav-links { display: flex; gap: 1.25rem; list-style: none; align-items: center; }
+    .nav-link { text-decoration: none; color: var(--text-secondary); font-size: 0.9rem; font-weight: 500; }
+    .nav-link:hover { color: var(--text-primary); }
+
+    .btn-toggle {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      padding: 0.45rem 0.85rem;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    /* Hero */
+    .hero { padding: 3.5rem 0 2.5rem; text-align: center; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.3rem 0.75rem;
+      background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: var(--radius-full); color: #10b981; font-size: 0.8rem; font-weight: 600; margin-bottom: 1rem;
+    }
+    .pulse-dot { width: 7px; height: 7px; background: #10b981; border-radius: 50%; }
+    .hero-title { font-size: 2.5rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
+    .gradient-text { background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero-role { font-size: 1.2rem; font-weight: 600; color: var(--text-accent); margin-bottom: 1rem; }
+    .hero-desc { font-size: 1.05rem; color: var(--text-secondary); max-width: 620px; margin: 0 auto 1.75rem; }
+    .hero-buttons { display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;
+      padding: 0.65rem 1.25rem; border-radius: var(--radius-md); font-size: 0.9rem; font-weight: 600;
+      text-decoration: none; cursor: pointer; border: 1px solid transparent;
+    }
+    .btn-primary { background: var(--accent-gradient); color: #fff; box-shadow: 0 4px 12px var(--accent-glow); }
+    .btn-outline { background: var(--bg-card); color: var(--text-primary); border-color: var(--border-color); }
+
+    .stats-row {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
+      padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg); margin-top: 1.5rem;
+    }
+    .stat-val { font-size: 1.6rem; font-weight: 800; }
+    .stat-lbl { font-size: 0.75rem; color: var(--text-muted); font-weight: 500; }
+
+    /* Sections */
+    .section { padding: 3rem 0; }
+    .sec-head { text-align: center; margin-bottom: 2rem; }
+    .sec-badge { font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: var(--text-accent); letter-spacing: 0.08em; }
+    .sec-title { font-size: 1.85rem; font-weight: 800; margin-top: 0.25rem; }
+
+    /* Skills */
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+    .skill-box { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.25rem; }
+    .skill-box-title { font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary); }
+    .skill-pills { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .skill-pill { font-size: 0.75rem; font-family: var(--font-mono); background: var(--bg-tag); color: var(--text-accent); padding: 0.25rem 0.5rem; border-radius: 4px; border: 1px solid var(--border-color); }
+
+    /* Controls & Projects */
+    .filter-bar { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.75rem; margin-bottom: 1.5rem; }
+    .tab-group { display: flex; flex-wrap: wrap; gap: 0.35rem; background: var(--bg-card); padding: 0.25rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color); }
+    .tab-btn { background: transparent; border: none; padding: 0.35rem 0.75rem; font-size: 0.8rem; font-weight: 600; color: var(--text-secondary); cursor: pointer; border-radius: 4px; }
+    .tab-btn.active { background: var(--accent-gradient); color: #fff; }
+    .search-input { background: var(--bg-card); border: 1px solid var(--border-color); padding: 0.45rem 0.85rem; border-radius: var(--radius-sm); color: var(--text-primary); font-size: 0.85rem; }
+
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; }
+    .proj-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; }
+    .proj-img { width: 100%; height: 160px; object-fit: cover; }
+    .proj-body { padding: 1.25rem; display: flex; flex-direction: column; flex-grow: 1; }
+    .proj-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.35rem; }
+    .proj-desc { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.85rem; flex-grow: 1; }
+    .proj-metric { font-size: 0.75rem; color: var(--accent-secondary); font-weight: 600; margin-bottom: 0.85rem; }
+    .proj-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 0.75rem; border-top: 1px solid var(--border-color); }
+    .link-group { display: flex; gap: 0.4rem; }
+    .small-link { font-size: 0.75rem; font-weight: 600; color: var(--text-secondary); text-decoration: none; padding: 0.25rem 0.5rem; background: var(--bg-secondary); border-radius: 4px; border: 1px solid var(--border-color); }
+    .btn-detail { background: none; border: none; color: var(--text-accent); font-weight: 700; font-size: 0.8rem; cursor: pointer; }
+
+    /* Timeline */
+    .timeline { border-left: 2px solid var(--accent-primary); margin-left: 1rem; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 1.75rem; }
+    .tl-item { position: relative; }
+    .tl-item::before { content: ''; position: absolute; left: -1.95rem; top: 0.35rem; width: 12px; height: 12px; border-radius: 50%; background: var(--accent-primary); }
+    .tl-card { background: var(--bg-card); border: 1px solid var(--border-color); padding: 1.25rem; border-radius: var(--radius-md); }
+    .tl-role { font-size: 1.1rem; font-weight: 700; }
+    .tl-company { font-size: 0.9rem; color: var(--text-accent); font-weight: 600; margin-bottom: 0.35rem; }
+    .tl-period { font-size: 0.75rem; font-family: var(--font-mono); color: var(--text-muted); }
+
+    /* Modal */
+    .modal-wrap { position: fixed; inset: 0; background: var(--modal-backdrop); backdrop-filter: blur(8px); display: none; align-items: center; justify-content: center; z-index: 200; padding: 1rem; }
+    .modal-wrap.open { display: flex; }
+    .modal-content { background: var(--bg-modal); border: 1px solid var(--border-color); border-radius: var(--radius-lg); max-width: 650px; width: 100%; max-height: 85vh; overflow-y: auto; padding: 1.75rem; position: relative; }
+    .modal-close { position: absolute; top: 1rem; right: 1rem; background: var(--bg-card); border: 1px solid var(--border-color); color: var(--text-primary); border-radius: 50%; width: 2rem; height: 2rem; cursor: pointer; }
+
+    @media (max-width: 600px) {
+      .stats-row { grid-template-columns: repeat(2, 1fr); }
+      .nav-links { display: none; }
+      .hero-title { font-size: 1.85rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="logo">
+        <span class="logo-badge">&lt;/&gt;</span>
+        <span id="nav-title">Alex Morgan</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+      </ul>
+      <button id="theme-btn" class="btn-toggle" onclick="toggleTheme()">🌓 Theme</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="badge"><span class="pulse-dot"></span> Available for Opportunities</div>
+      <h1 class="hero-title">Hi, I'm <span class="gradient-text" id="hero-name">Alex Morgan</span></h1>
+      <div class="hero-role" id="hero-role">Full-Stack Software Engineer & Architect</div>
+      <p class="hero-desc" id="hero-desc">Building scalable, high-performance web applications and intuitive digital experiences with modern technologies.</p>
+
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <button class="btn btn-outline" onclick="copyEmail()">Copy Email</button>
+      </div>
+
+      <div class="stats-row">
+        <div><div class="stat-val gradient-text">4+</div><div class="stat-lbl">Years Experience</div></div>
+        <div><div class="stat-val gradient-text">25+</div><div class="stat-lbl">Projects Built</div></div>
+        <div><div class="stat-val gradient-text">1.2k</div><div class="stat-lbl">GitHub Stars</div></div>
+        <div><div class="stat-val gradient-text">1,400+</div><div class="stat-lbl">Commits / Year</div></div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <div class="sec-head">
+        <div class="sec-badge">Technical Stack</div>
+        <h2 class="sec-title">Skills & Technologies</h2>
+      </div>
+      <div id="skills-list" class="skills-grid"></div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="sec-head">
+        <div class="sec-badge">Portfolio</div>
+        <h2 class="sec-title">Projects & Case Studies</h2>
+      </div>
+
+      <div class="filter-bar">
+        <div class="tab-group" id="tabs">
+          <button class="tab-btn active" onclick="setCategory('all', this)">All</button>
+          <button class="tab-btn" onclick="setCategory('fullstack', this)">Full-Stack</button>
+          <button class="tab-btn" onclick="setCategory('frontend', this)">Frontend</button>
+          <button class="tab-btn" onclick="setCategory('ai-ml', this)">AI & ML</button>
+          <button class="tab-btn" onclick="setCategory('cloud', this)">Cloud</button>
+          <button class="tab-btn" onclick="setCategory('tools', this)">DevTools</button>
+        </div>
+        <input type="text" id="search" class="search-input" placeholder="Search projects..." oninput="handleSearch(this.value)" />
+      </div>
+
+      <div id="projects-container" class="projects-grid"></div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section">
+      <div class="sec-head">
+        <div class="sec-badge">Career Track</div>
+        <h2 class="sec-title">Work Experience</h2>
+      </div>
+      <div id="exp-container" class="timeline"></div>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal-wrap" onclick="if(event.target===this)closeModal()">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <img id="m-img" style="width:100%;height:180px;object-fit:cover;border-radius:8px;margin-bottom:1rem;" src="" />
+      <h2 id="m-title" style="margin-bottom:0.35rem;"></h2>
+      <p id="m-tagline" style="color:var(--text-secondary);margin-bottom:1rem;font-size:0.95rem;"></p>
+      <div id="m-tags" style="display:flex;flex-wrap:wrap;gap:0.35rem;margin-bottom:1rem;"></div>
+
+      <h4 style="margin-bottom:0.35rem;">Overview</h4>
+      <p id="m-desc" style="color:var(--text-secondary);font-size:0.9rem;margin-bottom:1rem;"></p>
+
+      <h4 style="margin-bottom:0.35rem;">Key Architecture & Challenges</h4>
+      <div id="m-challenge" style="background:var(--bg-tag);padding:0.75rem;border-radius:6px;font-size:0.85rem;color:var(--text-primary);margin-bottom:1rem;"></div>
+
+      <div style="display:flex;gap:0.75rem;margin-top:1.25rem;">
+        <a id="m-demo" href="#" target="_blank" class="btn btn-primary" style="font-size:0.85rem;">Live Demo</a>
+        <a id="m-code" href="#" target="_blank" class="btn btn-outline" style="font-size:0.85rem;">GitHub Repo</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script>
+    let currentCat = 'all';
+    let query = '';
+
+    function toggleTheme() {
+      const cur = document.documentElement.getAttribute('data-theme');
+      document.documentElement.setAttribute('data-theme', cur === 'dark' ? 'light' : 'dark');
+    }
+
+    function copyEmail() {
+      if (window.portfolioData?.personal?.email) {
+        navigator.clipboard.writeText(window.portfolioData.personal.email);
+        alert('Email copied: ' + window.portfolioData.personal.email);
+      }
+    }
+
+    function renderAll() {
+      const d = window.portfolioData;
+      if (!d) return;
+
+      // Skills
+      const sBox = document.getElementById('skills-list');
+      if (sBox) {
+        sBox.innerHTML = d.skills.map(c => `
+          <div class="skill-box">
+            <div class="skill-box-title">${c.category}</div>
+            <div class="skill-pills">
+              ${c.items.map(i => `<span class="skill-pill">${i.name}</span>`).join('')}
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // Experience
+      const expBox = document.getElementById('exp-container');
+      if (expBox) {
+        expBox.innerHTML = d.experience.map(e => `
+          <div class="tl-item">
+            <div class="tl-card">
+              <div class="tl-role">${e.role}</div>
+              <div class="tl-company">${e.company} • <span class="tl-period">${e.period}</span></div>
+              <p style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.5rem;">${e.description}</p>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      renderProjects();
+    }
+
+    function setCategory(cat, el) {
+      currentCat = cat;
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      el.classList.add('active');
+      renderProjects();
+    }
+
+    function handleSearch(val) {
+      query = val.toLowerCase().trim();
+      renderProjects();
+    }
+
+    function renderProjects() {
+      const list = window.portfolioData?.projects || [];
+      const filtered = list.filter(p => {
+        const mCat = currentCat === 'all' || p.category === currentCat;
+        const mQ = query === '' || p.title.toLowerCase().includes(query) || p.tags.some(t => t.toLowerCase().includes(query));
+        return mCat && mQ;
+      });
+
+      const pBox = document.getElementById('projects-container');
+      if (!pBox) return;
+
+      if (filtered.length === 0) {
+        pBox.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:2rem;color:var(--text-secondary);">No projects found</div>';
+        return;
+      }
+
+      pBox.innerHTML = filtered.map(p => `
+        <div class="proj-card">
+          <img src="${p.image}" class="proj-img" alt="${p.title}" />
+          <div class="proj-body">
+            <div class="proj-title">${p.title}</div>
+            <div class="proj-desc">${p.tagline}</div>
+            ${p.metrics ? `<div class="proj-metric">⚡ ${p.metrics}</div>` : ''}
+            <div class="proj-footer">
+              <div class="link-group">
+                ${p.demoUrl ? `<a href="${p.demoUrl}" target="_blank" class="small-link">Demo</a>` : ''}
+                ${p.githubUrl ? `<a href="${p.githubUrl}" target="_blank" class="small-link">Code</a>` : ''}
+              </div>
+              <button class="btn-detail" onclick="openDetails('${p.id}')">Details →</button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function openDetails(id) {
+      const p = window.portfolioData.projects.find(x => x.id === id);
+      if (!p) return;
+      document.getElementById('m-img').src = p.image;
+      document.getElementById('m-title').textContent = p.title;
+      document.getElementById('m-tagline').textContent = p.tagline;
+      document.getElementById('m-tags').innerHTML = p.tags.map(t => `<span class="skill-pill">${t}</span>`).join('');
+      document.getElementById('m-desc').textContent = p.details?.overview || p.tagline;
+      document.getElementById('m-challenge').innerHTML = `<strong>Challenge:</strong> ${p.details?.technicalChallenge || 'N/A'}<br><br><strong>Solution:</strong> ${p.details?.solution || 'N/A'}`;
+      document.getElementById('m-demo').href = p.demoUrl || '#';
+      document.getElementById('m-code').href = p.githubUrl || '#';
+      document.getElementById('modal').classList.add('open');
+    }
+
+    function closeModal() {
+      document.getElementById('modal').classList.remove('open');
+    }
+
+    window.addEventListener('DOMContentLoaded', renderAll);
+  </script>
+</body>
+</html>
