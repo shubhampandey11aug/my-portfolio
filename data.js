@@ -1,754 +1,1641 @@
 /**
- * ====================================================================
- * PORTFOLIO DATA CONFIGURATION
- * ====================================================================
- * All portfolio information, resume details, and in-depth project
- * case studies are defined here.
+ * SHUBHAM PANDEY — DATA-DRIVEN PORTFOLIO CONFIGURATION
+ * ----------------------------------------------------
+ * This file contains the complete portfolio/resume data and the
+ * 10 Microsoft Fabric case studies.
+ *
+ * Asset convention:
+ *   assets/
+ *     Case Study 01 The Global Listing Intelligence Initiative/
+ *     Case Study 02 Logistics Data Modernization/
+ *     ...
+ *
+ * The folder names below follow the project folders shown in the
+ * GitHub repository/screenshot. Individual screenshot filenames are
+ * mapped from the image labels in the supplied case-study write-up.
+ */
+
+const ASSET_ROOT = "assets";
+
+const ASSET_FOLDERS = {
+  case01: `${ASSET_ROOT}/Case Study 01 The Global Listing Intelligence Initiative`,
+  case02: `${ASSET_ROOT}/Case Study 02 Logistics Data Modernization`,
+  case03: `${ASSET_ROOT}/Case Study 03 Workforce Intelligence.From Azure SQL to Lakehouse(Technology Consulting)`,
+  case04: `${ASSET_ROOT}/Case Study 04 Financial Data Transformation using Pyspark and Delta Lake`,
+  case05: `${ASSET_ROOT}/Case Study 05 Unified Commerce Analytics (Global Freight Forwarders)`,
+  case06: `${ASSET_ROOT}/Case Study 06 Market Risk Intelligence Feed`,
+  case07: `${ASSET_ROOT}/Case Study 07 The Accountability Gap .Regulatory Data Governance & Historical Accountability`,
+  case08: `${ASSET_ROOT}/Case Study 08 Inventory Data Migration to Microsoft Fabric Lakehouse`,
+  case09: `${ASSET_ROOT}/Case Study 09 Customer Data Trust Transformation`,
+  case10: `${ASSET_ROOT}/Case Study 10 Live Market Intelligence`
+};
+
+function asset(folder, filename) {
+  return encodeURI(`${folder}/${filename}`);
+}
+
+/*
+ * Screenshot filenames are intentionally centralized here.
+ * If the actual GitHub image filename differs, update only the
+ * corresponding gallery entry — the project write-up does not need
+ * to be changed.
  */
 
 const portfolioData = {
-  // --- Personal & Contact Information ---
+
+  // ================================================================
+  // PERSONAL PROFILE
+  // ================================================================
+
   personal: {
-    name: "Alex Morgan",
-    role: "Full-Stack Software Engineer & System Architect",
-    tagline: "Building scalable, high-performance web applications and intuitive digital experiences with modern technologies.",
-    location: "San Francisco, CA / Remote",
-    email: "alex.morgan.dev@example.com",
-    github: "https://github.com/yourusername",
-    linkedin: "https://linkedin.com/in/yourprofile",
-    twitter: "https://twitter.com/yourhandle",
-    resumePdf: "assets/resume.pdf",
-    availability: "Available for new opportunities",
-    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=80",
+    name: "Shubham Pandey",
+    role: "Data Analyst | BI Analyst | Energy Analyst | Data Engineer",
+    tagline: "Turning energy and operational data into reliable analytics, governed data pipelines, and decision-ready insights.",
+    location: "India | Open to Data & Analytics Opportunities",
+    email: "shubhampandey11aug@gmail.com",
+    phone: "+91-9794963499",
+    github: "https://github.com/shubhampandey11aug",
+    linkedin: "https://linkedin.com/in/shubhampandey08",
+    twitter: "",
+    resumePdf: "assets/Resume_Shubham Pandey(Energy Analyst).pdf",
+    availability: "Open to Data Analyst, BI Analyst, Energy Analytics, Data Engineering, Freelance & Consulting opportunities",
+    avatar: "assets/Photo_Shubham Pandey.jpg",
+
     stats: [
-      { label: "Years Experience", value: "4+" },
-      { label: "Projects Completed", value: "25+" },
-      { label: "Open Source Stars", value: "1.2k" },
-      { label: "Code Commits (Year)", value: "1,400+" }
+      { label: "Years Experience", value: "12+" },
+      { label: "Fabric Case Studies", value: "10" },
+      { label: "Energy Portfolio", value: "50+ GW" },
+      { label: "Reporting Automation", value: "30%" }
     ]
   },
 
-  // --- About Me & Biography ---
+  // ================================================================
+  // ABOUT
+  // ================================================================
+
   about: {
-    heading: "Passionate about transforming complex challenges into elegant solutions",
+    heading: "Energy-domain expertise meets modern data & analytics engineering",
+
     paragraphs: [
-      "I am a results-driven Full-Stack Engineer with over 4 years of hands-on experience designing and building production-grade web applications, microservices, and distributed cloud architectures.",
-      "My journey started with a curiosity about how the web functions under the hood, which evolved into leading product development sprints and architecting real-time systems serving hundreds of thousands of users.",
-      "When I'm not writing clean, maintainable code or tuning database queries, you can find me contributing to open-source developer tooling, exploring AI agent workflows, and writing technical deep-dives."
+      "I am an energy professional with 12+ years of experience across forecasting & scheduling, Open Access, DSM settlement, power trading, renewable generation analytics and operational reporting.",
+      "I am transitioning deeper into data and analytics roles, combining energy-market knowledge with Power BI, SQL, Python, Advanced Excel, Microsoft Fabric and data-engineering concepts to build reliable pipelines and decision-ready analytics.",
+      "My portfolio demonstrates hands-on Microsoft Fabric case studies covering Lakehouse ingestion, Delta Lake, PySpark, T-SQL, Dataflows Gen2, warehouse-native API ingestion, real-time intelligence and Power BI-oriented analytical architectures."
     ],
+
     highlights: [
-      "Specialized in TypeScript, React, Next.js, Node.js, and Python ecosystems.",
-      "Track record of improving API latency by up to 60% via caching and query optimization.",
-      "Strong advocate for automated testing (Jest, Playwright) and robust CI/CD pipelines.",
-      "Proven experience collaborating across cross-functional product, design, and QA teams."
+      "12+ years across renewable-energy operations, forecasting, scheduling, Open Access, DSM and power trading.",
+      "Power BI dashboards covering generation trends, forecast accuracy, DSM impact and revenue.",
+      "Automated reporting workflows using Power Query with 30% reduction in manual effort.",
+      "Analyzed a 50+ GW portfolio and improved forecasting accuracy by 15%.",
+      "Hands-on Microsoft Fabric learning across Lakehouse, Pipelines, Dataflows and Power BI integration.",
+      "Building practical data-engineering capability with ETL/ELT, Bronze/Silver/Gold architecture, Delta Lake and PySpark."
     ]
   },
 
-  // --- Technical Skills Matrix ---
+  // ================================================================
+  // SKILLS
+  // ================================================================
+
   skills: [
     {
-      category: "Frontend Development",
+      category: "Data Analytics & BI",
+      icon: "bar-chart",
+      items: [
+        { name: "Power BI & Data Visualization", level: "Advanced" },
+        { name: "KPI Development", level: "Advanced" },
+        { name: "Business Intelligence & Reporting", level: "Advanced" },
+        { name: "Data Storytelling", level: "Advanced" },
+        { name: "Trend & Root Cause Analysis", level: "Advanced" },
+        { name: "Forecasting & Performance Analytics", level: "Advanced" }
+      ]
+    },
+    {
+      category: "Programming & Data",
       icon: "code",
       items: [
-        { name: "React / Next.js", level: "Expert" },
-        { name: "TypeScript / JavaScript", level: "Expert" },
-        { name: "HTML5 / CSS3 / SCSS", level: "Expert" },
-        { name: "Tailwind CSS", level: "Expert" },
-        { name: "Vue.js", level: "Intermediate" },
-        { name: "Redux Toolkit / Zustand", level: "Advanced" }
+        { name: "Python / Pandas / NumPy", level: "Intermediate" },
+        { name: "SQL — Extraction & Transformation", level: "Intermediate" },
+        { name: "Advanced Excel", level: "Advanced" },
+        { name: "Power Query", level: "Advanced" },
+        { name: "Data Cleaning & Validation", level: "Advanced" },
+        { name: "Data Modelling", level: "Intermediate" }
       ]
     },
     {
-      category: "Backend & APIs",
-      icon: "server",
-      items: [
-        { name: "Node.js / Express", level: "Expert" },
-        { name: "Python / FastAPI / Django", level: "Advanced" },
-        { name: "RESTful & GraphQL APIs", level: "Expert" },
-        { name: "WebSockets & SSE", level: "Advanced" },
-        { name: "Microservices Architecture", level: "Advanced" },
-        { name: "gRPC & Protocol Buffers", level: "Intermediate" }
-      ]
-    },
-    {
-      category: "Databases & Storage",
+      category: "Microsoft Fabric & Data Engineering",
       icon: "database",
       items: [
-        { name: "PostgreSQL & Prisma / TypeORM", level: "Expert" },
-        { name: "MongoDB & Mongoose", level: "Advanced" },
-        { name: "Redis (Caching & Queues)", level: "Advanced" },
-        { name: "Vector DBs (Pinecone / Chroma)", level: "Intermediate" },
-        { name: "Supabase & Firebase", level: "Advanced" }
+        { name: "Microsoft Fabric", level: "Hands-on Learning" },
+        { name: "Lakehouse Architecture", level: "Hands-on" },
+        { name: "Fabric Data Pipelines", level: "Hands-on" },
+        { name: "Delta Lake", level: "Hands-on" },
+        { name: "PySpark", level: "Hands-on" },
+        { name: "Dataflows Gen2", level: "Hands-on" },
+        { name: "Fabric Warehouse / T-SQL", level: "Hands-on" },
+        { name: "Real-Time Intelligence / KQL", level: "Hands-on" }
       ]
     },
     {
-      category: "DevOps, Cloud & Tools",
-      icon: "cloud",
+      category: "Energy Domain Analytics",
+      icon: "zap",
       items: [
-        { name: "Docker & Containerization", level: "Advanced" },
-        { name: "AWS (S3, EC2, Lambda, CloudFront)", level: "Advanced" },
-        { name: "GitHub Actions & CI/CD", level: "Expert" },
-        { name: "Git & Version Control", level: "Expert" },
-        { name: "Jest / Vitest / Playwright", level: "Advanced" },
-        { name: "Linux & Bash Scripting", level: "Advanced" }
+        { name: "Forecasting & Scheduling", level: "Advanced" },
+        { name: "DSM Settlement & Deviation Analytics", level: "Advanced" },
+        { name: "Open Access", level: "Advanced" },
+        { name: "Energy Banking", level: "Advanced" },
+        { name: "Power Trading / IEX", level: "Advanced" },
+        { name: "Captive Power Allocation", level: "Advanced" },
+        { name: "Renewable Asset Analytics", level: "Advanced" },
+        { name: "Regulatory & Grid Connectivity Analytics", level: "Advanced" }
+      ]
+    },
+    {
+      category: "Domain & Engineering Tools",
+      icon: "settings",
+      items: [
+        { name: "EMS", level: "Experienced" },
+        { name: "SCADA", level: "Experienced" },
+        { name: "ETAP", level: "Experienced" },
+        { name: "PV-Syst", level: "Experienced" },
+        { name: "AutoCAD", level: "Experienced" },
+        { name: "MATLAB", level: "Experienced" },
+        { name: "Databricks", level: "Learning" }
       ]
     }
   ],
 
-  // --- Work Experience Timeline ---
+  // ================================================================
+  // EXPERIENCE
+  // ================================================================
+
   experience: [
     {
-      role: "Senior Full-Stack Engineer",
-      company: "Nexus Cloud Systems",
-      period: "2023 - Present",
-      location: "San Francisco, CA (Hybrid)",
-      description: "Leading the core platform engineering team building enterprise analytics and real-time collaboration dashboards.",
+      role: "Assistant Manager – Analytics (Energy & Market Operations)",
+      company: "Gentari India",
+      period: "Sep 2025 – Present",
+      location: "Gurgaon, India",
+      description: "Leading data-driven energy and market-operations analytics across forecasting, scheduling, Open Access and renewable-energy assets.",
       achievements: [
-        "Architected and deployed a real-time event streaming pipeline processing 2M+ daily events using Node.js, Redis Pub/Sub, and WebSockets.",
-        "Refactored legacy monolith into modular Next.js micro-frontends, reducing page load times by 45% and Lighthouse performance scores to 98+.",
-        "Mentored 5 junior and mid-level engineers, instituted rigorous code review standards, and created internal reusable UI component libraries."
+        "Lead data-driven forecasting and scheduling operations for wind and solar assets using real-time datasets.",
+        "Track KPIs, identify performance gaps and support asset-efficiency improvement through analytical approaches.",
+        "Manage DSM analytics and deviation data to support better financial optimisation.",
+        "Translate operational data into actionable business insights with technical and business stakeholders.",
+        "Drive process improvement and data-standardisation initiatives.",
+        "Explore Microsoft Fabric and Databricks for scalable analytics and data-engineering solutions.",
+        "Coordinate captive power allocation for Open Access projects with focus on timely allocation, regulatory compliance and operational efficiency.",
+        "Track and interpret regulatory updates covering Energy Banking, BESS, Forecasting & Scheduling, Open Access and Grid Connectivity."
       ],
-      technologies: ["TypeScript", "Next.js", "Node.js", "PostgreSQL", "Redis", "Docker", "AWS"]
+      technologies: ["Power BI", "Excel", "Power Query", "SQL", "Microsoft Fabric", "Databricks", "Energy Analytics"]
     },
+
     {
-      role: "Full-Stack Software Developer",
-      company: "Apex Digital Solutions",
-      period: "2021 - 2023",
-      location: "Austin, TX (Remote)",
-      description: "Developed and maintained full-stack web applications for FinTech and eCommerce enterprise clients.",
+      role: "Deputy Manager – Energy Analytics & Trading",
+      company: "Kreate Energy",
+      period: "Nov 2019 – Aug 2025",
+      location: "New Delhi, India",
+      description: "Managed analytics, reporting, forecasting, DSM analysis and trading-support workflows across a large renewable-energy portfolio.",
       achievements: [
-        "Designed and implemented high-volume payment processing workflows integrated with Stripe and PayPal APIs, handling $4M+ monthly volume.",
-        "Engineered REST and GraphQL endpoints backed by PostgreSQL with query optimization that cut database response times by 35%.",
-        "Set up automated CI/CD pipelines via GitHub Actions, automating testing and zero-downtime deployment to AWS ECS clusters.",
+        "Built and maintained Power BI dashboards tracking generation trends, forecast accuracy, DSM impact and revenue.",
+        "Automated reporting workflows using Power Query, reducing manual effort by 30%.",
+        "Analyzed large datasets across a 50+ GW portfolio and improved forecasting accuracy by 15%.",
+        "Developed data-backed strategies for power exchange bidding on IEX.",
+        "Performed data cleaning, validation and transformation across multiple systems.",
+        "Delivered insights through dashboards, reports and presentations to technical and business teams.",
+        "Improved workflows and operational efficiency, increasing productivity by 15%.",
+        "Managed the end-to-end data lifecycle from collection and processing through analysis and reporting."
       ],
-      technologies: ["React", "TypeScript", "Python/FastAPI", "PostgreSQL", "Stripe API", "AWS ECS", "Jest"]
+      technologies: ["Power BI", "Power Query", "Advanced Excel", "Python", "SQL", "IEX", "Energy Analytics"]
     },
+
     {
-      role: "Frontend Engineer Intern",
-      company: "Vanguard Media Labs",
-      period: "2020 - 2021",
-      location: "Seattle, WA",
-      description: "Contributed to responsive customer-facing web apps and internal content management systems.",
+      role: "Project Engineer (Contract)",
+      company: "NTPC / IOCL Projects (NBPPL & EIL)",
+      period: "2017 – 2019",
+      location: "India",
+      description: "Contributed to large-scale engineering projects with exposure to operational data, reporting and project processes.",
       achievements: [
-        "Built 20+ responsive web components adhering to WCAG 2.1 AA accessibility guidelines.",
-        "Collaborated with UX/UI designers in Figma to translate interactive wireframes into pixel-perfect CSS and React components.",
-        "Improved bundle size by 30% through code-splitting and dynamic asset loading techniques."
+        "Contributed to large-scale projects with exposure to data, operations and reporting processes.",
+        "Supported project execution and technical reporting activities."
       ],
-      technologies: ["JavaScript (ES6+)", "React", "CSS3 / Sass", "Webpack", "Git"]
+      technologies: ["Engineering Analytics", "Reporting", "Operational Data"]
+    },
+
+    {
+      role: "Assistant Engineer – Wind Operations",
+      company: "Wind World India Ltd.",
+      period: "Jul 2013 – May 2016",
+      location: "Mumbai, India",
+      description: "Worked on wind-farm operations, monitoring and performance analytics.",
+      achievements: [
+        "Used data analysis to improve wind-farm productivity by 25%.",
+        "Created MIS reports and conducted trend analysis, benchmarking and root-cause analysis.",
+        "Worked with operational systems for data monitoring and performance tracking."
+      ],
+      technologies: ["Wind Operations", "MIS", "Trend Analysis", "SCADA", "Performance Analytics"]
     }
   ],
 
-  // --- Education & Academic Background ---
+  // ================================================================
+  // EDUCATION
+  // ================================================================
+
   education: [
     {
-      degree: "Bachelor of Science in Computer Science",
-      institution: "University of California, Berkeley",
-      period: "2017 - 2021",
-      location: "Berkeley, CA",
-      honors: "Magna Cum Laude (GPA: 3.85 / 4.0)",
+      degree: "B.Tech – Electrical & Electronics Engineering",
+      institution: "Gautam Buddha Technical University",
+      period: "2008 – 2012",
+      location: "India",
+      honors: "Engineering background supporting strong energy-domain and analytical capability.",
       coursework: [
-        "Data Structures & Algorithms",
-        "Distributed Systems & Cloud Computing",
-        "Database Architecture",
-        "Artificial Intelligence & Machine Learning",
-        "Computer Networks & Security"
+        "Electrical & Electronics Engineering",
+        "Power Systems",
+        "Engineering Analysis"
       ]
     }
   ],
 
-  // --- Certifications & Accreditations ---
+  // ================================================================
+  // CERTIFICATIONS / UPSKILLING
+  // ================================================================
+
   certifications: [
     {
-      name: "AWS Certified Solutions Architect - Associate",
-      issuer: "Amazon Web Services (AWS)",
-      year: "2023",
-      verifyUrl: "https://aws.amazon.com/verification"
+      name: "Microsoft DP-600 – Fabric Analytics Engineer",
+      issuer: "Microsoft",
+      year: "In Progress",
+      verifyUrl: ""
     },
     {
-      name: "Certified Kubernetes Application Developer (CKAD)",
-      issuer: "Cloud Native Computing Foundation (CNCF)",
-      year: "2024",
-      verifyUrl: "https://www.cncf.io/certification/ckad/"
+      name: "Microsoft DP-700 – Fabric Data Engineer Associate",
+      issuer: "Microsoft",
+      year: "In Progress",
+      verifyUrl: ""
     },
     {
-      name: "Meta Front-End Developer Professional Certificate",
-      issuer: "Meta / Coursera",
-      year: "2022",
-      verifyUrl: "https://www.coursera.org"
+      name: "Data Analytics Certification",
+      issuer: "INSAID",
+      year: "Completed",
+      verifyUrl: ""
+    },
+    {
+      name: "Electrical Design",
+      issuer: "AEDEI",
+      year: "Completed",
+      verifyUrl: ""
     }
   ],
 
-  // --- Comprehensive Projects with In-Depth Writeups & Build Steps ---
+  // ================================================================
+  // PROJECTS / CASE STUDIES
+  // ================================================================
+
   projects: [
+
+    // --------------------------------------------------------------
+    // CASE STUDY 01
+    // --------------------------------------------------------------
+
     {
-      id: "devpulse",
-      title: "DevPulse - Realtime Cloud Monitor & Telemetry Dashboard",
-      tagline: "Enterprise-grade server monitoring, alerting, and telemetry visualizer with sub-second latency.",
-      category: "fullstack",
+      id: "global-listing-intelligence",
+      title: "The Global Listing Intelligence Initiative",
+      tagline: "Automating nightly property-listing ingestion with Microsoft Fabric Lakehouse orchestration, governed Silver data and auditable file handling.",
+      category: "microsoft-fabric",
       featured: true,
-      role: "Lead Full-Stack Architect",
-      timeline: "3 Months (Q3 2024)",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80",
-      demoUrl: "https://example.com/demo/devpulse",
-      githubUrl: "https://github.com/yourusername/devpulse",
-      metrics: "Processes 500k+ metrics/sec with < 50ms latency",
-      tags: ["TypeScript", "Next.js", "FastAPI", "ClickHouse", "WebSockets", "TailwindCSS", "Docker"],
+      role: "Lead Data Engineer",
+      timeline: "Microsoft Fabric Case Study",
+      image: asset(ASSET_FOLDERS.case01, "Image 1 - Title Image.png"),
+      demoUrl: "",
+      githubUrl: "https://github.com/shubhampandey11aug/my-portfolio/tree/main/assets/Case%20Study%2001%20The%20Global%20Listing%20Intelligence%20Initiative",
+      metrics: "24–48h manual consolidation replaced by automated nightly ingestion",
+      tags: ["Microsoft Fabric", "Lakehouse", "Data Pipeline", "Copy Data", "Silver", "Upsert", "Wildcard Ingestion", "Data Governance"],
 
-      // Detailed Writeup Sections
-      writeup: {
-        executiveSummary: "DevPulse is an end-to-end cloud infrastructure monitoring platform engineered to give DevOps and SRE teams live, sub-second visibility into server fleet health, memory leaks, CPU spikes, and network throughput bottlenecks.",
-        problemStatement: "Traditional monitoring platforms are often bloated, expensive, and impose noticeable agent overhead on monitored hosts. Engineering teams needed a lightweight, self-hostable monitoring solution capable of ingesting high-cardinality telemetry data without UI slowdowns or multi-second latency lags.",
-        objectives: [
-          "Maintain an agent memory footprint under 15MB on monitored instances.",
-          "Ingest and query over 500,000 metrics per second with low computational overhead.",
-          "Render real-time 60fps streaming time-series graphs in client web browsers.",
-          "Provide flexible webhook alerting integrations (Slack, Discord, PagerDuty, Email)."
+      details: {
+        overview: "Grandeur Properties International needed to replace manual spreadsheet-based listing consolidation with an automated, auditable Microsoft Fabric ingestion pipeline serving London, New York and Dubai.",
+        keyFeatures: [
+          "Wildcard-based nightly file ingestion",
+          "Schema mapping into a governed Silver table",
+          "property_id-based upsert integrity",
+          "Ingestion timestamping and PII exclusion",
+          "Archive-then-delete file handling"
         ],
-        targetAudience: "Cloud Engineers, Site Reliability Engineers (SREs), DevOps Leads, and Full-Stack Developers managing distributed microservice clusters."
+        technicalChallenge: "Manual consolidation introduced 24–48 hours of latency and created duplicate, overwritten and late-file risks.",
+        solution: "A three-activity Fabric pipeline ingests nightly files, archives processed files and deletes them from the landing zone only after successful archival."
+      },
+
+      writeup: {
+        executiveSummary: "Grandeur Properties International is transitioning from manual, spreadsheet-based listing consolidation to an automated and auditable Microsoft Fabric Lakehouse pipeline. The solution is designed around a clean nightly snapshot, governed Silver data, property-level upsert integrity, processed-file archival and ingestion timestamps.",
+        problemStatement: "The manual model failed during simultaneous negotiations: Dubai filed late, London produced duplicate rows and New York was silently overwritten. The resulting 24–48 hour latency and material-error risk made leadership decisions dependent on data that could not be reliably trusted.",
+        objectives: [
+          "Automate nightly ingestion of listing files from multiple offices.",
+          "Use wildcard ingestion and controlled schema mapping into Silver.",
+          "Upsert property records using property_id as the unique key.",
+          "Exclude unnecessary PII and timestamp records at ingestion.",
+          "Archive successfully processed files and remove them from the landing zone.",
+          "Make the pipeline auditable and operationally repeatable."
+        ],
+        targetAudience: "Portfolio leadership, global real-estate operations, data engineering and analysts consuming trusted listing intelligence.",
+        overview: "A Lakehouse-centric ingestion architecture that separates raw file handling from business consumption.",
+        technologyUsed: ["Microsoft Fabric", "Lakehouse", "Data Pipeline", "Copy Data Activity", "Silver Table", "Wildcard File Ingestion"],
+        projectScope: "Nightly listing ingestion, validation, governed Silver loading, upsert integrity, archival and landing-zone cleanup.",
+        solution: "Three pipeline activities form the operating pattern: ingest and upsert, archive processed files, then delete them from the landing zone after archive success.",
+        challenges: [
+          "Late and duplicated office files",
+          "Silent overwrites in manual consolidation",
+          "24–48 hour reporting latency",
+          "Duplicate property_id handling",
+          "Archive failure after a successful data load"
+        ]
       },
 
       methodology: {
-        architectureOverview: "The system utilizes a decoupled, event-driven streaming architecture. Edge agents push telemetry over gRPC to an ingestion gateway, which buffers records into a high-speed ClickHouse columnar database while broadcasting real-time deltas to client browser sessions over WebSockets.",
+        architectureOverview: "Nightly office files land in the Fabric raw/landing area. Copy Data uses a wildcard pattern and schema mapping to load governed Silver data. property_id is used for upsert integrity and an ingestion timestamp is captured. Archive and Delete activities complete the file lifecycle.",
         technicalDecisions: [
           {
-            decision: "ClickHouse instead of PostgreSQL for time-series storage",
-            rationale: "ClickHouse provides 10x-50x superior data compression for sequential time-series data and supports lightning-fast vectorized aggregation queries over billions of metric rows."
+            decision: "Use property_id as the upsert key",
+            rationale: "The nightly snapshot represents the final authoritative state of a property for the day, so the property-level key protects Silver from duplicate rows."
           },
           {
-            decision: "Protocol Buffers (Protobuf) over JSON for agent communication",
-            rationale: "Binary encoding reduced bandwidth consumption by 68% and eliminated JSON parsing bottlenecks on constrained edge servers."
+            decision: "Archive before delete",
+            rationale: "Delete is dependent on confirmed Archive success, preventing the landing file from being removed before an operational copy exists."
           },
           {
-            decision: "WebGL Canvas Rendering for charts",
-            rationale: "Standard SVG chart libraries choked on 10,000+ continuous data points; uPlot and WebGL canvas maintained buttery-smooth 60fps frame rates."
+            decision: "Use wildcard ingestion",
+            rationale: "The pipeline can collect all applicable office files without manual file-by-file selection."
           }
         ],
-        securityAndReliability: "Agent authentication is enforced via mutual TLS (mTLS) with automated token rotation. Rate limiting and circuit breakers prevent database saturation during cascading network incidents."
+        securityAndReliability: "PII exclusion, ingestion timestamping, governed Silver mapping and dependency-controlled archival/deletion provide an auditable operating model. If Archive fails after Copy Data succeeds, the source remains in Files/raw/ and can be reprocessed without creating Silver duplicates."
       },
 
       steps: [
         {
           stepNumber: 1,
-          phase: "Phase 1: Architecture & Schema Planning",
-          title: "Telemetry Data Modeling & Protocol Design",
-          description: "Defined protobuf schemas for CPU, RAM, disk I/O, network bandwidth, and custom container health checks. Designed the ClickHouse schema utilizing MergeTree engines with monthly partitioning.",
-          deliverables: ["Protobuf schema definitions", "ClickHouse partition strategy documentation", "System architecture diagrams"],
-          tools: ["Protocol Buffers", "ClickHouse", "Figma / Eraser.io"]
+          phase: "Phase 1: Foundation",
+          title: "Configure Wildcard Listing Ingestion",
+          description: "Configure the Fabric Copy Data activity to discover the nightly office files using a wildcard pattern and map the required source fields into the governed Silver schema.",
+          deliverables: ["Wildcard ingestion", "Column mapping", "PII exclusion"],
+          tools: ["Microsoft Fabric", "Copy Data", "Lakehouse"]
         },
         {
           stepNumber: 2,
-          phase: "Phase 2: Ingestion & Backend Pipeline",
-          title: "High-Throughput Ingestion Engine & WebSocket Server",
-          description: "Developed the core ingestion service in Python/FastAPI and Go. Integrated Redis Pub/Sub channels to broadcast live streaming metrics directly to subscribed user dashboards.",
-          deliverables: ["FastAPI ingestion gateway", "Redis Pub/Sub cluster", "WebSocket connection pool manager"],
-          tools: ["Python", "FastAPI", "Go", "Redis", "Docker"]
+          phase: "Phase 2: Data Integrity",
+          title: "Implement property_id Upsert Logic",
+          description: "Load listing records using property_id as the unique key and capture the ingestion timestamp so the final nightly state can be identified.",
+          deliverables: ["Upsert write mode", "Property-level integrity", "Ingestion timestamp"],
+          tools: ["Fabric Data Pipeline", "Silver Table"]
         },
         {
           stepNumber: 3,
-          phase: "Phase 3: Frontend Dashboard & Visualization",
-          title: "Realtime Next.js UI & WebGL Visualizer",
-          description: "Built the responsive single-page dashboard in Next.js and TypeScript. Implemented customizable widget layouts, time-range scrubbing, anomaly heatmaps, and dark mode interface.",
-          deliverables: ["Interactive Next.js dashboard", "WebGL chart components", "Custom alert rule builder UI"],
-          tools: ["Next.js", "TypeScript", "Tailwind CSS", "uPlot", "Zustand"]
+          phase: "Phase 3: File Lifecycle",
+          title: "Archive Processed Files",
+          description: "Move successfully processed files into the archive destination so the raw landing area does not become the permanent processing store.",
+          deliverables: ["Archive source configuration", "Archive destination"],
+          tools: ["Fabric Pipeline", "Files"]
         },
         {
           stepNumber: 4,
-          phase: "Phase 4: Alerting, Testing & Cloud Deployment",
-          title: "Automated Incident Alerting & Production CI/CD",
-          description: "Implemented threshold-based and anomaly-detection alerting triggers. Established end-to-end integration test suites and Docker Compose / Helm charts for 1-click cloud deployment.",
-          deliverables: ["Multi-channel notification dispatcher", "Playwright E2E test suite", "Docker & Kubernetes Helm packages"],
-          tools: ["GitHub Actions", "Docker", "Kubernetes", "Playwright", "Jest"]
+          phase: "Phase 4: Cleanup & Reliability",
+          title: "Delete Only After Archive Success",
+          description: "Configure activity dependencies so Delete executes only after Archive succeeds. If Archive fails, the file remains available for the next run.",
+          deliverables: ["Dependency configuration", "Controlled cleanup", "Retry-safe processing"],
+          tools: ["Fabric Pipeline"]
         }
       ],
 
       gallery: [
-        {
-          url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&auto=format&fit=crop&q=80",
-          caption: "Live Telemetry Dashboard Overview",
-          description: "Real-time streaming charts with CPU, RAM, and Disk I/O telemetry."
-        },
-        {
-          url: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=900&auto=format&fit=crop&q=80",
-          caption: "Alert Rule Builder & Webhook Manager",
-          description: "Custom threshold triggers and multi-channel notification routing."
-        },
-        {
-          url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&auto=format&fit=crop&q=80",
-          caption: "Historical Log & Trace Inspector",
-          description: "Sub-second search queries over hundreds of thousands of historical logs."
-        }
+        { url: asset(ASSET_FOLDERS.case01, "Image 1 - Title Image.png"), caption: "Case Study Overview", description: "Global Listing Intelligence Initiative." },
+        { url: asset(ASSET_FOLDERS.case01, "Image 2 - Pipeline.png"), caption: "Pipeline Architecture", description: "Three-activity Microsoft Fabric ingestion, archive and delete flow." },
+        { url: asset(ASSET_FOLDERS.case01, "Image 3 - Copy Data Activity- Source.png"), caption: "Copy Data Source", description: "Nightly office-file ingestion configuration." },
+        { url: asset(ASSET_FOLDERS.case01, "Image 4 - Copy Data Activity- Destination.png"), caption: "Copy Data Destination", description: "Governed Silver destination configuration." },
+        { url: asset(ASSET_FOLDERS.case01, "Image 5 - Schema Mapping.png"), caption: "Schema Mapping", description: "Source-to-Silver field mapping." },
+        { url: asset(ASSET_FOLDERS.case01, "Image 6 - System Constraints.png"), caption: "System Constraints", description: "Architecture constraints governing the implementation." },
+        { url: asset(ASSET_FOLDERS.case01, "Image 7 - Archive Activity_Source.png"), caption: "Archive Source", description: "Processed-file archival source configuration." },
+        { url: asset(ASSET_FOLDERS.case01, "Image 8 - Archive Activity_Destination.png"), caption: "Archive Destination", description: "Processed-file archive destination." },
+        { url: asset(ASSET_FOLDERS.case01, "Image 8 - Landing.png"), caption: "Landing Zone", description: "Landing-area file handling." }
       ],
 
       results: [
-        { metric: "500,000+", label: "Metrics Processed Per Second" },
-        { metric: "< 50ms", label: "End-to-End Delivery Latency" },
-        { metric: "12MB", label: "Average Agent RAM Footprint" },
-        { metric: "99.99%", label: "Production Ingestion Uptime" }
+        { metric: "24–48h", label: "Manual Consolidation Latency Addressed" },
+        { metric: "3", label: "Pipeline Activities" },
+        { metric: "property_id", label: "Upsert Integrity Key" },
+        { metric: "Nightly", label: "Automated Snapshot Pattern" }
       ]
     },
 
+    // --------------------------------------------------------------
+    // CASE STUDY 02
+    // --------------------------------------------------------------
+
     {
-      id: "omniai",
-      title: "OmniAI - Context-Aware Multimodal RAG Assistant",
-      tagline: "Intelligent document retrieval, semantic search, and interactive conversational AI assistant.",
-      category: "ai-ml",
+      id: "logistics-data-modernization",
+      title: "Logistics Data Modernization",
+      tagline: "A watermark-driven Microsoft Fabric pipeline that ingests only net-new shipment JSON files into Delta Lake.",
+      category: "microsoft-fabric",
       featured: true,
-      role: "AI / Full-Stack Engineer",
-      timeline: "2 Months (Q2 2024)",
-      image: "https://images.unsplash.com/photo-1677442136019-21780efad99a?w=800&auto=format&fit=crop&q=80",
-      demoUrl: "https://example.com/demo/omniai",
-      githubUrl: "https://github.com/yourusername/omniai-assistant",
-      metrics: "94% semantic query retrieval accuracy over 100k+ docs",
-      tags: ["Python", "LangChain", "OpenAI / Claude API", "FastAPI", "Pinecone", "React", "TailwindCSS"],
+      role: "Lead Data Engineer",
+      timeline: "Microsoft Fabric Case Study",
+      image: asset(ASSET_FOLDERS.case02, "Image 1 - Title Image.png"),
+      demoUrl: "",
+      githubUrl: "https://github.com/shubhampandey11aug/my-portfolio/tree/main/assets/Case%20Study%2002%20Logistics%20Data%20Modernization",
+      metrics: "Incremental, state-aware ingestion with auditable Delta Lake history",
+      tags: ["Microsoft Fabric", "Delta Lake", "Watermark", "JSON", "Lakehouse", "Append", "Pipeline Automation"],
+
+      details: {
+        overview: "Global Freight Forwarders needed to eliminate manual inspection of hundreds of shipment-log files and reliably ingest only net-new JSON records.",
+        keyFeatures: ["Watermark state tracking", "Net-new file detection", "Delta Lake destination", "Append semantics", "Retry-safe watermark progression"],
+        technicalChallenge: "Manual file selection caused an 18-hour missed status update and an SLA breach.",
+        solution: "A durable watermark in Delta Lake identifies the processing boundary. Only files newer than the last successful watermark are ingested and appended to ShippingLogs."
+      },
 
       writeup: {
-        executiveSummary: "OmniAI is an advanced Retrieval-Augmented Generation (RAG) conversational platform that transforms raw enterprise documentation (PDFs, Notion exports, Markdown codebases) into an intelligent, citation-accurate knowledge base.",
-        problemStatement: "Standard Large Language Models frequently suffer from hallucinations and lack domain-specific knowledge about private company repositories. Generic vector search often yields imprecise context chunks, leading to misleading answers.",
+        executiveSummary: "Global Freight Forwarders operates a high-velocity logistics environment where shipment logs arrive as JSON files. The solution introduces state-aware ingestion using a durable Delta watermark, removing manual file hunting and creating an auditable incremental ingestion framework.",
+        problemStatement: "Analysts manually inspected timestamps to identify net-new files. A missed DHL Freight status update went undetected for eighteen hours, resulting in an SLA breach and client escalation.",
         objectives: [
-          "Achieve > 90% accuracy on domain-specific question answering with verbatim citations.",
-          "Support asynchronous parsing and chunking of complex documents containing tables and code.",
-          "Keep response latency under 1.5 seconds for complete synthesized answers.",
-          "Ensure enterprise data privacy through tenant isolation and customer-managed encryption."
+          "Run shipment ingestion on a scheduled basis without manual file selection.",
+          "Process only net-new JSON files since the last successful run.",
+          "Persist the watermark in a durable Delta table.",
+          "Append shipment status events rather than collapsing history.",
+          "Ensure retry behaviour does not duplicate successfully written data."
         ],
-        targetAudience: "Engineering teams, legal researchers, and enterprise knowledge managers requiring trustworthy AI-powered semantic search."
+        targetAudience: "Logistics operations, supply-chain analysts, data engineers and reporting teams.",
+        overview: "State-aware incremental ingestion into a governed Delta Lake Bronze layer.",
+        technologyUsed: ["Microsoft Fabric", "Lakehouse", "Delta Lake", "JSON", "Data Pipeline", "Watermark"],
+        projectScope: "Net-new shipment-log detection, watermark management, append loading and retry-safe pipeline execution.",
+        solution: "Maintain a processing watermark, filter files beyond that state, append the resulting events to ShippingLogs and advance the watermark only after successful completion.",
+        challenges: [
+          "Hundreds of historical files mixed with new files",
+          "Manual timestamp inspection",
+          "Late status visibility",
+          "Need to preserve event history",
+          "Retry/idempotency requirements"
+        ]
       },
 
       methodology: {
-        architectureOverview: "OmniAI employs a hybrid search strategy pairing dense vector embeddings (OpenAI text-embedding-3-large stored in Pinecone) with sparse BM25 lexical keyword matching. A secondary Cohere Re-ranker filters top candidate chunks before feeding them to Claude/GPT-4o.",
+        architectureOverview: "A Fabric pipeline uses a durable Delta watermark as its state store. The watermark advances after successful processing, allowing subsequent runs to identify only net-new files. Shipment records are written to the ShippingLogs Delta table in Append mode.",
         technicalDecisions: [
           {
-            decision: "Hybrid Dense + Sparse Vector Search (BM25 + Dense)",
-            rationale: "Pure vector search struggles with exact alphanumeric identifiers (e.g. error codes or SKU IDs); combining BM25 boosted precision by 24%."
+            decision: "Use a Delta watermark for state persistence",
+            rationale: "The pipeline needs a durable state boundary that survives between executions and advances only after successful completion."
           },
           {
-            decision: "Recursive Character + Markdown Document Chunking",
-            rationale: "Preserved hierarchical header context and code blocks intact, preventing fragmented code snippets."
+            decision: "Append shipment events",
+            rationale: "A shipment may legitimately appear as In-Transit, Delayed and Delivered; each is a distinct event that must remain in the analytical history."
           },
           {
-            decision: "Streaming Server-Sent Events (SSE) for Responses",
-            rationale: "Allowed users to read immediate generated tokens without waiting for the complete multi-paragraph output."
+            decision: "Keep the watermark as the retry safety mechanism",
+            rationale: "A failed write does not advance the watermark, so the next execution resumes from the last successful state."
           }
         ],
-        securityAndReliability: "Uploaded files are encrypted in Amazon S3 presigned storage. Vector namespaces enforce strict tenant separation."
+        securityAndReliability: "Delta Lake provides ACID writes and an immutable transaction history. The watermark is advanced only after successful processing, supporting retry-safe execution and an auditable processing trail."
       },
 
       steps: [
         {
           stepNumber: 1,
-          phase: "Phase 1: Ingestion & Parsing Pipeline",
-          title: "Multimodal Document Ingestion & Optical Chunking",
-          description: "Engineered background Celery workers to parse PDFs, docx, and code repositories into structured ASTs, extracting tables and images with OCR.",
-          deliverables: ["Document parsing worker", "OCR table extraction module", "Chunking pipeline"],
-          tools: ["Python", "PyMuPDF", "LangChain", "Celery", "Redis"]
+          phase: "Phase 1: State Foundation",
+          title: "Create the Watermark Table",
+          description: "Create a durable Delta table that stores the latest successfully processed state used by subsequent pipeline executions.",
+          deliverables: ["Watermark table", "Initial state"],
+          tools: ["Microsoft Fabric", "Delta Lake", "Notebook"]
         },
         {
           stepNumber: 2,
-          phase: "Phase 2: Embedding & Retrieval Engine",
-          title: "Hybrid Vector Storage & Cohere Re-Ranking",
-          description: "Built vector indexing workflows in Pinecone with metadata filtering. Implemented two-stage retrieval combining dense vector similarity with Cohere reranking.",
-          deliverables: ["Pinecone index configuration", "Hybrid search orchestrator", "Reranker pipeline"],
-          tools: ["Pinecone", "Cohere API", "OpenAI Embeddings"]
+          phase: "Phase 2: Incremental Detection",
+          title: "Identify Net-New JSON Files",
+          description: "Use the persisted watermark to filter the file set and isolate only shipment logs that arrived after the last successful run.",
+          deliverables: ["Incremental filter", "Net-new file set"],
+          tools: ["Fabric Pipeline", "JSON"]
         },
         {
           stepNumber: 3,
-          phase: "Phase 3: Conversational Frontend & Citations",
-          title: "Interactive React Chat Interface & Citation Viewer",
-          description: "Developed a sleek chat interface with real-time markdown streaming, syntax highlighting, and interactive badge popovers linking directly to original PDF page snippets.",
-          deliverables: ["Streaming chat UI", "Document citation popover", "Document upload dropzone"],
-          tools: ["React", "TypeScript", "Tailwind CSS", "SSE"]
+          phase: "Phase 3: Delta Ingestion",
+          title: "Append to ShippingLogs",
+          description: "Write shipment events to the Lakehouse Delta table using Append semantics so every status event remains available for downstream analysis.",
+          deliverables: ["ShippingLogs Delta table", "Append write"],
+          tools: ["Delta Lake", "Lakehouse"]
         },
         {
           stepNumber: 4,
-          phase: "Phase 4: Evaluation & Hallucination Guardrails",
-          title: "Automated Evaluation Framework & Deployment",
-          description: "Integrated RAGAS evaluation framework to benchmark context precision, faithfulness, and answer relevancy across test datasets.",
-          deliverables: ["RAGAS test harness", "Guardrail verification prompts", "Docker deployment"],
-          tools: ["RAGAS", "FastAPI", "Docker", "AWS S3"]
+          phase: "Phase 4: State Commit",
+          title: "Update Watermark After Success",
+          description: "Advance the watermark only after the ingestion succeeds, leaving the previous state intact when a write fails.",
+          deliverables: ["Successful-run state", "Retry-safe processing"],
+          tools: ["Fabric Pipeline", "Delta Lake"]
         }
       ],
 
       gallery: [
-        {
-          url: "https://images.unsplash.com/photo-1677442136019-21780efad99a?w=900&auto=format&fit=crop&q=80",
-          caption: "Conversational RAG Chat Interface",
-          description: "Streaming answers with inline source citations and verified quotes."
-        },
-        {
-          url: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&auto=format&fit=crop&q=80",
-          caption: "Document Knowledge Hub & Chunk Visualizer",
-          description: "Manage uploaded PDFs, documentation collections, and vector status."
-        }
+        { url: asset(ASSET_FOLDERS.case02, "Image 1 - Title Image.png"), caption: "Logistics Data Modernization", description: "Incremental shipment-log ingestion case study." },
+        { url: asset(ASSET_FOLDERS.case02, "Image 2 - Pipeline.png"), caption: "Incremental Pipeline", description: "State-aware Microsoft Fabric pipeline." },
+        { url: asset(ASSET_FOLDERS.case02, "Image 3 - Notebook _Table Creation.png"), caption: "Watermark Table Creation", description: "Delta table used for durable pipeline state." },
+        { url: asset(ASSET_FOLDERS.case02, "Image 4 - Notebook _SET Watermark Value.png"), caption: "Watermark Value", description: "Setting the processing watermark." },
+        { url: asset(ASSET_FOLDERS.case02, "Image 4 - Copy Data_Source.png"), caption: "Copy Data Source", description: "Shipment-log source configuration." },
+        { url: asset(ASSET_FOLDERS.case02, "Image 5 - Pipeline_settings_Update watermark.png"), caption: "Update Watermark", description: "Pipeline state-update configuration." },
+        { url: asset(ASSET_FOLDERS.case02, "Image 6 - Pipeline Run.png"), caption: "Pipeline Run", description: "Execution of the incremental ingestion pipeline." }
       ],
 
       results: [
-        { metric: "94%", label: "Semantic Retrieval Accuracy" },
-        { metric: "1.2s", label: "Average First-Token Latency" },
-        { metric: "100k+", label: "Indexed Document Corpus" },
-        { metric: "0%", label: "Data Leakage Across Tenants" }
+        { metric: "Net-New", label: "Files Processed Per Run" },
+        { metric: "ACID", label: "Delta Lake Write Guarantees" },
+        { metric: "Append", label: "Event Preservation Strategy" },
+        { metric: "18h", label: "Missed Status Incident Addressed" }
       ]
     },
 
+    // --------------------------------------------------------------
+    // CASE STUDY 03
+    // --------------------------------------------------------------
+
     {
-      id: "flowboard",
-      title: "FlowBoard - Collaborative Workspace & Kanban Suite",
-      tagline: "Ultra-responsive project management canvas with live multiplayer cursors and offline sync.",
-      category: "frontend",
+      id: "workforce-intelligence-azure-sql-lakehouse",
+      title: "Workforce Intelligence: From Azure SQL to Lakehouse",
+      tagline: "A Bronze-to-Silver Microsoft Fabric pipeline for incremental HR data ingestion, quarantine, deduplication and trusted workforce reporting.",
+      category: "microsoft-fabric",
       featured: true,
-      role: "Frontend Lead & UI Engineer",
-      timeline: "2.5 Months (Q1 2024)",
-      image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&auto=format&fit=crop&q=80",
-      demoUrl: "https://example.com/demo/flowboard",
-      githubUrl: "https://github.com/yourusername/flowboard",
-      metrics: "Sub-16ms smooth drag-and-drop 60fps animations",
-      tags: ["React", "TypeScript", "Zustand", "Yjs (CRDTs)", "TailwindCSS", "WebRTC"],
+      role: "Data Engineer",
+      timeline: "Microsoft Fabric Case Study",
+      image: asset(ASSET_FOLDERS.case03, "Image 1 - Title Image.png"),
+      demoUrl: "",
+      githubUrl: "https://github.com/shubhampandey11aug/my-portfolio/tree/main/assets/Case%20Study%2003%20Workforce%20Intelligence.From%20Azure%20SQL%20to%20Lakehouse(Technology%20Consulting)",
+      metrics: "Bronze 332 → Silver 307 | Quarantine 20 | Duplicates 5",
+      tags: ["Microsoft Fabric", "Azure SQL", "Lakehouse", "Bronze", "Silver", "PySpark", "Data Quality", "Quarantine"],
+
+      details: {
+        overview: "Innovate Solutions needed to replace manual SQL exports and Excel cleanup with an engineered Azure SQL to Fabric Lakehouse pipeline.",
+        keyFeatures: ["Incremental Azure SQL extraction", "Bronze landing", "PySpark transformation", "Quarantine of invalid records", "Duplicate removal", "Silver reconciliation"],
+        technicalChallenge: "HR reporting required 48-hour manual turnaround and the source contained duplicate employee IDs and invalid salaries.",
+        solution: "Copy Activity loads Azure SQL incrementally into Bronze; a Notebook cleans, validates, quarantines invalid records, deduplicates and writes the trusted result to Silver."
+      },
 
       writeup: {
-        executiveSummary: "FlowBoard is a high-performance, offline-first agile project management tool featuring real-time multiplayer collaboration, Kanban boards, Gantt charts, and custom workflow automations.",
-        problemStatement: "Most cloud project management apps become sluggish with large boards and completely fail when users lose internet connectivity. Teams needed a tool with desktop-grade responsiveness and zero sync conflicts.",
+        executiveSummary: "Innovate Solutions operates across London, New York and Singapore and maintains workforce data in Azure SQL. The project introduces a two-stage Microsoft Fabric pipeline that moves employee data into Bronze and applies PySpark-based cleansing and enrichment before writing a trusted Silver workforce layer.",
+        problemStatement: "HR reporting relied on manual SQL exports and Excel cleanup, creating a 48-hour turnaround. The dataset contained five duplicate employee IDs and eighteen invalid salaries, making a governed transformation layer necessary.",
         objectives: [
-          "Guarantee 60fps fluid animations during complex multi-column card drags.",
-          "Enable offline edits with zero-conflict automatic sync upon reconnection.",
-          "Render live multiplayer cursors with under 30ms peer-to-peer latency.",
-          "Support keyboard-first workflows with a Cmd+K command palette."
+          "Extract employee records incrementally from Azure SQL.",
+          "Land source data in a Fabric Bronze layer.",
+          "Apply cleaning and enrichment through a Notebook.",
+          "Quarantine invalid or null records instead of silently losing them.",
+          "Remove duplicate employee records.",
+          "Persist a reconciled silver_employees dataset.",
+          "Account for every record entering the Lakehouse."
         ],
-        targetAudience: "Agile software teams, product designers, and remote squads requiring rapid, frictionless task coordination."
+        targetAudience: "HR reporting teams, workforce analysts, data engineers and technology-consulting stakeholders.",
+        overview: "An incremental Bronze-to-Silver workforce data pipeline with explicit data-quality accounting.",
+        technologyUsed: ["Microsoft Fabric", "Azure SQL", "Lakehouse", "Copy Activity", "Notebook", "PySpark", "Bronze", "Silver"],
+        projectScope: "Incremental extraction, Bronze persistence, validation, quarantine, deduplication, enrichment and Silver reconciliation.",
+        solution: "Use Copy Activity for source extraction and a PySpark Notebook for deterministic cleaning, filtering, duplicate removal and Silver persistence.",
+        challenges: [
+          "48-hour manual reporting cycle",
+          "Duplicate employee IDs",
+          "Invalid salaries",
+          "Need for controlled quarantine",
+          "Need to reconcile Bronze and Silver counts"
+        ]
       },
 
       methodology: {
-        architectureOverview: "FlowBoard utilizes Conflict-free Replicated Data Types (CRDTs) powered by Yjs. Updates are saved locally to IndexedDB immediately and broadcast peer-to-peer via WebRTC and fallback WebSockets.",
+        architectureOverview: "Azure SQL feeds a Fabric Copy Activity, which lands incremental records in Bronze. A Notebook reads Bronze and applies validation, range filtering, quarantine, deduplication and enrichment before writing silver_employees.",
         technicalDecisions: [
           {
-            decision: "Yjs CRDTs over Central Lock Server",
-            rationale: "CRDTs mathematically resolve concurrent conflicting edits locally without requiring server-side locking or rollback dialogs."
+            decision: "Separate Bronze ingestion from Silver curation",
+            rationale: "The source copy remains available for traceability while transformation logic can be changed independently."
           },
           {
-            decision: "Virtual scrolling for large lists",
-            rationale: "Enabled boards with over 5,000 tasks to render in under 100ms with constant low memory usage."
+            decision: "Quarantine invalid records",
+            rationale: "Invalid data is isolated and counted rather than silently discarded or allowed to contaminate the trusted Silver layer."
+          },
+          {
+            decision: "Reconcile record counts",
+            rationale: "Bronze 332, Silver 307, Quarantine 20 and 5 duplicates dropped provide an explicit accounting of the transformation."
           }
         ],
-        securityAndReliability: "End-to-end encryption across WebRTC data channels ensures workspace data is never readable in transit."
+        securityAndReliability: "The Bronze layer preserves the source landing state, while Silver contains validated records. Quarantine provides a controlled location for invalid data and count reconciliation provides operational transparency."
       },
 
       steps: [
         {
           stepNumber: 1,
-          phase: "Phase 1: State Architecture",
-          title: "CRDT Model & Local IndexedDB Persistence",
-          description: "Structured Yjs shared types for boards, columns, and cards. Configured local persistence with y-indexeddb.",
-          deliverables: ["Yjs data schemas", "Local offline storage layer"],
-          tools: ["Yjs", "IndexedDB", "TypeScript"]
+          phase: "Phase 1: Source Ingestion",
+          title: "Extract Incremental Employee Records",
+          description: "Configure Copy Activity to move employee records from Azure SQL into the Fabric Bronze layer.",
+          deliverables: ["Azure SQL source", "Bronze table", "Incremental ingestion"],
+          tools: ["Microsoft Fabric", "Azure SQL", "Copy Activity"]
         },
         {
           stepNumber: 2,
-          phase: "Phase 2: Drag & Drop UI",
-          title: "Accessible 60fps Drag-and-Drop Interaction",
-          description: "Engineered high-performance physics-based drag-and-drop using `@dnd-kit` with keyboard accessibility and collision detection.",
-          deliverables: ["Kanban column components", "Card reordering logic"],
-          tools: ["React", "@dnd-kit", "Tailwind CSS"]
+          phase: "Phase 2: Bronze Inspection",
+          title: "Read and Profile Bronze Data",
+          description: "Use a Notebook to inspect the Bronze dataset and establish the transformation and validation rules.",
+          deliverables: ["Bronze DataFrame", "Validation rules"],
+          tools: ["PySpark", "Fabric Notebook"]
         },
         {
           stepNumber: 3,
-          phase: "Phase 3: Realtime Multiplayer",
-          title: "WebRTC Peer Discovery & Presence Tracking",
-          description: "Implemented live multiplayer cursor positions, avatar halo presence indicators, and ephemeral typing indicators.",
-          deliverables: ["WebRTC signaling server", "Multiplayer cursor visualizer"],
-          tools: ["WebRTC", "WebSockets", "Zustand"]
+          phase: "Phase 3: Data Quality",
+          title: "Quarantine Invalid Records",
+          description: "Filter invalid or null records and preserve them in a quarantine output so the data-quality impact remains visible.",
+          deliverables: ["Quarantine dataset", "Invalid-record handling"],
+          tools: ["PySpark"]
         },
         {
           stepNumber: 4,
-          phase: "Phase 4: Command Palette & Polish",
-          title: "Cmd+K Command Palette & Export Utilities",
-          description: "Added fuzzy-search command palette for keyboard shortcuts, task filtering, and CSV/PDF export engines.",
-          deliverables: ["Cmd+K command center", "PDF/CSV exporters", "Unit tests"],
-          tools: ["cmdk", "Vitest", "Playwright"]
+          phase: "Phase 4: Deduplication",
+          title: "Remove Duplicate Employee IDs",
+          description: "Deduplicate employee records so the Silver layer produces one trusted record per employee.",
+          deliverables: ["Deduplicated employee dataset"],
+          tools: ["PySpark"]
+        },
+        {
+          stepNumber: 5,
+          phase: "Phase 5: Silver Publishing",
+          title: "Write and Reconcile silver_employees",
+          description: "Persist the trusted Silver table and reconcile Bronze, Silver, Quarantine and duplicate counts.",
+          deliverables: ["silver_employees", "Count reconciliation"],
+          tools: ["Fabric Lakehouse", "Delta Lake"]
         }
       ],
 
       gallery: [
-        {
-          url: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=900&auto=format&fit=crop&q=80",
-          caption: "Live Kanban Board View",
-          description: "Fluid card drag-and-drop with custom tags and priority flags."
-        },
-        {
-          url: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=900&auto=format&fit=crop&q=80",
-          caption: "Multiplayer Presence & Live Cursors",
-          description: "Real-time collaborative editing with peer tracking."
-        }
+        { url: asset(ASSET_FOLDERS.case03, "Image 1 - Title Image.png"), caption: "Workforce Intelligence", description: "Azure SQL to Lakehouse case study." },
+        { url: asset(ASSET_FOLDERS.case03, "Image 2 - Target Tables Str.png"), caption: "Target Tables", description: "Target structure for workforce processing." },
+        { url: asset(ASSET_FOLDERS.case03, "Image 3 - Copy Data from SQL Database_Source.png"), caption: "Azure SQL Source", description: "Source extraction configuration." },
+        { url: asset(ASSET_FOLDERS.case03, "Image 4 - Pipeline Design.png"), caption: "Pipeline Design", description: "Bronze-to-Silver pipeline orchestration." },
+        { url: asset(ASSET_FOLDERS.case03, "Image 5 - Copy Data from SQL Database_Destination.png"), caption: "Bronze Destination", description: "Copy Activity destination." },
+        { url: asset(ASSET_FOLDERS.case03, "Image 6 - Bronze Table.png"), caption: "Bronze Table", description: "Source data persisted in Bronze." },
+        { url: asset(ASSET_FOLDERS.case03, "Image 7 - Notbook_Read Data from Bronze Table.png"), caption: "Notebook Read", description: "Reading Bronze into PySpark." },
+        { url: asset(ASSET_FOLDERS.case03, "Image 8 - Display Bronze Table.png"), caption: "Bronze Inspection", description: "Bronze dataset inspection." },
+        { url: asset(ASSET_FOLDERS.case03, "Image 9 - Qurantine Logic.png"), caption: "Quarantine Logic", description: "Controlled invalid-record handling." },
+        { url: asset(ASSET_FOLDERS.case03, "Image 10 - Filter Invalid or Null Records.png"), caption: "Invalid / Null Filtering", description: "Data-quality filtering." },
+        { url: asset(ASSET_FOLDERS.case03, "Image 11 - Filter Rows as per required range.png"), caption: "Range Validation", description: "Filtering records according to required ranges." },
+        { url: asset(ASSET_FOLDERS.case03, "Image 12 - Drop Duplicated Records.png"), caption: "Deduplication", description: "Duplicate employee records removed." },
+        { url: asset(ASSET_FOLDERS.case03, "Image 13 - Disply all records.png"), caption: "Transformed Records", description: "Post-transformation record view." },
+        { url: asset(ASSET_FOLDERS.case03, "Image 14 - Write as Silver Table.png"), caption: "Write Silver Table", description: "Publishing the trusted Silver output." },
+        { url: asset(ASSET_FOLDERS.case03, "Image 15 - View Silver Quarantine Table.png"), caption: "Silver Quarantine", description: "Quarantined records." },
+        { url: asset(ASSET_FOLDERS.case03, "Image 16 - View Silver Table.png"), caption: "Silver Table", description: "Trusted workforce output." },
+        { url: asset(ASSET_FOLDERS.case03, "Image 17 - View Silver Table-2.png"), caption: "Silver Table Detail", description: "Additional Silver table view." }
       ],
 
       results: [
-        { metric: "60 FPS", label: "Animation Performance" },
-        { metric: "100%", label: "Offline Availability" },
-        { metric: "< 25ms", label: "P2P Sync Latency" },
-        { metric: "0", label: "Merge Conflicts on Reconnect" }
+        { metric: "332", label: "Bronze Records" },
+        { metric: "307", label: "Silver Records" },
+        { metric: "20", label: "Quarantined Records" },
+        { metric: "5", label: "Duplicates Dropped" }
       ]
     },
 
+    // --------------------------------------------------------------
+    // CASE STUDY 04
+    // --------------------------------------------------------------
+
     {
-      id: "hyperpay",
-      title: "HyperPay - Microservice Payment Gateway Engine",
-      tagline: "High-throughput, idempotent payment processing engine built for global SaaS platforms.",
-      category: "fullstack",
-      featured: false,
-      role: "Backend Systems Engineer",
-      timeline: "3 Months (Q4 2023)",
-      image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&auto=format&fit=crop&q=80",
-      demoUrl: "https://example.com/demo/hyperpay",
-      githubUrl: "https://github.com/yourusername/hyperpay-engine",
-      metrics: "99.999% uptime with automated circuit breaker failovers",
-      tags: ["Go", "Node.js", "PostgreSQL", "Redis", "Docker", "Stripe SDK"],
+      id: "financial-data-transformation-pyspark-delta",
+      title: "Financial Data Transformation using PySpark & Delta Lake",
+      tagline: "Optimising enterprise financial processing with broadcast joins, Delta schema enforcement and Time Travel recovery.",
+      category: "microsoft-fabric",
+      featured: true,
+      role: "Data Engineer",
+      timeline: "Microsoft Fabric Case Study",
+      image: asset(ASSET_FOLDERS.case04, "Image 1 - Title Image.png"),
+      demoUrl: "",
+      githubUrl: "https://github.com/shubhampandey11aug/my-portfolio/tree/main/assets/Case%20Study%2004%20Financial%20Data%20Transformation%20using%20Pyspark%20and%20Delta%20Lake",
+      metrics: "2+ hours → few-minute target processing pattern",
+      tags: ["Microsoft Fabric", "PySpark", "Delta Lake", "Broadcast Join", "Schema Enforcement", "Time Travel", "SCD Type 2"],
+
+      details: {
+        overview: "Global Corp's accounts-receivable processing was slow and vulnerable to malformed data and unrecoverable dashboard errors.",
+        keyFeatures: ["Broadcast join optimisation", "Physical-plan validation", "Delta schema enforcement", "Bad-data isolation", "Time Travel recovery", "SCD Type 2 concepts"],
+        technicalChallenge: "Tens of millions of transactions were processed with severe performance degradation and malformed currency data.",
+        solution: "Re-engineer PySpark joins, enforce Delta schemas, isolate bad records and use Delta Time Travel to inspect and restore prior versions."
+      },
 
       writeup: {
-        executiveSummary: "HyperPay is a fault-tolerant payment gateway microservice handling multi-currency subscriptions, automated dunning, intelligent failover routing, and tax calculations.",
-        problemStatement: "Duplicate payment charges and third-party gateway downtime cost e-commerce platforms millions in refunds and lost conversions. A distributed, idempotent billing service was essential.",
+        executiveSummary: "This Microsoft Fabric case study focuses on performance and reliability for enterprise financial processing. The solution combines PySpark broadcast joins with Delta Lake schema enforcement and Time Travel to reduce processing overhead and make data corruption recoverable.",
+        problemStatement: "The critical accounts-receivable pipeline took over two hours, merged tens of millions of transactions with the customer master and suffered data corruption when alphabetical characters reached numeric currency fields. The platform also lacked a reliable rollback mechanism.",
         objectives: [
-          "Eliminate double-charging through strict idempotency locks.",
-          "Provide automatic failover across multiple payment providers (Stripe, Adyen, PayPal).",
-          "Process ledger transactions adhering to double-entry accounting principles."
+          "Optimise PySpark joins using broadcast strategies where appropriate.",
+          "Inspect physical execution plans before promoting the optimisation.",
+          "Enforce Delta Lake schemas at ingestion.",
+          "Identify and isolate malformed financial data.",
+          "Use Delta Time Travel to inspect historical table versions.",
+          "Demonstrate recovery by restoring a previous valid version."
         ],
-        targetAudience: "FinTech companies, global SaaS enterprises, and high-volume marketplace platforms."
+        targetAudience: "Finance data teams, data engineers, financial controllers and reporting stakeholders.",
+        overview: "A performance-and-reliability focused financial transformation pipeline.",
+        technologyUsed: ["Microsoft Fabric", "PySpark", "Delta Lake", "Broadcast Join", "Schema Enforcement", "Time Travel", "SCD Type 2"],
+        projectScope: "Transaction/customer joins, performance optimisation, malformed-data handling and historical recovery.",
+        solution: "Use broadcast joins to reduce shuffle for suitable dimension data, enforce schemas, isolate bad records and use Delta history for recovery.",
+        challenges: [
+          "Large transaction volumes",
+          "Join performance degradation",
+          "Malformed currency fields",
+          "Lack of rollback capability",
+          "Need to validate optimisation through execution plans"
+        ]
       },
 
       methodology: {
-        architectureOverview: "Built with Go and Node.js microservices communicating via asynchronous RabbitMQ event buses. PostgreSQL transactions handle immutable ledger accounts with Redis distributed mutex locks.",
+        architectureOverview: "PySpark processes transaction and customer data in Microsoft Fabric. The join strategy is validated through the physical plan. Delta Lake provides schema enforcement, transactional history and Time Travel for historical inspection and recovery.",
         technicalDecisions: [
           {
-            decision: "PostgreSQL Two-Phase Commit with Double-Entry Ledger",
-            rationale: "Guaranteed absolute financial accounting integrity where total debits always equal credits."
+            decision: "Broadcast the appropriate smaller table",
+            rationale: "Broadcasting avoids unnecessary network shuffle when the dimension-side dataset is suitable for broadcast."
           },
           {
-            decision: "Redis Redlock Distributed Mutex",
-            rationale: "Prevented race conditions on simultaneous identical charge API requests."
+            decision: "Enforce Delta schema",
+            rationale: "Malformed values should be rejected before corrupt financial data reaches trusted analytical tables."
+          },
+          {
+            decision: "Use Time Travel for recovery",
+            rationale: "Delta transaction history provides a precise mechanism to inspect and restore a prior table version."
           }
         ],
-        securityAndReliability: "Zero-trust tokenization; PCI-DSS compliance scope minimized by using hosted token vaults."
+        securityAndReliability: "Schema enforcement prevents malformed data from entering trusted tables, while Delta transaction history and Time Travel make prior states auditable and recoverable."
       },
 
       steps: [
         {
           stepNumber: 1,
-          phase: "Phase 1: Ledger & API Design",
-          title: "Double-Entry Ledger & Idempotency Specifications",
-          description: "Designed the financial database schema, idempotency key middleware, and webhook verification contracts.",
-          deliverables: ["Ledger schema", "API contract documentation"],
-          tools: ["PostgreSQL", "Go", "OpenAPI"]
+          phase: "Phase 1: Data Foundation",
+          title: "Create Financial Tables and Schema",
+          description: "Create the transaction structures and explicit schemas required for controlled financial processing.",
+          deliverables: ["Transaction schema", "Customer data structures"],
+          tools: ["Microsoft Fabric", "PySpark", "Delta Lake"]
         },
         {
           stepNumber: 2,
-          phase: "Phase 2: Provider Integration",
-          title: "Multi-Gateway Adapter & Smart Routing",
-          description: "Created standardized gateway abstraction interfaces for Stripe, Adyen, and PayPal with automatic fallback on gateway 5xx errors.",
-          deliverables: ["Gateway adapter interfaces", "Circuit breaker rules"],
-          tools: ["Stripe API", "Go", "Resilience4j concepts"]
+          phase: "Phase 2: Performance",
+          title: "Inspect the Physical Plan",
+          description: "Review the execution plan and identify the join strategy before applying broadcast optimisation.",
+          deliverables: ["Physical plan review", "Join strategy"],
+          tools: ["PySpark", "Spark Execution Plan"]
         },
         {
           stepNumber: 3,
-          phase: "Phase 3: Webhook & Retry Engine",
-          title: "Reliable Event Dispatcher & Dunning Automation",
-          description: "Built exponential-backoff retry queues for webhook delivery to client applications.",
-          deliverables: ["RabbitMQ worker cluster", "Dunning email triggers"],
-          tools: ["RabbitMQ", "Node.js", "Redis"]
+          phase: "Phase 3: Optimisation",
+          title: "Implement Broadcast Join",
+          description: "Apply broadcast join logic to the suitable smaller dataset to reduce network shuffle and improve processing performance.",
+          deliverables: ["Broadcast join", "Optimised transformation"],
+          tools: ["PySpark"]
         },
         {
           stepNumber: 4,
-          phase: "Phase 4: Load Testing & Security Audit",
-          title: "Chaos Engineering & PCI Compliance Verification",
-          description: "Conducted simulated gateway outages and high-load stress testing (10,000 req/sec) using k6.",
-          deliverables: ["k6 load test scripts", "Security compliance report"],
-          tools: ["k6", "Docker", "Grafana"]
+          phase: "Phase 4: Data Quality",
+          title: "Validate and Isolate Bad Financial Data",
+          description: "Use strict Delta schema expectations and separate malformed records for inspection rather than allowing them to contaminate trusted outputs.",
+          deliverables: ["Clean data", "Bad-data output"],
+          tools: ["Delta Lake", "PySpark"]
+        },
+        {
+          stepNumber: 5,
+          phase: "Phase 5: Recovery",
+          title: "Inspect History and Restore a Prior Version",
+          description: "Use Delta Time Travel to describe table history, inspect a previous version and demonstrate restoration of the prior valid state.",
+          deliverables: ["Table history", "Previous-version inspection", "Restore operation"],
+          tools: ["Delta Lake", "Time Travel"]
         }
       ],
 
       gallery: [
-        {
-          url: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=900&auto=format&fit=crop&q=80",
-          caption: "Transaction Flow & Settlement Dashboard",
-          description: "Real-time payment volume monitoring, dispute tracking, and gateway health."
-        }
+        { url: asset(ASSET_FOLDERS.case04, "Image 1 - Title Image.png"), caption: "Financial Data Transformation", description: "PySpark optimisation and Delta Lake case study." },
+        { url: asset(ASSET_FOLDERS.case04, "Image 2 - Notebook-1_Import Libraries and Create Schema.png"), caption: "Schema Setup", description: "Notebook and schema preparation." },
+        { url: asset(ASSET_FOLDERS.case04, "Image 3 - Transaction Table View.png"), caption: "Transaction Table", description: "Financial transaction dataset." },
+        { url: asset(ASSET_FOLDERS.case04, "Image 4 - Filler Data Transaction Table.png"), caption: "Transaction Data", description: "Transaction-table preparation." },
+        { url: asset(ASSET_FOLDERS.case04, "Image 5 - View Physical Plan.png"), caption: "Physical Plan", description: "Execution-plan inspection before optimisation." },
+        { url: asset(ASSET_FOLDERS.case04, "Image 6 - Broadcast Join.png"), caption: "Broadcast Join", description: "Broadcast join implementation." },
+        { url: asset(ASSET_FOLDERS.case04, "Image 7 - Broadcast Join-1.png"), caption: "Broadcast Join Detail", description: "Optimised join execution." },
+        { url: asset(ASSET_FOLDERS.case04, "Image 8 - Test Table.png"), caption: "Test Table", description: "Test dataset for reliability checks." },
+        { url: asset(ASSET_FOLDERS.case04, "Image 9 - View Bad data Table Records.png"), caption: "Bad Data Records", description: "Malformed data inspection." },
+        { url: asset(ASSET_FOLDERS.case04, "Image 10 - Join Tables Clean and Bad data.png"), caption: "Clean vs Bad Data", description: "Data-quality separation." },
+        { url: asset(ASSET_FOLDERS.case04, "Image 11 - Time Travel-Update Records.png"), caption: "Time Travel Update", description: "Versioned Delta table update." },
+        { url: asset(ASSET_FOLDERS.case04, "Image 12 - Time Travel-View Updated Records.png"), caption: "Updated Records", description: "Post-update table state." },
+        { url: asset(ASSET_FOLDERS.case04, "Image 13 - Time Travel-Describe History.png"), caption: "Delta History", description: "Inspecting transaction history." },
+        { url: asset(ASSET_FOLDERS.case04, "Image 14 - Time Travel-View Previous Version.png"), caption: "Previous Version", description: "Inspecting an earlier table version." },
+        { url: asset(ASSET_FOLDERS.case04, "Image 15 - Time Travel-Restore Previous Version.png"), caption: "Restore Previous Version", description: "Recovering the prior valid state." }
       ],
 
       results: [
-        { metric: "99.999%", label: "Platform Uptime" },
-        { metric: "$4M+", label: "Monthly Processed Volume" },
-        { metric: "0", label: "Duplicate Billing Incidents" },
-        { metric: "18ms", label: "Average API Response Time" }
+        { metric: "2+ hrs", label: "Original Processing Time" },
+        { metric: "Broadcast", label: "Shuffle-Reduction Strategy" },
+        { metric: "Delta", label: "Transactional Reliability Layer" },
+        { metric: "Time Travel", label: "Historical Recovery" }
       ]
     },
 
+    // --------------------------------------------------------------
+    // CASE STUDY 05
+    // --------------------------------------------------------------
+
     {
-      id: "cloudvault",
-      title: "CloudVault - End-to-End Encrypted File Sharing",
-      tagline: "Zero-knowledge cryptographic storage platform with granular expiration and revokable links.",
-      category: "cloud",
-      featured: false,
-      role: "Security & Cloud Developer",
-      timeline: "2 Months (Q4 2023)",
-      image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&auto=format&fit=crop&q=80",
-      demoUrl: "https://example.com/demo/cloudvault",
-      githubUrl: "https://github.com/yourusername/cloudvault",
-      metrics: "AES-256-GCM client-side encryption before upload",
-      tags: ["TypeScript", "Web Crypto API", "AWS S3 Presigned URLs", "Next.js", "TailwindCSS"],
+      id: "unified-commerce-analytics",
+      title: "Unified Commerce Analytics",
+      tagline: "A Microsoft Fabric Bronze-Silver-Gold analytics platform transforming Azure SQL data into a Power BI-ready star schema.",
+      category: "microsoft-fabric",
+      featured: true,
+      role: "Lead Data Engineer",
+      timeline: "Microsoft Fabric Case Study",
+      image: asset(ASSET_FOLDERS.case05, "Image 1 - Title Image.png"),
+      demoUrl: "",
+      githubUrl: "https://github.com/shubhampandey11aug/my-portfolio/tree/main/assets/Case%20Study%2005%20Unified%20Commerce%20Analytics%20(Global%20Freight%20Forwarders)",
+      metrics: "Bronze → Silver → Gold → Power BI",
+      tags: ["Microsoft Fabric", "Azure SQL", "PySpark", "Lakehouse", "Delta Lake", "Star Schema", "Power BI", "Semantic Model"],
+
+      details: {
+        overview: "North Meridian Retail Group needs to modernise a normalised transactional reporting estate without disrupting operational transactions.",
+        keyFeatures: ["Bronze ingestion", "PySpark Silver curation", "Gold dimensional modelling", "Fact_Sales", "SQL Endpoint", "Power BI semantic model"],
+        technicalChallenge: "The legacy normalised reporting estate could not keep pace with growing e-commerce volume and decision-making requirements.",
+        solution: "Build a three-layer Lakehouse architecture, curate Silver tables with PySpark, create a Gold star schema and connect the Gold layer to Power BI."
+      },
 
       writeup: {
-        executiveSummary: "CloudVault enables secure, zero-knowledge sharing of sensitive files, credentials, and documents with client-side encryption and self-destructing links.",
-        problemStatement: "Traditional cloud storage providers hold encryption keys, leaving sensitive corporate documents vulnerable to server breaches or rogue employees.",
+        executiveSummary: "The Unified Commerce Analytics Platform modernises reporting for a multi-channel retail environment using Microsoft Fabric. Azure SQL and RegionMapping.csv are ingested into Bronze, transformed through PySpark into Silver, modelled into a Gold star schema and exposed to Power BI through a semantic model.",
+        problemStatement: "North Meridian Retail Group faces architectural obsolescence in a highly normalised transactional reporting estate while e-commerce volume grows. Reporting needs to become decoupled from operational transactions without touching the transaction flow.",
         objectives: [
-          "Encrypt files entirely inside the user's browser using AES-256-GCM.",
-          "Ensure servers never receive plaintext data or encryption keys.",
-          "Support large files up to 2GB via streaming encryption in Web Workers."
+          "Securely ingest Azure SQL tables and RegionMapping.csv into Bronze.",
+          "Reconcile Bronze row counts against the source.",
+          "Use PySpark to curate Silver tables.",
+          "Build a Gold dimensional model with surrogate keys and a date dimension.",
+          "Expose Fact_Sales through the SQL Endpoint.",
+          "Connect Power BI to the Gold layer for executive dashboards.",
+          "Maintain security, compliance and reliability standards at each layer."
         ],
-        targetAudience: "Security teams, lawyers, journalists, and companies sharing confidential deliverables."
+        targetAudience: "Retail leadership, Sales teams, analytics teams, data engineers and Power BI consumers.",
+        overview: "A three-layer Bronze-Silver-Gold architecture from Azure SQL extraction to Power BI.",
+        technologyUsed: ["Microsoft Fabric", "Azure SQL", "Lakehouse", "PySpark", "Delta Lake", "SQL Endpoint", "Power BI"],
+        projectScope: "Source ingestion, Bronze reconciliation, Silver curation, Gold star schema modelling and semantic-model consumption.",
+        solution: "Separate ingestion, transformation and business consumption through Bronze, Silver and Gold layers.",
+        challenges: [
+          "Legacy normalised reporting architecture",
+          "Growing e-commerce data volume",
+          "Need to avoid operational-system disruption",
+          "Need for row-level reconciliation",
+          "Need for scalable dimensional modelling"
+        ]
       },
 
       methodology: {
-        architectureOverview: "Utilizes the browser's native Web Crypto API. Encryption keys are generated locally and embedded exclusively in the URL hash fragment (which is never sent to the server). Uploads stream directly to AWS S3 using presigned URLs.",
+        architectureOverview: "Azure SQL and RegionMapping.csv land in Bronze. PySpark curates Bronze into Silver Delta tables. The Gold notebook creates customer/product surrogate keys, derives the date dimension and builds a pre-aggregated Fact_Sales model at Date–Customer–Product–Status grain. Power BI consumes Gold through a semantic model.",
         technicalDecisions: [
           {
-            decision: "URL Hash Fragment Key Storage (#key=...)",
-            rationale: "Per HTTP standards, URL hashes are processed strictly client-side and never transmitted in HTTP headers to server logs."
+            decision: "Use Bronze-Silver-Gold separation",
+            rationale: "Each layer has a clear responsibility: source preservation, governed transformation and business-ready analytical modelling."
           },
           {
-            decision: "Web Worker Stream Chunking",
-            rationale: "Prevented browser freezing during heavy AES encryption of multi-gigabyte files."
+            decision: "Build a star schema in Gold",
+            rationale: "Dimensional modelling provides a cleaner analytical contract for reporting and Power BI consumption."
+          },
+          {
+            decision: "Keep operational transactions untouched",
+            rationale: "Analytics is decoupled from the operational flow so reporting improvements do not require changes to the transactional system."
           }
         ],
-        securityAndReliability: "Passkey (WebAuthn) biometric authentication and automated S3 lifecycle deletion policies."
+        securityAndReliability: "Delivery is sequenced from foundational ingestion to domain enablement and then scale/stabilisation. Acceptance includes source-to-Bronze reconciliation and an audit query that reconciles Gold back to Bronze."
       },
 
       steps: [
         {
           stepNumber: 1,
-          phase: "Phase 1: Cryptographic Engine",
-          title: "Web Crypto API Streaming Implementation",
-          description: "Implemented chunked AES-GCM-256 encryption in dedicated Web Workers.",
-          deliverables: ["Encryption Web Worker", "Key generation module"],
-          tools: ["Web Crypto API", "TypeScript"]
+          phase: "Phase 1: Foundation",
+          title: "Ingest Azure SQL and Region Mapping",
+          description: "Securely ingest all required Azure SQL tables and RegionMapping.csv into Bronze with row-count reconciliation against source.",
+          deliverables: ["Bronze tables", "RegionMapping", "Source reconciliation"],
+          tools: ["Microsoft Fabric", "Azure SQL", "Data Pipeline"]
         },
         {
           stepNumber: 2,
-          phase: "Phase 2: Cloud Storage Pipeline",
-          title: "S3 Presigned Multi-Part Direct Uploads",
-          description: "Constructed secure backend endpoints issuing temporary AWS S3 presigned upload tokens.",
-          deliverables: ["Presigned URL generator", "Direct S3 uploader"],
-          tools: ["AWS S3", "Next.js API Routes"]
+          phase: "Phase 2: Domain Enablement",
+          title: "Transform Bronze to Silver",
+          description: "Use PySpark to enrich customers with region information, round product prices and derive sales measures from joined sales, products and orders.",
+          deliverables: ["Silver Delta tables", "Derived SalesAmount"],
+          tools: ["PySpark", "Delta Lake"]
         },
         {
           stepNumber: 3,
-          phase: "Phase 3: User Interface & Decryption",
-          title: "Secure Shareable Links & Decryption Player",
-          description: "Designed clean download page that automatically parses hash key, streams chunks, and triggers browser downloads.",
-          deliverables: ["Decryption UI", "Expiration timer countdown"],
-          tools: ["Next.js", "Tailwind CSS"]
+          phase: "Phase 3: Gold Modelling",
+          title: "Build the Dimensional Model",
+          description: "Generate surrogate keys, derive the date dimension and pre-aggregate the sales fact table at Date–Customer–Product–Status grain.",
+          deliverables: ["Customer dimension", "Product dimension", "Date dimension", "Fact_Sales"],
+          tools: ["PySpark", "Delta Lake"]
         },
         {
           stepNumber: 4,
-          phase: "Phase 4: Security Audit",
-          title: "Cryptographic Peer Review & Penetration Testing",
-          description: "Audited network payloads to mathematically confirm zero leakage of keys or plaintext data.",
-          deliverables: ["Security audit report", "Production release"],
-          tools: ["Wireshark", "OWASP ZAP"]
+          phase: "Phase 4: Consumption",
+          title: "Expose Gold to Sales and Power BI",
+          description: "Enable the Sales team to query Fact_Sales through the SQL Endpoint and connect a Power BI semantic model to Gold.",
+          deliverables: ["SQL Endpoint access", "Power BI semantic model"],
+          tools: ["Microsoft Fabric", "SQL Endpoint", "Power BI"]
+        },
+        {
+          stepNumber: 5,
+          phase: "Phase 5: Operationalisation",
+          title: "Schedule and Stabilise",
+          description: "Operationalise the complete flow with daily triggers and final reconciliation checks.",
+          deliverables: ["Daily trigger", "End-to-end validation"],
+          tools: ["Fabric Pipelines", "Power BI"]
         }
       ],
 
       gallery: [
-        {
-          url: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=900&auto=format&fit=crop&q=80",
-          caption: "Secure Drag-and-Drop Encryption Portal",
-          description: "Client-side AES-256 key generation with configurable expiry."
-        }
+        { url: asset(ASSET_FOLDERS.case05, "Image 1 - Title Image.png"), caption: "Unified Commerce Analytics", description: "Modern retail analytics architecture." },
+        { url: asset(ASSET_FOLDERS.case05, "Image 2 - Bronze-Silver-Gold architecture.png"), caption: "Bronze-Silver-Gold Architecture", description: "Three-layer Lakehouse architecture." },
+        { url: asset(ASSET_FOLDERS.case05, "Image 3 - Look Up Activity.png"), caption: "Lookup Activity", description: "Pipeline lookup configuration." },
+        { url: asset(ASSET_FOLDERS.case05, "Image 3 - For Loop Activity.png"), caption: "For Loop Activity", description: "Iterative table ingestion pattern." },
+        { url: asset(ASSET_FOLDERS.case05, "Image 4 - Activity_Pipleline settings.png"), caption: "Pipeline Settings", description: "Pipeline orchestration configuration." },
+        { url: asset(ASSET_FOLDERS.case05, "Image 5 - For Loop Activity-Copy Data.png"), caption: "Copy Data Loop", description: "Automated source-table ingestion." },
+        { url: asset(ASSET_FOLDERS.case05, "Image 6 - Broze to Silver Table.png"), caption: "Bronze to Silver", description: "PySpark curation stage." },
+        { url: asset(ASSET_FOLDERS.case05, "Image 6 - Save As Silver Table.png"), caption: "Save Silver Table", description: "Silver Delta persistence." },
+        { url: asset(ASSET_FOLDERS.case05, "Image 7 - Silver Table-View.png"), caption: "Silver View", description: "Silver-layer inspection." },
+        { url: asset(ASSET_FOLDERS.case05, "Image 8 - Silver Table.png"), caption: "Silver Table", description: "Curated analytical data." },
+        { url: asset(ASSET_FOLDERS.case05, "Image 9 - Silver Table-1.png"), caption: "Silver Table Detail", description: "Additional Silver view." },
+        { url: asset(ASSET_FOLDERS.case05, "Image 10 - Silver to Gold Table.png"), caption: "Silver to Gold", description: "Gold dimensional transformation." },
+        { url: asset(ASSET_FOLDERS.case05, "Image 11 - Gold Table.png"), caption: "Gold Table", description: "Gold analytical model." },
+        { url: asset(ASSET_FOLDERS.case05, "Image 12 - Gold Table-1.png"), caption: "Gold Table Detail", description: "Gold model view." },
+        { url: asset(ASSET_FOLDERS.case05, "Image 13 - Gold Table-2.png"), caption: "Gold Table Detail", description: "Additional Gold view." },
+        { url: asset(ASSET_FOLDERS.case05, "Image 14 - Gold Table-3.png"), caption: "Gold Table Detail", description: "Final Gold model view." }
       ],
 
       results: [
-        { metric: "100%", label: "Zero-Knowledge Guarantee" },
-        { metric: "2 GB", label: "Max File Size Supported" },
-        { metric: "AES-256", label: "Military Grade Encryption" },
-        { metric: "0", label: "Keys Stored on Server" }
+        { metric: "3", label: "Medallion Layers" },
+        { metric: "Star", label: "Gold Data Model" },
+        { metric: "Power BI", label: "Semantic Consumption" },
+        { metric: "100%", label: "Bronze Source Reconciliation Target" }
       ]
     },
 
+    // --------------------------------------------------------------
+    // CASE STUDY 06
+    // --------------------------------------------------------------
+
     {
-      id: "cliforge",
-      title: "CLI-Forge - Developer Terminal Productivity Tool",
-      tagline: "Blazing fast Rust CLI tool for scaffolding full-stack monorepos and generating typed APIs.",
-      category: "tools",
+      id: "market-risk-intelligence-feed",
+      title: "Market Risk Intelligence Feed",
+      tagline: "Automating daily FX market-data ingestion with Microsoft Fabric Warehouse, T-SQL JSON shredding and idempotent stored procedures.",
+      category: "microsoft-fabric",
       featured: false,
-      role: "Creator & Maintainer",
-      timeline: "1.5 Months (Q1 2024)",
-      image: "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=800&auto=format&fit=crop&q=80",
-      demoUrl: "https://example.com/demo/cliforge",
-      githubUrl: "https://github.com/yourusername/cliforge",
-      metrics: "50k+ downloads on crates.io / npm",
-      tags: ["Rust", "CLI", "Shell", "Docker", "GraphQL", "Monorepo"],
+      role: "Data Engineer",
+      timeline: "Microsoft Fabric Case Study",
+      image: asset(ASSET_FOLDERS.case06, "Image 1 - Title Image.png"),
+      demoUrl: "",
+      githubUrl: "https://github.com/shubhampandey11aug/my-portfolio/tree/main/assets/Case%20Study%2006%20Market%20Risk%20Intelligence%20Feed",
+      metrics: "Daily FX feed with idempotent historical backfill",
+      tags: ["Microsoft Fabric", "Warehouse", "T-SQL", "OPENJSON", "Stored Procedure", "API Ingestion", "ForEach"],
+
+      details: {
+        overview: "Global Credit Corp needed a defensible daily FX-rate mechanism for mark-to-market exposure, credit limits and hedging decisions.",
+        keyFeatures: ["Parameterized Web Activity", "Frankfurter API", "OPENJSON shredding", "Idempotent stored procedure", "ForEach historical backfill"],
+        technicalChallenge: "The Risk desk was relying on static, often month-outdated conversion factors.",
+        solution: "A warehouse-native Fabric pipeline calls the FX API for a parameterised date, shreds JSON with OPENJSON and uses an idempotent stored procedure so repeated runs do not duplicate the same date."
+      },
 
       writeup: {
-        executiveSummary: "CLI-Forge is an open-source terminal utility compiled to native static binaries that scaffolds production-ready full-stack applications and auto-generates TypeScript types from SQL schemas in seconds.",
-        problemStatement: "Setting up modern developer toolchains (linters, formatters, Docker compose databases, type generators) is tedious and error-prone.",
+        executiveSummary: "Global Credit Corp requires a reliable daily exchange-rate mechanism for international exposure reporting. The project implements a warehouse-native Microsoft Fabric ingestion pattern combining API calls, T-SQL JSON parsing, idempotent stored procedures and historical backfill.",
+        problemStatement: "The absence of a reliable daily FX feed left Risk Management with a blind spot around currency volatility. Credit-limit and hedging decisions were being made using static conversion factors.",
         objectives: [
-          "Scaffold a complete full-stack environment in under 5 seconds.",
-          "Zero runtime dependencies (compiled single binary in Rust).",
-          "Cross-platform support for macOS, Linux, and Windows."
+          "Call the FX API for a parameterised date.",
+          "Parse nested JSON responses into relational rows using OPENJSON.",
+          "Use a stored procedure to make repeated runs idempotent.",
+          "Support historical backfill using a ForEach loop.",
+          "Create a warehouse-native and auditable FX ingestion process."
         ],
-        targetAudience: "Full-stack engineers, backend developers, and software architecture leads."
+        targetAudience: "Risk management, treasury, finance analytics, data engineering and market-data consumers.",
+        overview: "Warehouse-native API ingestion for a daily FX-rate intelligence feed.",
+        technologyUsed: ["Microsoft Fabric Warehouse", "T-SQL", "OPENJSON", "Stored Procedures", "Web Activity", "ForEach"],
+        projectScope: "Schema creation, table design, API ingestion, JSON shredding, upsert/idempotency and historical backfill.",
+        solution: "Parameterise the requested date, call the external FX service, parse the JSON response in T-SQL and upsert the resulting rates through a stored procedure.",
+        challenges: [
+          "No reliable daily FX mechanism",
+          "Nested JSON response parsing",
+          "Need for repeatable same-date execution",
+          "Historical backfill requirements"
+        ]
       },
 
       methodology: {
-        architectureOverview: "Written in Rust using `clap` for CLI argument parsing, `dialoguer` for interactive terminal menus, and `tera` for template rendering.",
+        architectureOverview: "A Fabric Web Activity calls the FX service for a selected date. The response is parsed with T-SQL OPENJSON into warehouse tables. A stored procedure performs the idempotent upsert, while a ForEach loop supports historical dates.",
         technicalDecisions: [
           {
-            decision: "Rust over Node.js for CLI executable",
-            rationale: "Instant startup (< 5ms) and no requirement for the end-user to have Node or Python pre-installed."
+            decision: "Use OPENJSON for warehouse-native parsing",
+            rationale: "The nested API response can be transformed directly inside T-SQL without requiring a separate external processing layer."
+          },
+          {
+            decision: "Use an idempotent stored procedure",
+            rationale: "Running the same date more than once should result in one logical set of rates rather than duplicates."
+          },
+          {
+            decision: "Use ForEach for historical backfill",
+            rationale: "The same parameterised ingestion pattern can be reused across a sequence of historical dates."
           }
         ],
-        securityAndReliability: "Automated multi-target cross-compilation pipeline with cryptographic SHA256 checksums on all release assets."
+        securityAndReliability: "Idempotent stored-procedure logic provides repeatable execution, while parameterised dates and controlled warehouse tables make the feed auditable and backfillable."
       },
 
       steps: [
         {
           stepNumber: 1,
-          phase: "Phase 1: CLI Core & Interactive Prompts",
-          title: "Terminal UI & Template Engine Setup",
-          description: "Engineered interactive fuzzy-search prompts and dynamic Jinja/Tera templating engine.",
-          deliverables: ["Rust CLI core", "Interactive menu system"],
-          tools: ["Rust", "clap", "dialoguer", "tera"]
+          phase: "Phase 1: Warehouse Foundation",
+          title: "Create Schema and FX Tables",
+          description: "Create the warehouse schema and target table required for storing the daily FX rates.",
+          deliverables: ["Warehouse schema", "FX table"],
+          tools: ["Microsoft Fabric Warehouse", "T-SQL"]
         },
         {
           stepNumber: 2,
-          phase: "Phase 2: Database Schema Introspection",
-          title: "SQL Parser & Type Generator",
-          description: "Wrote SQL schema parser that automatically generates TypeScript types and Prisma schemas.",
-          deliverables: ["Type generator engine", "Docker Compose templates"],
-          tools: ["Rust", "sqlparser-rs"]
+          phase: "Phase 2: API Ingestion",
+          title: "Call the FX API",
+          description: "Configure a Web Activity to call Frankfurter using a parameterised date.",
+          deliverables: ["Web Activity", "Date parameter"],
+          tools: ["Fabric Pipeline", "Web Activity"]
         },
         {
           stepNumber: 3,
-          phase: "Phase 3: CI/CD & Cross-Compilation",
-          title: "Automated Cross-Platform Releases",
-          description: "Set up GitHub Actions to compile native binaries for x86_64 and ARM64 architectures.",
-          deliverables: ["Cross-compilation pipeline", "Homebrew tap & npm wrapper"],
-          tools: ["GitHub Actions", "cross-rs", "Homebrew"]
+          phase: "Phase 3: JSON Transformation",
+          title: "Shred the API Response",
+          description: "Use OPENJSON to transform the nested response into relational records.",
+          deliverables: ["JSON parsing logic", "Relational rows"],
+          tools: ["T-SQL", "OPENJSON"]
+        },
+        {
+          stepNumber: 4,
+          phase: "Phase 4: Idempotency",
+          title: "Implement Stored Procedure Upsert",
+          description: "Use a stored procedure to ensure repeated ingestion for the same date does not create duplicate logical records.",
+          deliverables: ["Stored procedure", "Idempotent write"],
+          tools: ["T-SQL", "Fabric Warehouse"]
+        },
+        {
+          stepNumber: 5,
+          phase: "Phase 5: Historical Backfill",
+          title: "Run Date-Based Backfill",
+          description: "Use a ForEach pattern to execute the same ingestion process across historical dates.",
+          deliverables: ["Historical FX data", "Backfill loop"],
+          tools: ["ForEach", "Fabric Pipeline"]
         }
       ],
 
       gallery: [
-        {
-          url: "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=900&auto=format&fit=crop&q=80",
-          caption: "Terminal Interactive Scaffold Menu",
-          description: "Interactive fuzzy prompts with colorized terminal output."
-        }
+        { url: asset(ASSET_FOLDERS.case06, "Image 1 - Title Image.png"), caption: "Market Risk Intelligence Feed", description: "Daily FX ingestion case study." },
+        { url: asset(ASSET_FOLDERS.case06, "Image 2 - Create Schema.png"), caption: "Create Schema", description: "Warehouse schema setup." },
+        { url: asset(ASSET_FOLDERS.case06, "Image 3 - Create Table.png"), caption: "Create FX Table", description: "Target table creation." },
+        { url: asset(ASSET_FOLDERS.case06, "Image 4 - JSON Parsing.png"), caption: "JSON Parsing", description: "OPENJSON transformation." },
+        { url: asset(ASSET_FOLDERS.case06, "Image 5 - Create Stored Procedure.png"), caption: "Stored Procedure", description: "Idempotent ingestion logic." },
+        { url: asset(ASSET_FOLDERS.case06, "Image 6 - Data Pipeline.png"), caption: "Data Pipeline", description: "End-to-end API ingestion." },
+        { url: asset(ASSET_FOLDERS.case06, "Image 7 - Data Pipeline-SP.png"), caption: "Pipeline + Stored Procedure", description: "Procedure-integrated pipeline." },
+        { url: asset(ASSET_FOLDERS.case06, "Image 8 - Data Pipeline-Settings.png"), caption: "Pipeline Settings", description: "Runtime configuration." },
+        { url: asset(ASSET_FOLDERS.case06, "Image 9 - Data Pipeline-Run.png"), caption: "Pipeline Run", description: "Execution result." },
+        { url: asset(ASSET_FOLDERS.case06, "Image 10 - Alter Table.png"), caption: "Alter Table", description: "Table evolution." },
+        { url: asset(ASSET_FOLDERS.case06, "Image 10 - Alter Table-View.png"), caption: "Alter Table View", description: "Updated table structure." },
+        { url: asset(ASSET_FOLDERS.case06, "Image 10 - Alter Stored Procedure-Idempotent.png"), caption: "Idempotent Procedure", description: "Final repeat-safe procedure logic." }
       ],
 
       results: [
-        { metric: "50,000+", label: "Community Downloads" },
-        { metric: "< 5ms", label: "CLI Startup Time" },
-        { metric: "100%", label: "Native Rust Static Binary" },
-        { metric: "4.9/5", label: "Community Rating" }
+        { metric: "Daily", label: "FX Intelligence Feed" },
+        { metric: "Idempotent", label: "Same-Date Processing" },
+        { metric: "OPENJSON", label: "Native JSON Shredding" },
+        { metric: "ForEach", label: "Historical Backfill Pattern" }
+      ]
+    },
+
+    // --------------------------------------------------------------
+    // CASE STUDY 07
+    // --------------------------------------------------------------
+
+    {
+      id: "accountability-gap",
+      title: "The Accountability Gap",
+      tagline: "Regulatory data governance with defensive T-SQL, recursive hierarchy resolution and SCD Type 2 historical accountability.",
+      category: "microsoft-fabric",
+      featured: true,
+      role: "Data Engineer",
+      timeline: "Microsoft Fabric Case Study",
+      image: asset(ASSET_FOLDERS.case07, "Image 1 - Title Image.png"),
+      demoUrl: "",
+      githubUrl: "https://github.com/shubhampandey11aug/my-portfolio/tree/main/assets/Case%20Study%2007%20The%20Accountability%20Gap%20.Regulatory%20Data%20Governance%20%26%20Historical%20Accountability",
+      metrics: "Five-level accountability chain + SCD Type 2 history",
+      tags: ["Microsoft Fabric", "T-SQL", "Data Governance", "Recursive Hierarchy", "SCD Type 2", "TRY_CAST", "TRY_CONVERT"],
+
+      details: {
+        overview: "Veritas Global needs a regulatory attribution chain that can explain responsibility for flagged positions across a five-level Relationship Manager hierarchy.",
+        keyFeatures: ["Governed Gold view", "Defensive casting", "RM performance leaderboard", "Five-level hierarchy flattener", "SCD Type 2 merge"],
+        technicalChallenge: "Dirty staging data, hierarchical relationships and the need to preserve future personnel changes create different governance challenges.",
+        solution: "A governed view absorbs dirty values, a recursive hierarchy query exposes the five-level chain and an SCD Type 2 structure preserves future roster states."
+      },
+
+      writeup: {
+        executiveSummary: "Veritas Global manages a $42B institutional asset portfolio and requires complete accountability chains for flagged positions. The project uses Microsoft Fabric T-SQL to create a governed data layer, resolve a five-level RM hierarchy and evolve the roster into an SCD Type 2 historical model.",
+        problemStatement: "The firm needs defensible regulatory attribution while operating with dirty source values, a five-level reporting hierarchy and a roster that historically overwrites personnel states.",
+        objectives: [
+          "Create GOLD.CLEAN_POSITIONS as a governed view over staging.",
+          "Handle malformed values safely with TRY_CONVERT and TRY_CAST.",
+          "Build an RM performance leaderboard with peer-based ranking.",
+          "Resolve the complete five-level accountability chain in one query.",
+          "Evolve the RM roster to SCD Type 2.",
+          "Preserve future personnel changes without overwriting prior active records.",
+          "Be explicit about the boundary: SCD Type 2 cannot reconstruct history overwritten before the solution goes live."
+        ],
+        targetAudience: "Regulatory reporting, compliance, asset-management operations, data governance and audit teams.",
+        overview: "A defensive T-SQL architecture for regulatory attribution and historical accountability.",
+        technologyUsed: ["Microsoft Fabric", "Warehouse", "T-SQL", "Governed Views", "Recursive Hierarchy", "SCD Type 2"],
+        projectScope: "Governed position view, performance ranking, hierarchy resolution and historical RM roster tracking.",
+        solution: "Use a governed view to absorb dirty values, a recursive query for accountability-chain resolution and an atomic SCD Type 2 sync for roster changes.",
+        challenges: [
+          "Malformed source values",
+          "Five-level reporting hierarchy",
+          "Regulatory completeness requirements",
+          "Historical personnel-state tracking",
+          "Pre-existing overwritten history cannot be reconstructed"
+        ]
+      },
+
+      methodology: {
+        architectureOverview: "The governed Gold view sits over staging positions and applies defensive casting and RM joins. A recursive query resolves Analyst-to-Managing-Partner accountability. The Relationship Manager table is evolved into SCD Type 2 and incoming roster changes close the prior active record and create a new active state.",
+        technicalDecisions: [
+          {
+            decision: "Use TRY_CAST and TRY_CONVERT",
+            rationale: "Malformed values become controlled NULL or sentinel values instead of failing the complete query or batch."
+          },
+          {
+            decision: "Resolve hierarchy recursively",
+            rationale: "The five-level chain is hierarchical and is more naturally resolved through a recursive query than repeated fixed joins."
+          },
+          {
+            decision: "Use SCD Type 2",
+            rationale: "Future roster changes must be preserved as historical states rather than overwriting the prior record."
+          }
+        ],
+        securityAndReliability: "Governed views isolate consumers from dirty staging data, defensive conversion prevents batch failure, and SCD Type 2 preserves every roster change from implementation onward. The design explicitly does not claim to reconstruct history overwritten before deployment."
+      },
+
+      steps: [
+        {
+          stepNumber: 1,
+          phase: "Phase 1: Defensive Data Layer",
+          title: "Create the Governed Gold View",
+          description: "Build GOLD.CLEAN_POSITIONS over staging, applying defensive casting, RM joins and exposure classification.",
+          deliverables: ["Governed view", "Defensive conversions", "Exposure classification"],
+          tools: ["Microsoft Fabric Warehouse", "T-SQL"]
+        },
+        {
+          stepNumber: 2,
+          phase: "Phase 2: Performance Governance",
+          title: "Build RM Performance Leaderboard",
+          description: "Rank Relationship Managers against peers at the same title and count only positions with full regulatory closure.",
+          deliverables: ["Performance ranking", "Peer-based rank"],
+          tools: ["T-SQL"]
+        },
+        {
+          stepNumber: 3,
+          phase: "Phase 3: Hierarchy Resolution",
+          title: "Flatten the Five-Level Accountability Chain",
+          description: "Resolve every RM into a complete Analyst-to-Managing-Partner chain and return the hierarchy depth and accountability chain.",
+          deliverables: ["Hierarchy depth", "Accountability chain"],
+          tools: ["Recursive T-SQL"]
+        },
+        {
+          stepNumber: 4,
+          phase: "Phase 4: Historical Governance",
+          title: "Implement SCD Type 2",
+          description: "Backfill current active states and process incoming roster changes by closing the prior record and creating a new active record.",
+          deliverables: ["SCD Type 2 table", "Atomic merge/sync"],
+          tools: ["T-SQL", "SCD Type 2"]
+        }
+      ],
+
+      gallery: [
+        { url: asset(ASSET_FOLDERS.case07, "Image 1 - Title Image.png"), caption: "The Accountability Gap", description: "Regulatory data governance case study." },
+        { url: asset(ASSET_FOLDERS.case07, "Image 2 - Create Schema.png"), caption: "Create Schema", description: "Warehouse schema setup." },
+        { url: asset(ASSET_FOLDERS.case07, "Image 3 - Copy Data to Warehouse.png"), caption: "Copy Data to Warehouse", description: "Warehouse ingestion." },
+        { url: asset(ASSET_FOLDERS.case07, "Image 4 - Governed Gold View.png"), caption: "Governed Gold View", description: "Defensive governed view." },
+        { url: asset(ASSET_FOLDERS.case07, "Image 5 - RM performance leaderboard.png"), caption: "RM Performance Leaderboard", description: "Relationship Manager performance ranking." },
+        { url: asset(ASSET_FOLDERS.case07, "Image 6 - RM Rank.png"), caption: "RM Rank", description: "Peer-based ranking output." },
+        { url: asset(ASSET_FOLDERS.case07, "Image 7 - Flatten the five-level hierarchy.png"), caption: "Five-Level Hierarchy", description: "Accountability-chain resolution." },
+        { url: asset(ASSET_FOLDERS.case07, "Image 8 - hierarchy level.png"), caption: "Hierarchy Level", description: "Hierarchy-depth output." },
+        { url: asset(ASSET_FOLDERS.case07, "Image 9 - SCD-Type2.png"), caption: "SCD Type 2", description: "Historical tracking model." },
+        { url: asset(ASSET_FOLDERS.case07, "Image 10 - SCD-Type2_View Updated Records.png"), caption: "Updated SCD Records", description: "Historical state view." },
+        { url: asset(ASSET_FOLDERS.case07, "Image 11 - SCD-Type2_Staging Table.png"), caption: "SCD Staging", description: "Incoming roster changes." },
+        { url: asset(ASSET_FOLDERS.case07, "Image 12 - SCD-Type2_ merge.png"), caption: "SCD Merge", description: "Historical merge logic." },
+        { url: asset(ASSET_FOLDERS.case07, "Image 13 - SCD-Type2_ merge-1.png"), caption: "SCD Merge Step 1", description: "Merge implementation detail." },
+        { url: asset(ASSET_FOLDERS.case07, "Image 14 - SCD-Type2_ merge-2.png"), caption: "SCD Merge Step 2", description: "Merge implementation detail." },
+        { url: asset(ASSET_FOLDERS.case07, "Image 15 - SCD-Type2_ merge-3.png"), caption: "SCD Merge Step 3", description: "Final merge implementation detail." }
+      ],
+
+      results: [
+        { metric: "5", label: "Hierarchy Levels" },
+        { metric: "$42B", label: "Portfolio Context" },
+        { metric: "SCD 2", label: "Historical Roster Tracking" },
+        { metric: "TRY_CAST", label: "Defensive Data Handling" }
+      ]
+    },
+
+    // --------------------------------------------------------------
+    // CASE STUDY 08
+    // --------------------------------------------------------------
+
+    {
+      id: "inventory-data-migration",
+      title: "Inventory Data Migration to Microsoft Fabric Lakehouse",
+      tagline: "Automating on-premises PostgreSQL inventory migration with an On-premises Data Gateway, Fabric Pipeline and Delta Lake.",
+      category: "microsoft-fabric",
+      featured: true,
+      role: "Data Engineer",
+      timeline: "Microsoft Fabric Case Study",
+      image: asset(ASSET_FOLDERS.case08, "Image 1 - Title Image.png"),
+      demoUrl: "",
+      githubUrl: "https://github.com/shubhampandey11aug/my-portfolio/tree/main/assets/Case%20Study%2008%20Inventory%20Data%20Migration%20to%20Microsoft%20Fabric%20Lakehouse",
+      metrics: "12 warehouses | up to 22,000 transactions/day",
+      tags: ["Microsoft Fabric", "PostgreSQL", "On-premises Data Gateway", "Lakehouse", "Delta Lake", "Copy Data", "Audit Logging"],
+
+      details: {
+        overview: "RetailCore's inventory data remained on an on-premises PostgreSQL server while analytics was moving to Microsoft Fabric.",
+        keyFeatures: ["Secure gateway connectivity", "Copy Data pipeline", "Full extract and overwrite", "Delta Lake target", "Timestamped audit logging", "Supervisor-triggered execution"],
+        technicalChallenge: "Manual CSV export created 12–36 hours of latency and left no machine-generated audit trail.",
+        solution: "Connect PostgreSQL through the On-premises Data Gateway, execute a Fabric Copy Data pipeline and write the inventory snapshot to a governed Lakehouse Delta table with audit logging."
+      },
+
+      writeup: {
+        executiveSummary: "RetailCore Ltd operates twelve warehouses with inventory maintained in an on-premises PostgreSQL database. The project replaces the human integration layer with a secure Microsoft Fabric Pipeline using an On-premises Data Gateway and a governed Lakehouse destination.",
+        problemStatement: "Manual export and upload created 12–36 hours of reporting latency. With up to 22,000 inventory transactions per day, the delay could affect replenishment and allocation decisions, while the absence of machine-generated audit logs weakened lineage and governance.",
+        objectives: [
+          "Securely connect on-premises PostgreSQL to Microsoft Fabric.",
+          "Remove manual CSV export from the data-transfer workflow.",
+          "Use a Fabric Copy Data activity for inventory ingestion.",
+          "Perform a full extract and overwrite into a governed Lakehouse Delta table.",
+          "Record pipeline execution details through an audit table.",
+          "Allow the warehouse supervisor to trigger the pipeline once daily entries are confirmed complete."
+        ],
+        targetAudience: "Retail operations, warehouse supervisors, merchandising, inventory analytics and data engineering teams.",
+        overview: "A secure on-premises-to-cloud data transfer pattern for inventory analytics.",
+        technologyUsed: ["Microsoft Fabric", "PostgreSQL", "On-premises Data Gateway", "Data Pipeline", "Copy Data", "Lakehouse", "Delta Lake"],
+        projectScope: "Gateway connectivity, source table access, full snapshot ingestion, Delta persistence and execution auditing.",
+        solution: "Replace PostgreSQL → CSV → Upload → Reporting with PostgreSQL → Data Gateway → Fabric Pipeline → Lakehouse.",
+        challenges: [
+          "On-premises source connectivity",
+          "Manual CSV exports",
+          "12–36 hour reporting latency",
+          "Need for secure cloud access",
+          "Missing automated audit trail"
+        ]
+      },
+
+      methodology: {
+        architectureOverview: "The PostgreSQL source remains inside the organisation's network. The On-premises Data Gateway provides the secure bridge to Fabric. A Copy Data pipeline extracts the Inventory Snapshot table and overwrites the governed Lakehouse Delta table. A Set Variable/audit step records timestamps, transferred row counts and execution status.",
+        technicalDecisions: [
+          {
+            decision: "Use the On-premises Data Gateway",
+            rationale: "The PostgreSQL database remains private and does not need to be exposed to the public internet."
+          },
+          {
+            decision: "Use full extract and overwrite",
+            rationale: "The project is based on an inventory snapshot transfer, so the Lakehouse target is refreshed with the latest confirmed source state."
+          },
+          {
+            decision: "Add machine-generated audit logging",
+            rationale: "Pipeline execution details provide an auditable record of when and how inventory data was transferred."
+          }
+        ],
+        securityAndReliability: "The gateway provides the secure bridge between the private PostgreSQL environment and Fabric. Controlled pipeline execution and audit records improve repeatability, lineage and operational accountability."
+      },
+
+      steps: [
+        {
+          stepNumber: 1,
+          phase: "Phase 1: Connectivity",
+          title: "Configure the On-premises Data Gateway",
+          description: "Establish the secure connection between the internal PostgreSQL server and Microsoft Fabric without exposing the source database publicly.",
+          deliverables: ["Gateway connection", "PostgreSQL connectivity"],
+          tools: ["On-premises Data Gateway", "PostgreSQL", "Microsoft Fabric"]
+        },
+        {
+          stepNumber: 2,
+          phase: "Phase 2: Source Preparation",
+          title: "Create Schema and Inventory Table",
+          description: "Prepare the source-side schema/table structure and validate the inventory snapshot used by the pipeline.",
+          deliverables: ["Inventory Snapshot table", "Source validation"],
+          tools: ["PostgreSQL"]
+        },
+        {
+          stepNumber: 3,
+          phase: "Phase 3: Pipeline",
+          title: "Build the Fabric Copy Data Pipeline",
+          description: "Configure Copy Data to retrieve inventory data directly from PostgreSQL through the gateway.",
+          deliverables: ["Fabric pipeline", "Source and destination mappings"],
+          tools: ["Fabric Data Pipeline", "Copy Data"]
+        },
+        {
+          stepNumber: 4,
+          phase: "Phase 4: Lakehouse",
+          title: "Load the Delta Inventory Snapshot",
+          description: "Perform a full extract and overwrite into the governed Lakehouse Delta table.",
+          deliverables: ["Inventory Delta table", "Current snapshot"],
+          tools: ["Fabric Lakehouse", "Delta Lake"]
+        },
+        {
+          stepNumber: 5,
+          phase: "Phase 5: Audit",
+          title: "Record Execution and Transfer Metrics",
+          description: "Write a timestamped audit record containing execution details, transferred row counts and pipeline status.",
+          deliverables: ["Audit table", "Run status", "Row-count audit"],
+          tools: ["Fabric Pipeline", "Audit Logging"]
+        }
+      ],
+
+      gallery: [
+        { url: asset(ASSET_FOLDERS.case08, "Image 1 - Title Image.png"), caption: "Inventory Data Migration", description: "On-premises PostgreSQL to Fabric Lakehouse." },
+        { url: asset(ASSET_FOLDERS.case08, "Image 2 - On Premise Gateway.png"), caption: "On-premises Data Gateway", description: "Secure source connectivity." },
+        { url: asset(ASSET_FOLDERS.case08, "Image 3 - Create Schema,Table.png"), caption: "Source Schema and Table", description: "Inventory source setup." },
+        { url: asset(ASSET_FOLDERS.case08, "Image 4 - Table View.png"), caption: "Inventory Table", description: "Source inventory snapshot." },
+        { url: asset(ASSET_FOLDERS.case08, "Image 5 - Data Pipeline.png"), caption: "Data Pipeline", description: "Fabric ingestion pipeline." },
+        { url: asset(ASSET_FOLDERS.case08, "Image 6 - Copy Data-Destination.png"), caption: "Copy Data Destination", description: "Lakehouse destination." },
+        { url: asset(ASSET_FOLDERS.case08, "Image 7 - Copy Data-Source.png"), caption: "Copy Data Source", description: "PostgreSQL source configuration." },
+        { url: asset(ASSET_FOLDERS.case08, "Image 8 - Data Flow.png"), caption: "Data Flow", description: "End-to-end transfer flow." },
+        { url: asset(ASSET_FOLDERS.case08, "Image 9 - Create Audit Logging Table.png"), caption: "Audit Logging Table", description: "Execution and transfer audit structure." }
+      ],
+
+      results: [
+        { metric: "12", label: "Warehouse Locations" },
+        { metric: "22,000", label: "Max Transactions / Day Context" },
+        { metric: "12–36h", label: "Manual Latency Addressed" },
+        { metric: "Gateway", label: "Secure On-Prem Connectivity" }
+      ]
+    },
+
+    // --------------------------------------------------------------
+    // CASE STUDY 09
+    // --------------------------------------------------------------
+
+    {
+      id: "customer-data-trust-transformation",
+      title: "Customer Data Trust Transformation",
+      tagline: "Standardising customer data with Microsoft Fabric Dataflow Gen2, reference-data lookups and governed Customer_Silver output.",
+      category: "microsoft-fabric",
+      featured: false,
+      role: "Data Analyst / Data Engineer",
+      timeline: "Microsoft Fabric Case Study",
+      image: asset(ASSET_FOLDERS.case09, "Image 1 - Title Image.png"),
+      demoUrl: "",
+      githubUrl: "https://github.com/shubhampandey11aug/my-portfolio/tree/main/assets/Case%20Study%2009%20Customer%20Data%20Trust%20Transformation",
+      metrics: "Customer_Silver as the trusted analytical contract",
+      tags: ["Microsoft Fabric", "Dataflow Gen2", "Data Cleaning", "Customer 360", "Reference Data", "Power Query", "Data Standardisation"],
+
+      details: {
+        overview: "TelcoPrime's Customer 360 initiative is constrained by inconsistent addresses, state values and contact information accumulated over multiple years.",
+        keyFeatures: ["Dataflow Gen2", "Reference-data lookup", "Address standardisation", "State normalisation", "Phone cleansing", "Customer_Silver contract"],
+        technicalChallenge: "Inconsistent customer formats reduce the trustworthiness of customer analytics and downstream outreach.",
+        solution: "Use Dataflow Gen2 to promote/merge reference data, standardise address and state fields, clean phone numbers and publish Customer_Silver."
+      },
+
+      writeup: {
+        executiveSummary: "TelcoPrime is rebuilding its customer foundation for a Customer 360 initiative. The project focuses on low-code Microsoft Fabric transformation using Dataflow Gen2, reference-data lookups and standardisation rules for address, state and contact information.",
+        problemStatement: "Customer records accumulated without consistent enterprise validation. Addresses exist in conflicting formats, states use abbreviations and full names inconsistently, and phone fields contain punctuation and corrupted values.",
+        objectives: [
+          "Create a standardised Customer_Silver analytical contract.",
+          "Use reference data to standardise state information.",
+          "Clean and standardise address fields.",
+          "Normalise phone numbers into digits-only values.",
+          "Separate transformation stages so each data-quality operation is traceable.",
+          "Produce a customer foundation suitable for Customer 360 consumption."
+        ],
+        targetAudience: "Customer 360 teams, marketing, retention analytics, data quality teams and business stakeholders.",
+        overview: "A low-code customer-data standardisation workflow built with Dataflow Gen2.",
+        technologyUsed: ["Microsoft Fabric", "Dataflow Gen2", "Power Query", "Reference Data", "Customer 360"],
+        projectScope: "Customer Bronze preparation, reference-data merge, address/state/contact standardisation and Customer_Silver output.",
+        solution: "Promote and merge reference data, split and recombine address attributes, standardise states and cleanse phone values using Power Query transformations.",
+        challenges: [
+          "Multiple address suffix variants",
+          "Inconsistent state representations",
+          "Punctuation-heavy phone numbers",
+          "Corrupted contact values",
+          "Need for a single trusted Customer_Silver schema"
+        ]
+      },
+
+      methodology: {
+        architectureOverview: "Customer Bronze data is transformed through Dataflow Gen2. Reference state data is promoted and merged with customer data. Address components are split and recombined, unnecessary columns are removed, and phone values are converted to digits-only strings with a 10-digit validation rule before publishing Customer_Silver.",
+        technicalDecisions: [
+          {
+            decision: "Use Dataflow Gen2 for low-code cleansing",
+            rationale: "The transformation is primarily standardisation and reference-data integration, making a governed visual transformation flow appropriate."
+          },
+          {
+            decision: "Use reference data for state standardisation",
+            rationale: "A governed lookup avoids maintaining state mappings independently across downstream consumers."
+          },
+          {
+            decision: "Validate phone numbers after digit extraction",
+            rationale: "Removing punctuation first creates a consistent comparison and allows only 10-digit values to pass the final rule."
+          }
+        ],
+        securityAndReliability: "The Customer_Silver schema becomes the shared analytical contract. Standardisation steps are explicit and reusable, reducing the variation that would otherwise propagate into downstream Customer 360 analytics."
+      },
+
+      steps: [
+        {
+          stepNumber: 1,
+          phase: "Phase 1: Bronze Preparation",
+          title: "Load and Promote Customer Data",
+          description: "Bring the customer Bronze table into the Dataflow Gen2 transformation flow and prepare it for reference-data integration.",
+          deliverables: ["Bronze customer input", "Transformation flow"],
+          tools: ["Microsoft Fabric", "Dataflow Gen2"]
+        },
+        {
+          stepNumber: 2,
+          phase: "Phase 2: Reference Data",
+          title: "Merge State Reference Data",
+          description: "Promote the reference table and merge it with customer records to standardise state values.",
+          deliverables: ["Reference lookup", "Standardised state values"],
+          tools: ["Dataflow Gen2", "Power Query"]
+        },
+        {
+          stepNumber: 3,
+          phase: "Phase 3: Address Standardisation",
+          title: "Split, Clean and Recombine Address Fields",
+          description: "Split address components, remove unnecessary columns and merge the cleaned values back into the customer dataset.",
+          deliverables: ["Clean address structure"],
+          tools: ["Power Query", "Dataflow Gen2"]
+        },
+        {
+          stepNumber: 4,
+          phase: "Phase 4: Contact Cleansing",
+          title: "Normalise Phone Numbers",
+          description: "Trim the phone value, keep digits only and retain the value only when it contains exactly ten digits.",
+          deliverables: ["Clean phone column", "Invalid-value handling"],
+          tools: ["Power Query M"]
+        },
+        {
+          stepNumber: 5,
+          phase: "Phase 5: Trusted Output",
+          title: "Publish Customer_Silver",
+          description: "Publish the standardised customer dataset as the trusted schema for downstream Customer 360 consumption.",
+          deliverables: ["Customer_Silver", "Standardised customer foundation"],
+          tools: ["Microsoft Fabric", "Dataflow Gen2"]
+        }
+      ],
+
+      gallery: [
+        { url: asset(ASSET_FOLDERS.case09, "Image 1 - Title Image.png"), caption: "Customer Data Trust Transformation", description: "Customer 360 data-quality case study." },
+        { url: asset(ASSET_FOLDERS.case09, "Image 2 - Bronze_Customer Table.png"), caption: "Bronze Customer Table", description: "Source customer dataset." },
+        { url: asset(ASSET_FOLDERS.case09, "Image 3 - Customer Table-Promote Herders.png"), caption: "Promote Reference Data", description: "Reference-data preparation." },
+        { url: asset(ASSET_FOLDERS.case09, "Image 4 - Merge State and Customer Table.png"), caption: "Merge State and Customer", description: "Reference-data lookup integration." },
+        { url: asset(ASSET_FOLDERS.case09, "Image 5 - Remove Columns.png"), caption: "Remove Columns", description: "Dataflow field cleanup." },
+        { url: asset(ASSET_FOLDERS.case09, "Image 6 - Split Columns By delimter.png"), caption: "Split Address Columns", description: "Address transformation." },
+        { url: asset(ASSET_FOLDERS.case09, "Image 7 - Split Columns By delimter-1.png"), caption: "Split Columns — Detail", description: "Additional address transformation." },
+        { url: asset(ASSET_FOLDERS.case09, "Image 8 - Merge Address and Customer Table.png"), caption: "Merge Address and Customer", description: "Recombining cleaned customer attributes." },
+        { url: asset(ASSET_FOLDERS.case09, "Image 9 - Expand Table.png"), caption: "Expand Lookup", description: "Expanding reference-data attributes." },
+        { url: asset(ASSET_FOLDERS.case09, "Image 10 - Remove Column.png"), caption: "Final Column Cleanup", description: "Removing unnecessary transformation fields." },
+        { url: asset(ASSET_FOLDERS.case09, "Image 11 - Clean Phone Column.png"), caption: "Clean Phone Column", description: "Digits-only phone standardisation." },
+        { url: asset(ASSET_FOLDERS.case09, "Image 12 - Table View_Clean Data.png"), caption: "Clean Customer Data", description: "Final standardised customer output." }
+      ],
+
+      results: [
+        { metric: "Customer_Silver", label: "Trusted Data Contract" },
+        { metric: "10-digit", label: "Phone Validation Rule" },
+        { metric: "6+", label: "Address Variants Addressed" },
+        { metric: "Low-Code", label: "Transformation Approach" }
+      ]
+    },
+
+    // --------------------------------------------------------------
+    // CASE STUDY 10
+    // --------------------------------------------------------------
+
+    {
+      id: "live-market-intelligence",
+      title: "Live Market Intelligence",
+      tagline: "A Microsoft Fabric Real-Time Intelligence platform for tick ingestion, KQL analytics, live dashboards and Activator alerts.",
+      category: "microsoft-fabric",
+      featured: true,
+      role: "Data Engineer / Analytics Engineer",
+      timeline: "Microsoft Fabric Real-Time Intelligence Case Study",
+      image: asset(ASSET_FOLDERS.case10, "Image 1 - Title Image.png"),
+      demoUrl: "",
+      githubUrl: "https://github.com/shubhampandey11aug/my-portfolio/tree/main/assets/Case%20Study%2010%20Live%20Market%20Intelligence",
+      metrics: "30-second dashboard refresh + automated drawdown alerting",
+      tags: ["Microsoft Fabric", "Eventstream", "KQL Database", "Real-Time Intelligence", "KQL", "Activator", "Eventhouse", "Dashboard"],
+
+      details: {
+        overview: "VelocityTrade Capital needs to move from batch-refreshed prices to governed real-time market intelligence for algorithmic trading.",
+        keyFeatures: ["Tick ingestion", "KQL Database", "Eight analytics queries", "30-second dashboard", "Activator alert", "Configuration audit log"],
+        technicalChallenge: "Batch-refreshed market data constrains systematic strategies that depend on low-latency price information.",
+        solution: "Eventstream ingests StockMarketSample tick by tick, KQL models the data, queries generate market analytics, Real-Time Intelligence visualises the results and Activator triggers automated alerts."
+      },
+
+      writeup: {
+        executiveSummary: "VelocityTrade Capital operates in an environment where market-data fidelity and latency directly affect automated trading decisions. The project replaces batch-refreshed market data with a governed Microsoft Fabric Real-Time Intelligence pipeline.",
+        problemStatement: "Batch-refreshed prices have become a structural liability for systematic strategies. The trading environment requires a market-data feed that can be monitored, analysed and alerted on continuously.",
+        objectives: [
+          "Ingest StockMarketSample tick by tick using Eventstream.",
+          "Define the KQL Database and StockTicks schema before events land.",
+          "Create a governed library of KQL analytics queries.",
+          "Build live indicators for prices, volatility, returns, volume, drawdowns and anomalies.",
+          "Configure Activator to detect drawdown conditions and suppress duplicates within the alert window.",
+          "Maintain an audit log of configuration changes.",
+          "Provide a Real-Time Intelligence dashboard refreshing every 30 seconds."
+        ],
+        targetAudience: "Algorithmic trading, market-risk, data engineering, analytics and trading-operations teams.",
+        overview: "A real-time market intelligence architecture from tick ingestion to alerting.",
+        technologyUsed: ["Microsoft Fabric", "Eventstream", "Eventhouse", "KQL Database", "KQL", "Real-Time Intelligence", "Activator"],
+        projectScope: "Real-time ingestion, KQL modelling, analytics queries, automated alerting, governance and live dashboarding.",
+        solution: "Connect Eventstream to KQL, validate analytics against live data, visualise real-time indicators and trigger governed alerts from defined market conditions.",
+        challenges: [
+          "Batch latency",
+          "Real-time event routing",
+          "Schema readiness before event arrival",
+          "Continuous analytics",
+          "Alert deduplication",
+          "Configuration governance"
+        ]
+      },
+
+      methodology: {
+        architectureOverview: "StockMarketSample is ingested continuously through Fabric Eventstream and routed into a KQL Database. The StockTicks schema is defined before data lands. KQL queries calculate latest prices, volatility, returns, volume surges, drawdowns, anomalies, pipeline freshness and data integrity. Real-Time Intelligence provides the dashboard, while Activator handles the drawdown alert.",
+        technicalDecisions: [
+          {
+            decision: "Use Eventstream for continuous ingestion",
+            rationale: "Tick data is event-driven and requires a continuous routing mechanism rather than a batch pipeline."
+          },
+          {
+            decision: "Use KQL Database for real-time analytics",
+            rationale: "The case requires low-latency querying of continuously arriving market events and operational freshness signals."
+          },
+          {
+            decision: "Use Activator for governed alerting",
+            rationale: "The alert condition can be evaluated continuously and routed automatically without relying on manual dashboard monitoring."
+          }
+        ],
+        securityAndReliability: "Direct writes to KQL tables are restricted and configuration changes are captured in an audit log. The end-to-end trace covers sample source, Eventstream, KQL data, analytics, dashboard and alert."
+      },
+
+      steps: [
+        {
+          stepNumber: 1,
+          phase: "Phase 1: Real-Time Foundation",
+          title: "Provision Workspace and Eventhouse",
+          description: "Prepare the Fabric workspace and real-time environment required for continuous market-event processing.",
+          deliverables: ["Workspace", "Eventhouse"],
+          tools: ["Microsoft Fabric", "Eventhouse"]
+        },
+        {
+          stepNumber: 2,
+          phase: "Phase 2: KQL Data Model",
+          title: "Define StockTicks Schema",
+          description: "Create the KQL Database structures before live events begin arriving so the stream has a governed analytical destination.",
+          deliverables: ["KQL Database", "StockTicks schema"],
+          tools: ["KQL Database", "KQL"]
+        },
+        {
+          stepNumber: 3,
+          phase: "Phase 3: Streaming",
+          title: "Connect Eventstream to KQL",
+          description: "Configure Eventstream to continuously ingest StockMarketSample tick data and route it into the governed KQL destination.",
+          deliverables: ["Eventstream connection", "Continuous ingestion"],
+          tools: ["Eventstream", "KQL Database"]
+        },
+        {
+          stepNumber: 4,
+          phase: "Phase 4: Analytics",
+          title: "Develop KQL Market Analytics",
+          description: "Build and validate queries for latest prices, volatility, returns, volume surges, drawdowns, anomalies, pipeline freshness and data integrity.",
+          deliverables: ["Governed KQL query library", "Validated analytics"],
+          tools: ["KQL"]
+        },
+        {
+          stepNumber: 5,
+          phase: "Phase 5: Alerts & Visualisation",
+          title: "Configure Activator and Real-Time Dashboard",
+          description: "Create the drawdown alert and a live dashboard with market-price, volatility and volume indicators refreshed every 30 seconds.",
+          deliverables: ["Activator alert", "Real-Time dashboard", "Audit log"],
+          tools: ["Activator", "Real-Time Intelligence", "KQL"]
+        }
+      ],
+
+      gallery: [
+        { url: asset(ASSET_FOLDERS.case10, "Image 1 - Title Image.png"), caption: "Live Market Intelligence", description: "Real-time market-data case study." },
+        { url: asset(ASSET_FOLDERS.case10, "Image 2 - Provision the workspace and Eventhouse.png"), caption: "Workspace & Eventhouse", description: "Real-time environment provisioning." },
+        { url: asset(ASSET_FOLDERS.case10, "Image 3 - Define the KQL Database schemas before any data lands.png"), caption: "KQL Schema Definition", description: "Schema defined before event arrival." },
+        { url: asset(ASSET_FOLDERS.case10, "Image 4 - Connect the governed Eventstream.png"), caption: "Governed Eventstream", description: "Continuous event routing into KQL." },
+        { url: asset(ASSET_FOLDERS.case10, "Image 5 - KQL Query-01.png"), caption: "KQL Query 01", description: "Real-time market analytics." },
+        { url: asset(ASSET_FOLDERS.case10, "Image 6 - KQL Query-02.png"), caption: "KQL Query 02", description: "Real-time market analytics." },
+        { url: asset(ASSET_FOLDERS.case10, "Image 7 - KQL Query-03.png"), caption: "KQL Query 03", description: "Real-time market analytics." },
+        { url: asset(ASSET_FOLDERS.case10, "Image 8 - KQL Query-04.png"), caption: "KQL Query 04", description: "Real-time market analytics." },
+        { url: asset(ASSET_FOLDERS.case10, "Image 9 - KQL Query-05.png"), caption: "KQL Query 05", description: "Real-time market analytics." },
+        { url: asset(ASSET_FOLDERS.case10, "Image 10 - KQL Query-06.png"), caption: "KQL Query 06", description: "Real-time market analytics." },
+        { url: asset(ASSET_FOLDERS.case10, "Image 11 - KQL Query-07.png"), caption: "KQL Query 07", description: "Real-time market analytics." },
+        { url: asset(ASSET_FOLDERS.case10, "Image 12 - Configure the drawdown alert.png"), caption: "Drawdown Alert", description: "Activator drawdown alert configuration." },
+        { url: asset(ASSET_FOLDERS.case10, "Image 13 - Audit Log.png"), caption: "Audit Log", description: "Configuration-change audit log." },
+        { url: asset(ASSET_FOLDERS.case10, "Image 14 - Real Time Dashboard.png"), caption: "Real-Time Dashboard", description: "Live market-price, volatility and volume indicators." },
+        { url: asset(ASSET_FOLDERS.case10, "Image 15 - Real Time Dashboard-1.png"), caption: "Real-Time Dashboard Detail", description: "Additional live dashboard view." }
+      ],
+
+      results: [
+        { metric: "30 sec", label: "Dashboard Refresh" },
+        { metric: "8", label: "Governed Analytics Queries" },
+        { metric: "Tick-by-Tick", label: "Market Data Ingestion" },
+        { metric: "Activator", label: "Automated Alerting" }
       ]
     }
+
   ]
 };
 
-// Export to global scope
+// Export to global scope for index.html, app.js and project.html
 if (typeof window !== "undefined") {
   window.portfolioData = portfolioData;
 }
