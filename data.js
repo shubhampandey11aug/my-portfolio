@@ -11,9 +11,8 @@
  *     ...
  *
  * Image paths use the exact filenames found in the supplied assets archive.
- * Picture1 is used ONLY as the project-card thumbnail on the portfolio homepage.
- * Picture1 is NOT displayed on individual case-study pages.
- * Remaining PictureN files are used as the project gallery in numeric order.
+ * Picture1 is the main/title image for every case study. Remaining PictureN
+ * files are used as the project gallery in numeric order.
  */
 
 const ASSET_ROOT = "assets";
@@ -1644,6 +1643,37 @@ const portfolioData = {
 
   ]
 };
+
+
+
+// Portfolio filter taxonomy. A project can appear in multiple tool/domain filters.
+const projectFilters = {
+  "microsoft-fabric": "Microsoft Fabric",
+  "databricks": "Databricks",
+  "power-bi": "Power BI",
+  "python-sql": "Python & SQL",
+  "energy-analytics": "Energy Analytics",
+  "data-engineering": "Data Engineering"
+};
+
+function deriveProjectFilters(project) {
+  const t = (project.tags || []).join(" ").toLowerCase();
+  const title = (project.title || "").toLowerCase();
+  const result = new Set(["microsoft-fabric", "data-engineering"]);
+  if (/databricks|delta lake|pyspark/.test(t + " " + title)) result.add("databricks");
+  if (/power bi|powerbi/.test(t + " " + title)) result.add("power-bi");
+  if (/python|sql|pyspark|kql|t-sql/.test(t + " " + title)) result.add("python-sql");
+  if (/energy|market|forecast|trading|power/.test(t + " " + title)) result.add("energy-analytics");
+  return [...result];
+}
+
+portfolioData.projects.forEach(p => {
+  p.filters = deriveProjectFilters(p);
+  // Guardrail: Picture1 is card-only. Case-study pages must use gallery entries starting at Picture2.
+  p.showHero = false;
+  p.gallery = (p.gallery || []).filter(g => !/Picture1\./i.test(g.url));
+});
+portfolioData.projectFilters = projectFilters;
 
 // Export to global scope for index.html, app.js and project.html
 if (typeof window !== "undefined") {

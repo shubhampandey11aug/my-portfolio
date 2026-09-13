@@ -1,400 +1,86 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alex Morgan | Software Engineer Portfolio</title>
-  <meta name="description" content="Personal portfolio and project showcase for Alex Morgan, Full-Stack Software Engineer & System Architect." />
-  <meta name="keywords" content="portfolio, software engineer, web developer, full-stack, react, typescript, nodejs, python" />
-  <meta name="author" content="Alex Morgan" />
-
-  <!-- Open Graph / Social Sharing Meta Tags -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Alex Morgan | Software Engineer Portfolio" />
-  <meta property="og:description" content="Explore my software engineering projects, technical skills, and career journey." />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=1200" />
-  <meta property="twitter:card" content="summary_large_image" />
-
-  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Shubham Pandey — Data Analyst, BI Analyst, Energy Analyst and Data Engineer portfolio.">
+  <title>Shubham Pandey | Data & Energy Analytics Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Scroll Progress Indicator -->
-  <div id="scroll-progress"></div>
-
-  <!-- Navigation Bar -->
-  <header class="navbar">
-    <div class="container nav-container">
-      <a href="#hero" class="nav-logo">
-        <div class="logo-badge">&lt;/&gt;</div>
-        <span id="nav-logo-text">Alex Morgan</span>
-      </a>
-
-      <!-- Desktop Nav Links -->
-      <ul class="nav-links">
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#experience" class="nav-link">Experience</a></li>
-        <li><a href="#education" class="nav-link">Education</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-
-      <!-- Action Buttons (Theme Toggle & Mobile Menu) -->
-      <div class="nav-actions">
-        <button id="theme-toggle" class="icon-btn" aria-label="Toggle Color Theme" title="Toggle Light/Dark Theme">
-          <span id="theme-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="5"></circle>
-              <line x1="12" y1="1" x2="12" y2="3"></line>
-              <line x1="12" y1="21" x2="12" y2="23"></line>
-              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-              <line x1="1" y1="12" x2="3" y2="12"></line>
-              <line x1="21" y1="12" x2="23" y2="12"></line>
-              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-            </svg>
-          </span>
-        </button>
-
-        <a href="#contact" class="btn btn-primary btn-sm">Get In Touch</a>
-
-        <button id="mobile-menu-toggle" class="icon-btn mobile-toggle" aria-label="Toggle Menu">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </button>
-      </div>
-    </div>
-
-    <!-- Mobile Drawer Menu -->
-    <div id="mobile-menu-drawer" class="mobile-menu-drawer">
-      <a href="#about" class="nav-link mobile-drawer-link">About</a>
-      <a href="#skills" class="nav-link mobile-drawer-link">Skills</a>
-      <a href="#projects" class="nav-link mobile-drawer-link">Projects</a>
-      <a href="#experience" class="nav-link mobile-drawer-link">Experience</a>
-      <a href="#education" class="nav-link mobile-drawer-link">Education</a>
-      <a href="#contact" class="nav-link mobile-drawer-link">Contact</a>
-    </div>
+  <div class="site-grid"></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Shubham Pandey home"><span class="brand-mark">SP</span><span>SHUBHAM PANDEY</span></a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#about">About</a><a href="#skills">Stack</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="#contact">Let's connect <span>↗</span></a>
   </header>
 
-  <main>
-    <!-- Hero Section -->
-    <section id="hero" class="hero-section">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <div class="hero-badge-container">
-            <div class="availability-badge">
-              <span class="pulse-dot"></span>
-              <span id="hero-availability">Available for new opportunities</span>
-            </div>
-          </div>
+  <main id="top">
+    <section class="hero section-shell">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse-dot"></span> OPEN TO DATA & ANALYTICS OPPORTUNITIES</div>
+        <h1>Data systems for<br><span class="accent">real-world decisions.</span></h1>
+        <p class="hero-role">Data Analyst <i>•</i> BI Analyst <i>•</i> Energy Analyst <i>•</i> Data Engineer</p>
+        <p class="hero-lede">I combine 12+ years of renewable-energy and market-operations experience with Power BI, SQL, Python and Microsoft Fabric to turn complex operational data into governed pipelines, useful analytics and decision-ready reporting.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#projects">Explore case studies <span>↓</span></a><a class="btn btn-ghost" href="assets/Resume_Shubham Pandey(Energy Analyst).pdf" target="_blank" rel="noopener">View resume ↗</a></div>
+        <div class="hero-metrics" id="hero-metrics"></div>
+      </div>
+      <div class="hero-visual" aria-label="Data engineering visual">
+        <div class="terminal-window">
+          <div class="terminal-head"><span>portfolio.pipeline</span><span class="terminal-dots">● ● ●</span></div>
+          <pre><code><span class="code-muted">01</span> <span class="code-key">pipeline</span> = <span class="code-string">"fabric_lakehouse"</span>
+<span class="code-muted">02</span> <span class="code-key">source</span>   = <span class="code-string">"operational_data"</span>
+<span class="code-muted">03</span> <span class="code-key">layers</span>   = [<span class="code-string">"bronze"</span>, <span class="code-string">"silver"</span>, <span class="code-string">"gold"</span>]
+<span class="code-muted">04</span> <span class="code-key">quality</span>  = <span class="code-string">"governed + auditable"</span>
+<span class="code-muted">05</span> <span class="code-key">insight</span>  = <span class="code-string">"decision_ready"</span>
 
-          <h1 class="hero-title">
-            Hi, I'm <span id="hero-name" class="gradient-text">Alex Morgan</span>
-          </h1>
-          <div id="hero-role" class="hero-role">Full-Stack Software Engineer & Architect</div>
-          <p id="hero-description" class="hero-description">
-            Building scalable, high-performance web applications and intuitive digital experiences with modern technologies.
-          </p>
-
-          <div class="hero-cta">
-            <a href="#projects" class="btn btn-primary">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-              Explore Projects
-            </a>
-            <a id="hero-resume-btn" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-              Download Resume
-            </a>
-          </div>
-
-          <div id="hero-stats-container" class="hero-stats">
-            <!-- Stats rendered dynamically by JS -->
-          </div>
+<span class="code-comment">// energy + analytics + engineering</span>
+<span class="code-key">run</span>(forecast, dsm, trading, kpi)</code></pre>
+          <div class="terminal-status"><span><span class="status-led"></span> SYSTEMS THINKING</span><span>12+ YEARS</span></div>
         </div>
-
-        <!-- Hero Avatar Card -->
-        <div class="hero-avatar-card">
-          <div class="avatar-wrapper">
-            <img id="hero-avatar-img" src="" alt="Profile" class="avatar-img" />
-          </div>
-          <div class="avatar-floating-tag">
-            <div class="floating-icon">🚀</div>
-            <div>
-              <div class="floating-text-title">Clean Code & Architecture</div>
-              <div class="floating-text-sub">Performance First Mindset</div>
-            </div>
-          </div>
-        </div>
+        <div class="orbit-card card-a"><strong>50+ GW</strong><span>Portfolio analytics</span></div>
+        <div class="orbit-card card-b"><strong>30%</strong><span>Manual effort reduced</span></div>
       </div>
     </section>
 
-    <!-- About Me Section -->
-    <section id="about" class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-badge">About Me</span>
-          <h2 class="section-title">Background & <span class="gradient-text">Philosophy</span></h2>
-          <p class="section-subtitle">A glimpse into who I am, how I work, and what drives my passion for engineering.</p>
-        </div>
-
-        <div class="about-grid">
-          <div class="about-text">
-            <h3 id="about-heading">Passionate about transforming complex challenges into elegant solutions</h3>
-            <div id="about-paragraphs">
-              <!-- Paragraphs rendered by JS -->
-            </div>
-            <ul id="about-highlights-list" class="about-highlights">
-              <!-- Highlights rendered by JS -->
-            </ul>
-          </div>
-
-          <div class="about-card-box">
-            <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Quick Details</h3>
-            <p style="color: var(--text-secondary); font-size: 0.9rem;">Feel free to reach out for collaborations, questions, or opportunities.</p>
-
-            <ul class="contact-info-list">
-              <li class="contact-info-item">
-                <div class="contact-info-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                </div>
-                <div>
-                  <div class="contact-info-label">Location</div>
-                  <div id="contact-val-location" class="contact-info-val">San Francisco, CA / Remote</div>
-                </div>
-              </li>
-
-              <li class="contact-info-item">
-                <div class="contact-info-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                </div>
-                <div>
-                  <div class="contact-info-label">Email</div>
-                  <a id="contact-val-email" href="mailto:alex.morgan.dev@example.com" class="contact-info-val" style="color: var(--text-accent); text-decoration: none;">alex.morgan.dev@example.com</a>
-                </div>
-              </li>
-
-              <li class="contact-info-item">
-                <div class="contact-info-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                </div>
-                <div>
-                  <div class="contact-info-label">Timezone</div>
-                  <div class="contact-info-val">PST (UTC-8) • Flexible hours</div>
-                </div>
-              </li>
-            </ul>
-
-            <div style="margin-top: 2rem;">
-              <button id="copy-email-btn" class="btn btn-outline" style="width: 100%;">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                Copy Email Address
-              </button>
-            </div>
-          </div>
-        </div>
+    <section id="about" class="section-shell section-block">
+      <div class="section-label">01 / PROFILE</div>
+      <div class="about-grid">
+        <div><h2>Energy-domain depth.<br><span class="accent">Data-engineering mindset.</span></h2></div>
+        <div class="about-copy"><p id="about-p1"></p><p id="about-p2"></p><div class="highlight-list" id="highlights"></div></div>
       </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-badge">Technical Stack</span>
-          <h2 class="section-title">Skills & <span class="gradient-text">Technologies</span></h2>
-          <p class="section-subtitle">A comprehensive breakdown of the languages, frameworks, databases, and tools I use to build robust software.</p>
-        </div>
-
-        <div id="skills-container" class="skills-grid">
-          <!-- Skills Cards rendered by JS -->
-        </div>
-      </div>
+    <section id="skills" class="section-shell section-block">
+      <div class="section-label">02 / TECHNICAL STACK</div>
+      <div class="section-heading-row"><div><h2>Tools I use to<br><span class="accent">build the signal.</span></h2></div><p>Practical analytics and engineering skills shaped by operational data, energy markets and hands-on Fabric case studies.</p></div>
+      <div class="skill-grid" id="skills-grid"></div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-badge">Portfolio</span>
-          <h2 class="section-title">Featured <span class="gradient-text">Projects & Case Studies</span></h2>
-          <p class="section-subtitle">Real-world applications, open-source projects, and systems I've architected from concept to production.</p>
-        </div>
-
-        <!-- Filter Tabs & Realtime Search -->
-        <div class="projects-controls">
-          <div class="filter-search-bar">
-            <div class="filter-tabs">
-              <button class="filter-tab active" data-category="all">All Projects</button>
-              <button class="filter-tab" data-category="fullstack">Full-Stack</button>
-              <button class="filter-tab" data-category="frontend">Frontend</button>
-              <button class="filter-tab" data-category="ai-ml">AI & ML</button>
-              <button class="filter-tab" data-category="cloud">Cloud / Security</button>
-              <button class="filter-tab" data-category="tools">Dev Tools</button>
-            </div>
-
-            <div class="search-box-wrapper">
-              <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="11" cy="11" r="8"></circle>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-              </svg>
-              <input type="text" id="project-search-input" class="search-input" placeholder="Search by name, tech stack, tag..." />
-            </div>
-          </div>
-        </div>
-
-        <!-- Projects Grid -->
-        <div id="projects-grid" class="projects-grid">
-          <!-- Project Cards rendered dynamically by JS -->
-        </div>
-      </div>
+    <section id="projects" class="section-shell section-block projects-section">
+      <div class="section-label">03 / SELECTED WORK</div>
+      <div class="section-heading-row"><div><h2>Case studies, not<br><span class="accent">just dashboards.</span></h2></div><p>Ten practical Microsoft Fabric case studies covering ingestion, Lakehouse architecture, PySpark, Delta Lake, governance, real-time intelligence and analytics.</p></div>
+      <div class="filters" id="filters"></div>
+      <div class="project-grid" id="project-grid"></div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-badge">Career Journey</span>
-          <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
-          <p class="section-subtitle">My professional track record, impactful roles, and key engineering milestones.</p>
-        </div>
-
-        <div id="experience-timeline" class="timeline">
-          <!-- Experience items rendered by JS -->
-        </div>
-      </div>
+    <section id="experience" class="section-shell section-block">
+      <div class="section-label">04 / EXPERIENCE</div>
+      <div class="timeline" id="experience-list"></div>
     </section>
 
-    <!-- Education & Certifications Section -->
-    <section id="education" class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-badge">Academics & Accreditations</span>
-          <h2 class="section-title">Education & <span class="gradient-text">Certifications</span></h2>
-          <p class="section-subtitle">Academic foundations and verified industry credentials.</p>
-        </div>
-
-        <!-- Education Timeline -->
-        <div id="education-timeline" class="timeline">
-          <!-- Education rendered by JS -->
-        </div>
-
-        <!-- Certifications List -->
-        <div id="certifications-container" class="certifications-grid">
-          <!-- Certifications rendered by JS -->
-        </div>
-      </div>
+    <section id="education" class="section-shell section-block split-section">
+      <div><div class="section-label">05 / EDUCATION & UPSKILLING</div><h2>Engineering foundation.<br><span class="accent">Continuous learning.</span></h2></div>
+      <div id="education-list" class="edu-list"></div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-badge">Let's Connect</span>
-          <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
-          <p class="section-subtitle">Interested in discussing a project, exploring opportunities, or just saying hello? Send a message below!</p>
-        </div>
-
-        <div class="contact-grid">
-          <div class="contact-card-main">
-            <h3 style="font-size: 1.5rem; margin-bottom: 0.75rem;">Send a Direct Message</h3>
-            <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 0.95rem;">
-              Fill out the form and it will initiate an email directly to my inbox. I typically respond within 24-48 hours.
-            </p>
-
-            <form id="contact-form" class="contact-form">
-              <div class="form-group">
-                <label for="form-name" class="form-label">Your Name</label>
-                <input type="text" id="form-name" class="form-input" placeholder="e.g. Sarah Connor" required />
-              </div>
-
-              <div class="form-group">
-                <label for="form-email" class="form-label">Your Email</label>
-                <input type="email" id="form-email" class="form-input" placeholder="e.g. sarah@example.com" required />
-              </div>
-
-              <div class="form-group">
-                <label for="form-message" class="form-label">Message</label>
-                <textarea id="form-message" class="form-textarea" placeholder="Tell me about your project, team, or opportunity..." required></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-                Send Message
-              </button>
-            </form>
-          </div>
-
-          <div style="display: flex; flex-direction: column; justify-content: center; gap: 2rem;">
-            <div class="about-card-box">
-              <h3 style="font-size: 1.3rem; margin-bottom: 0.75rem;">Looking for my resume?</h3>
-              <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.25rem;">
-                You can download the full PDF version of my resume with complete work history, references, and publication records.
-              </p>
-              <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                Download Resume (PDF)
-              </a>
-            </div>
-
-            <div class="about-card-box">
-              <h3 style="font-size: 1.3rem; margin-bottom: 0.75rem;">Open Source & Collaboration</h3>
-              <p style="color: var(--text-secondary); font-size: 0.95rem;">
-                I'm active across GitHub and tech communities. Star my repositories, open an issue, or connect with me on social platforms.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <section id="contact" class="section-shell section-block contact-section">
+      <div class="contact-card"><div><div class="section-label">06 / CONTACT</div><h2>Let's build something<br><span class="accent">useful with data.</span></h2><p>Open to Data Analyst, BI Analyst, Energy Analytics, Data Engineering, freelance and consulting opportunities.</p></div><div class="contact-actions"><a class="btn btn-primary" id="email-link" href="#">Email me ↗</a><a class="btn btn-ghost" id="linkedin-link" href="#" target="_blank" rel="noopener">LinkedIn ↗</a><a class="btn btn-ghost" id="github-link" href="#" target="_blank" rel="noopener">GitHub ↗</a></div></div>
     </section>
   </main>
-
-  <!-- Back to Top Button -->
-  <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-      <polyline points="18 15 12 9 6 15"></polyline>
-    </svg>
-  </button>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div style="font-weight: 800; font-size: 1.2rem; margin-bottom: 0.35rem;" id="footer-name">Alex Morgan</div>
-          <div style="color: var(--text-secondary); font-size: 0.9rem;">Building high-impact software solutions.</div>
-        </div>
-
-        <div class="footer-social-links">
-          <a id="footer-github" href="#" target="_blank" rel="noopener noreferrer" class="icon-btn" title="GitHub">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-          </a>
-          <a id="footer-linkedin" href="#" target="_blank" rel="noopener noreferrer" class="icon-btn" title="LinkedIn">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-          </a>
-          <a id="footer-twitter" href="#" target="_blank" rel="noopener noreferrer" class="icon-btn" title="Twitter / X">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
-          </a>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; <span id="footer-year"></span> All rights reserved. Designed & built for free hosting on GitHub Pages.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="data.js"></script>
-  <script src="app.js"></script>
+  <footer class="footer section-shell"><span>© <span id="year"></span> Shubham Pandey</span><span>Data • Energy • Engineering</span></footer>
+  <script src="data.js"></script><script src="app.js"></script>
 </body>
 </html>
