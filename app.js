@@ -16,7 +16,7 @@
   $('#year').textContent = new Date().getFullYear();
 
   // Skills
-  $('#skills-grid').innerHTML = d.skills.map((g,i) => `<article class="skill-card"><div class="skill-no">0${i+1}</div><h3>${escapeHtml(g.category)}</h3><div class="skill-items">${g.items.map(x => `<div class="skill-item"><span>${escapeHtml(x.name)}</span><em>${escapeHtml(x.level)}</em></div>`).join('')}</div></article>`).join('');
+  $('#skills-grid').innerHTML = d.skills.map((g,i) => `<article class="skill-card"><div class="skill-no">0${i+1}</div><h3>${escapeHtml(g.category)}</h3><div class="skill-items">${g.items.map(x => `<div class="skill-item"><span class="skill-tool">${x.logo && x.logo.startsWith('http') ? `<img src="${x.logo}" alt="${escapeHtml(x.name)}" class="skill-logo" loading="lazy" onerror="this.style.display='none'">` : `<span class="skill-emoji">${x.logo || ''}</span>`}<span class="skill-name">${escapeHtml(x.name)}</span></span></div>`).join('')}</div></article>`).join('');
 
   // Projects / filters
   const filterDefs = [{id:'all',label:'All Projects'}, ...Object.entries(d.projectFilters || {}).map(([id,label])=>({id,label}))];

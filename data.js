@@ -51,14 +51,14 @@ const portfolioData = {
     name: "Shubham Pandey",
     role: "Data Analyst | BI Analyst | Energy Analyst | Data Engineer",
     tagline: "Turning energy and operational data into reliable analytics, governed data pipelines, and decision-ready insights.",
-    location: "India | Open to Data & AI Enginnering Opportunities",
+    location: "India | Open to Data & Analytics Opportunities",
     email: "shubhampandey11aug@gmail.com",
     phone: "+91-9794963499",
     github: "https://github.com/shubhampandey11aug",
     linkedin: "https://linkedin.com/in/shubhampandey08",
     twitter: "",
     resumePdf: "assets/Resume_Shubham Pandey(Energy Analyst).pdf",
-    availability: "",
+    availability: "Open to Data Analyst, BI Analyst, Energy Analytics, Data Engineering, Freelance & Consulting opportunities",
     avatar: "assets/Photo_Shubham Pandey.jpg",
 
     stats: [
@@ -91,61 +91,38 @@ const portfolioData = {
       "Building practical data-engineering capability with ETL/ELT, Bronze/Silver/Gold architecture, Delta Lake and PySpark."
     ]
   },
-// ================================================================
-// SKILLS
-// ================================================================
-
-$('#skills-grid').innerHTML = d.skills.map((g,i) => `
-  <article class="skill-card">
-
-    <div class="skill-no">
-      0${i+1}
-    </div>
-
-    <h3>${escapeHtml(g.category)}</h3>
-
-    <div class="skill-items">
-
-      ${g.items.map(x => `
-        <div class="skill-item">
-
-          <span class="skill-tool">
-
-            ${
-              x.logo && x.logo.startsWith('http')
-              ? `
-                <img
-                  src="${x.logo}"
-                  alt="${escapeHtml(x.name)}"
-                  class="skill-logo"
-                  loading="lazy"
-                >
-              `
-              : `
-                <span class="skill-emoji">
-                  ${x.logo || ''}
-                </span>
-              `
-            }
-
-            <span class="skill-name">
-              ${escapeHtml(x.name)}
-            </span>
-
-          </span>
-
-        </div>
-      `).join('')}
-
-    </div>
-
-  </article>
-`).join('');
 
   // ================================================================
-  // EXPERIENCE
+  // SKILLS
   // ================================================================
 
+  skills: [
+    { category: "BI & Analytics", icon: "bar-chart", items: [
+      { name: "Power BI", logo: "https://cdn.simpleicons.org/powerbi" },
+      { name: "Excel", logo: "https://cdn.simpleicons.org/microsoftexcel" },
+      { name: "Power Query", logo: "https://cdn.simpleicons.org/microsoft" },
+      { name: "DAX", logo: "https://cdn.simpleicons.org/powerbi" }
+    ] },
+    { category: "Programming & Data", icon: "code", items: [
+      { name: "Python", logo: "https://cdn.simpleicons.org/python" },
+      { name: "SQL", logo: "https://cdn.simpleicons.org/mysql" },
+      { name: "Pandas", logo: "https://cdn.simpleicons.org/pandas" },
+      { name: "NumPy", logo: "https://cdn.simpleicons.org/numpy" }
+    ] },
+    { category: "Data Engineering", icon: "database", items: [
+      { name: "Microsoft Fabric", logo: "https://cdn.simpleicons.org/microsoftfabric" },
+      { name: "Databricks", logo: "https://cdn.simpleicons.org/databricks" },
+      { name: "PySpark", logo: "https://cdn.simpleicons.org/apachespark" },
+      { name: "Delta Lake", logo: "https://cdn.simpleicons.org/delta" },
+      { name: "Lakehouse", logo: "https://cdn.simpleicons.org/microsoftfabric" }
+    ] },
+    { category: "Energy Analytics", icon: "zap", items: [
+      { name: "Forecasting & Scheduling", logo: "⚡" },
+      { name: "DSM Analytics", logo: "⚡" },
+      { name: "Open Access", logo: "⚡" },
+      { name: "Power Trading / IEX", logo: "⚡" }
+    ] }
+  ],
   experience: [
     {
       role: "Assistant Manager – Analytics (Energy & Market Operations)",
@@ -186,7 +163,7 @@ $('#skills-grid').innerHTML = d.skills.map((g,i) => `
     },
 
     {
-      role: "Project Engineer",
+      role: "Project Engineer (Contract)",
       company: "NTPC / IOCL Projects (NBPPL & EIL)",
       period: "2017 – 2019",
       location: "India",
