@@ -10,9 +10,9 @@
  *     Case Study 02 Logistics Data Modernization/
  *     ...
  *
- * The folder names below follow the project folders shown in the
- * GitHub repository/screenshot. Individual screenshot filenames are
- * mapped from the image labels in the supplied case-study write-up.
+ * Image paths use the exact filenames found in the supplied assets archive.
+ * Picture1 is the main/title image for every case study. Remaining PictureN
+ * files are used as the project gallery in numeric order.
  */
 
 const ASSET_ROOT = "assets";
@@ -303,7 +303,7 @@ const portfolioData = {
       featured: true,
       role: "Lead Data Engineer",
       timeline: "Microsoft Fabric Case Study",
-      image: asset(ASSET_FOLDERS.case01, "Image 1 - Title Image.png"),
+      image: asset(ASSET_FOLDERS.case01, "Picture1.jpg"),
       demoUrl: "",
       githubUrl: "https://github.com/shubhampandey11aug/my-portfolio/tree/main/assets/Case%20Study%2001%20The%20Global%20Listing%20Intelligence%20Initiative",
       metrics: "24–48h manual consolidation replaced by automated nightly ingestion",
@@ -402,15 +402,16 @@ const portfolioData = {
       ],
 
       gallery: [
-        { url: asset(ASSET_FOLDERS.case01, "Image 1 - Title Image.png"), caption: "Case Study Overview", description: "Global Listing Intelligence Initiative." },
-        { url: asset(ASSET_FOLDERS.case01, "Image 2 - Pipeline.png"), caption: "Pipeline Architecture", description: "Three-activity Microsoft Fabric ingestion, archive and delete flow." },
-        { url: asset(ASSET_FOLDERS.case01, "Image 3 - Copy Data Activity- Source.png"), caption: "Copy Data Source", description: "Nightly office-file ingestion configuration." },
-        { url: asset(ASSET_FOLDERS.case01, "Image 4 - Copy Data Activity- Destination.png"), caption: "Copy Data Destination", description: "Governed Silver destination configuration." },
-        { url: asset(ASSET_FOLDERS.case01, "Image 5 - Schema Mapping.png"), caption: "Schema Mapping", description: "Source-to-Silver field mapping." },
-        { url: asset(ASSET_FOLDERS.case01, "Image 6 - System Constraints.png"), caption: "System Constraints", description: "Architecture constraints governing the implementation." },
-        { url: asset(ASSET_FOLDERS.case01, "Image 7 - Archive Activity_Source.png"), caption: "Archive Source", description: "Processed-file archival source configuration." },
-        { url: asset(ASSET_FOLDERS.case01, "Image 8 - Archive Activity_Destination.png"), caption: "Archive Destination", description: "Processed-file archive destination." },
-        { url: asset(ASSET_FOLDERS.case01, "Image 8 - Landing.png"), caption: "Landing Zone", description: "Landing-area file handling." }
+        { url: asset(ASSET_FOLDERS.case01, "Picture1.jpg"), caption: "Case Study Overview", description: "Global Listing Intelligence Initiative." },
+        { url: asset(ASSET_FOLDERS.case01, "Picture2.png"), caption: "Pipeline Architecture", description: "Three-activity Microsoft Fabric ingestion, archive and delete flow." },
+        { url: asset(ASSET_FOLDERS.case01, "Picture3.png"), caption: "Copy Data Source", description: "Nightly office-file ingestion configuration." },
+        { url: asset(ASSET_FOLDERS.case01, "Picture4.png"), caption: "Copy Data Destination", description: "Governed Silver destination configuration." },
+        { url: asset(ASSET_FOLDERS.case01, "Picture5.png"), caption: "Schema Mapping", description: "Source-to-Silver field mapping." },
+        { url: asset(ASSET_FOLDERS.case01, "Picture6.png"), caption: "System Constraints", description: "Architecture constraints governing the implementation." },
+        { url: asset(ASSET_FOLDERS.case01, "Picture7.png"), caption: "Archive Source", description: "Processed-file archival source configuration." },
+        { url: asset(ASSET_FOLDERS.case01, "Picture8.png"), caption: "Archive Destination", description: "Processed-file archive destination." },
+        { url: asset(ASSET_FOLDERS.case01, "Picture9.png"), caption: "Landing Zone", description: "Landing-area file handling." }
+      
       ],
 
       results: [
@@ -433,7 +434,7 @@ const portfolioData = {
       featured: true,
       role: "Lead Data Engineer",
       timeline: "Microsoft Fabric Case Study",
-      image: asset(ASSET_FOLDERS.case02, "Image 1 - Title Image.png"),
+      image: asset(ASSET_FOLDERS.case02, "Picture1.jpg"),
       demoUrl: "",
       githubUrl: "https://github.com/shubhampandey11aug/my-portfolio/tree/main/assets/Case%20Study%2002%20Logistics%20Data%20Modernization",
       metrics: "Incremental, state-aware ingestion with auditable Delta Lake history",
@@ -525,13 +526,14 @@ const portfolioData = {
       ],
 
       gallery: [
-        { url: asset(ASSET_FOLDERS.case02, "Image 1 - Title Image.png"), caption: "Logistics Data Modernization", description: "Incremental shipment-log ingestion case study." },
-        { url: asset(ASSET_FOLDERS.case02, "Image 2 - Pipeline.png"), caption: "Incremental Pipeline", description: "State-aware Microsoft Fabric pipeline." },
-        { url: asset(ASSET_FOLDERS.case02, "Image 3 - Notebook _Table Creation.png"), caption: "Watermark Table Creation", description: "Delta table used for durable pipeline state." },
-        { url: asset(ASSET_FOLDERS.case02, "Image 4 - Notebook _SET Watermark Value.png"), caption: "Watermark Value", description: "Setting the processing watermark." },
-        { url: asset(ASSET_FOLDERS.case02, "Image 4 - Copy Data_Source.png"), caption: "Copy Data Source", description: "Shipment-log source configuration." },
-        { url: asset(ASSET_FOLDERS.case02, "Image 5 - Pipeline_settings_Update watermark.png"), caption: "Update Watermark", description: "Pipeline state-update configuration." },
-        { url: asset(ASSET_FOLDERS.case02, "Image 6 - Pipeline Run.png"), caption: "Pipeline Run", description: "Execution of the incremental ingestion pipeline." }
+        { url: asset(ASSET_FOLDERS.case02, "Picture1.jpg"), caption: "Logistics Data Modernization", description: "Incremental shipment-log ingestion case study." },
+        { url: asset(ASSET_FOLDERS.case02, "Picture2.png"), caption: "Incremental Pipeline", description: "State-aware Microsoft Fabric pipeline." },
+        { url: asset(ASSET_FOLDERS.case02, "Picture3.png"), caption: "Watermark Table Creation", description: "Delta table used for durable pipeline state." },
+        { url: asset(ASSET_FOLDERS.case02, "Picture4.png"), caption: "Watermark Value", description: "Setting the processing watermark." },
+        { url: asset(ASSET_FOLDERS.case02, "Picture5.png"), caption: "Copy Data Source", description: "Shipment-log source configuration." },
+        { url: asset(ASSET_FOLDERS.case02, "Picture6.png"), caption: "Update Watermark", description: "Pipeline state-update configuration." },
+        { url: asset(ASSET_FOLDERS.case02, "Picture7.png"), caption: "Pipeline Run", description: "Execution of the incremental ingestion pipeline." }
+      
       ],
 
       results: [
@@ -554,7 +556,7 @@ const portfolioData = {
       featured: true,
       role: "Data Engineer",
       timeline: "Microsoft Fabric Case Study",
-      image: asset(ASSET_FOLDERS.case03, "Image 1 - Title Image.png"),
+      image: asset(ASSET_FOLDERS.case03, "Picture1.jpg"),
       demoUrl: "",
       githubUrl: "https://github.com/shubhampandey11aug/my-portfolio/tree/main/assets/Case%20Study%2003%20Workforce%20Intelligence.From%20Azure%20SQL%20to%20Lakehouse(Technology%20Consulting)",
       metrics: "Bronze 332 → Silver 307 | Quarantine 20 | Duplicates 5",
@@ -656,23 +658,24 @@ const portfolioData = {
       ],
 
       gallery: [
-        { url: asset(ASSET_FOLDERS.case03, "Image 1 - Title Image.png"), caption: "Workforce Intelligence", description: "Azure SQL to Lakehouse case study." },
-        { url: asset(ASSET_FOLDERS.case03, "Image 2 - Target Tables Str.png"), caption: "Target Tables", description: "Target structure for workforce processing." },
-        { url: asset(ASSET_FOLDERS.case03, "Image 3 - Copy Data from SQL Database_Source.png"), caption: "Azure SQL Source", description: "Source extraction configuration." },
-        { url: asset(ASSET_FOLDERS.case03, "Image 4 - Pipeline Design.png"), caption: "Pipeline Design", description: "Bronze-to-Silver pipeline orchestration." },
-        { url: asset(ASSET_FOLDERS.case03, "Image 5 - Copy Data from SQL Database_Destination.png"), caption: "Bronze Destination", description: "Copy Activity destination." },
-        { url: asset(ASSET_FOLDERS.case03, "Image 6 - Bronze Table.png"), caption: "Bronze Table", description: "Source data persisted in Bronze." },
-        { url: asset(ASSET_FOLDERS.case03, "Image 7 - Notbook_Read Data from Bronze Table.png"), caption: "Notebook Read", description: "Reading Bronze into PySpark." },
-        { url: asset(ASSET_FOLDERS.case03, "Image 8 - Display Bronze Table.png"), caption: "Bronze Inspection", description: "Bronze dataset inspection." },
-        { url: asset(ASSET_FOLDERS.case03, "Image 9 - Qurantine Logic.png"), caption: "Quarantine Logic", description: "Controlled invalid-record handling." },
-        { url: asset(ASSET_FOLDERS.case03, "Image 10 - Filter Invalid or Null Records.png"), caption: "Invalid / Null Filtering", description: "Data-quality filtering." },
-        { url: asset(ASSET_FOLDERS.case03, "Image 11 - Filter Rows as per required range.png"), caption: "Range Validation", description: "Filtering records according to required ranges." },
-        { url: asset(ASSET_FOLDERS.case03, "Image 12 - Drop Duplicated Records.png"), caption: "Deduplication", description: "Duplicate employee records removed." },
-        { url: asset(ASSET_FOLDERS.case03, "Image 13 - Disply all records.png"), caption: "Transformed Records", description: "Post-transformation record view." },
-        { url: asset(ASSET_FOLDERS.case03, "Image 14 - Write as Silver Table.png"), caption: "Write Silver Table", description: "Publishing the trusted Silver output." },
-        { url: asset(ASSET_FOLDERS.case03, "Image 15 - View Silver Quarantine Table.png"), caption: "Silver Quarantine", description: "Quarantined records." },
-        { url: asset(ASSET_FOLDERS.case03, "Image 16 - View Silver Table.png"), caption: "Silver Table", description: "Trusted workforce output." },
-        { url: asset(ASSET_FOLDERS.case03, "Image 17 - View Silver Table-2.png"), caption: "Silver Table Detail", description: "Additional Silver table view." }
+        { url: asset(ASSET_FOLDERS.case03, "Picture1.jpg"), caption: "Workforce Intelligence", description: "Azure SQL to Lakehouse case study." },
+        { url: asset(ASSET_FOLDERS.case03, "Picture2.png"), caption: "Target Tables", description: "Target structure for workforce processing." },
+        { url: asset(ASSET_FOLDERS.case03, "Picture3.png"), caption: "Azure SQL Source", description: "Source extraction configuration." },
+        { url: asset(ASSET_FOLDERS.case03, "Picture4.png"), caption: "Pipeline Design", description: "Bronze-to-Silver pipeline orchestration." },
+        { url: asset(ASSET_FOLDERS.case03, "Picture5.png"), caption: "Bronze Destination", description: "Copy Activity destination." },
+        { url: asset(ASSET_FOLDERS.case03, "Picture6.png"), caption: "Bronze Table", description: "Source data persisted in Bronze." },
+        { url: asset(ASSET_FOLDERS.case03, "Picture7.png"), caption: "Notebook Read", description: "Reading Bronze into PySpark." },
+        { url: asset(ASSET_FOLDERS.case03, "Picture8.png"), caption: "Bronze Inspection", description: "Bronze dataset inspection." },
+        { url: asset(ASSET_FOLDERS.case03, "Picture9.png"), caption: "Quarantine Logic", description: "Controlled invalid-record handling." },
+        { url: asset(ASSET_FOLDERS.case03, "Picture10.png"), caption: "Invalid / Null Filtering", description: "Data-quality filtering." },
+        { url: asset(ASSET_FOLDERS.case03, "Picture11.png"), caption: "Range Validation", description: "Filtering records according to required ranges." },
+        { url: asset(ASSET_FOLDERS.case03, "Picture12.png"), caption: "Deduplication", description: "Duplicate employee records removed." },
+        { url: asset(ASSET_FOLDERS.case03, "Picture13.png"), caption: "Transformed Records", description: "Post-transformation record view." },
+        { url: asset(ASSET_FOLDERS.case03, "Picture14.png"), caption: "Write Silver Table", description: "Publishing the trusted Silver output." },
+        { url: asset(ASSET_FOLDERS.case03, "Picture15.png"), caption: "Silver Quarantine", description: "Quarantined records." },
+        { url: asset(ASSET_FOLDERS.case03, "Picture16.png"), caption: "Silver Table", description: "Trusted workforce output." },
+        { url: asset(ASSET_FOLDERS.case03, "Picture17.png"), caption: "Silver Table Detail", description: "Additional Silver table view." }
+      
       ],
 
       results: [
@@ -695,7 +698,7 @@ const portfolioData = {
       featured: true,
       role: "Data Engineer",
       timeline: "Microsoft Fabric Case Study",
-      image: asset(ASSET_FOLDERS.case04, "Image 1 - Title Image.png"),
+      image: asset(ASSET_FOLDERS.case04, "Picture1.jpg"),
       demoUrl: "",
       githubUrl: "https://github.com/shubhampandey11aug/my-portfolio/tree/main/assets/Case%20Study%2004%20Financial%20Data%20Transformation%20using%20Pyspark%20and%20Delta%20Lake",
       metrics: "2+ hours → few-minute target processing pattern",
@@ -796,21 +799,22 @@ const portfolioData = {
       ],
 
       gallery: [
-        { url: asset(ASSET_FOLDERS.case04, "Image 1 - Title Image.png"), caption: "Financial Data Transformation", description: "PySpark optimisation and Delta Lake case study." },
-        { url: asset(ASSET_FOLDERS.case04, "Image 2 - Notebook-1_Import Libraries and Create Schema.png"), caption: "Schema Setup", description: "Notebook and schema preparation." },
-        { url: asset(ASSET_FOLDERS.case04, "Image 3 - Transaction Table View.png"), caption: "Transaction Table", description: "Financial transaction dataset." },
-        { url: asset(ASSET_FOLDERS.case04, "Image 4 - Filler Data Transaction Table.png"), caption: "Transaction Data", description: "Transaction-table preparation." },
-        { url: asset(ASSET_FOLDERS.case04, "Image 5 - View Physical Plan.png"), caption: "Physical Plan", description: "Execution-plan inspection before optimisation." },
-        { url: asset(ASSET_FOLDERS.case04, "Image 6 - Broadcast Join.png"), caption: "Broadcast Join", description: "Broadcast join implementation." },
-        { url: asset(ASSET_FOLDERS.case04, "Image 7 - Broadcast Join-1.png"), caption: "Broadcast Join Detail", description: "Optimised join execution." },
-        { url: asset(ASSET_FOLDERS.case04, "Image 8 - Test Table.png"), caption: "Test Table", description: "Test dataset for reliability checks." },
-        { url: asset(ASSET_FOLDERS.case04, "Image 9 - View Bad data Table Records.png"), caption: "Bad Data Records", description: "Malformed data inspection." },
-        { url: asset(ASSET_FOLDERS.case04, "Image 10 - Join Tables Clean and Bad data.png"), caption: "Clean vs Bad Data", description: "Data-quality separation." },
-        { url: asset(ASSET_FOLDERS.case04, "Image 11 - Time Travel-Update Records.png"), caption: "Time Travel Update", description: "Versioned Delta table update." },
-        { url: asset(ASSET_FOLDERS.case04, "Image 12 - Time Travel-View Updated Records.png"), caption: "Updated Records", description: "Post-update table state." },
-        { url: asset(ASSET_FOLDERS.case04, "Image 13 - Time Travel-Describe History.png"), caption: "Delta History", description: "Inspecting transaction history." },
-        { url: asset(ASSET_FOLDERS.case04, "Image 14 - Time Travel-View Previous Version.png"), caption: "Previous Version", description: "Inspecting an earlier table version." },
-        { url: asset(ASSET_FOLDERS.case04, "Image 15 - Time Travel-Restore Previous Version.png"), caption: "Restore Previous Version", description: "Recovering the prior valid state." }
+        { url: asset(ASSET_FOLDERS.case04, "Picture1.jpg"), caption: "Financial Data Transformation", description: "PySpark optimisation and Delta Lake case study." },
+        { url: asset(ASSET_FOLDERS.case04, "Picture2.png"), caption: "Schema Setup", description: "Notebook and schema preparation." },
+        { url: asset(ASSET_FOLDERS.case04, "Picture3.PNG"), caption: "Transaction Table", description: "Financial transaction dataset." },
+        { url: asset(ASSET_FOLDERS.case04, "Picture4.PNG"), caption: "Transaction Data", description: "Transaction-table preparation." },
+        { url: asset(ASSET_FOLDERS.case04, "Picture5.PNG"), caption: "Physical Plan", description: "Execution-plan inspection before optimisation." },
+        { url: asset(ASSET_FOLDERS.case04, "Picture6.PNG"), caption: "Broadcast Join", description: "Broadcast join implementation." },
+        { url: asset(ASSET_FOLDERS.case04, "Picture7.PNG"), caption: "Broadcast Join Detail", description: "Optimised join execution." },
+        { url: asset(ASSET_FOLDERS.case04, "Picture8.PNG"), caption: "Test Table", description: "Test dataset for reliability checks." },
+        { url: asset(ASSET_FOLDERS.case04, "Picture9.PNG"), caption: "Bad Data Records", description: "Malformed data inspection." },
+        { url: asset(ASSET_FOLDERS.case04, "Picture10.PNG"), caption: "Clean vs Bad Data", description: "Data-quality separation." },
+        { url: asset(ASSET_FOLDERS.case04, "Picture11.PNG"), caption: "Time Travel Update", description: "Versioned Delta table update." },
+        { url: asset(ASSET_FOLDERS.case04, "Picture12.PNG"), caption: "Updated Records", description: "Post-update table state." },
+        { url: asset(ASSET_FOLDERS.case04, "Picture13.PNG"), caption: "Delta History", description: "Inspecting transaction history." },
+        { url: asset(ASSET_FOLDERS.case04, "Picture14.PNG"), caption: "Previous Version", description: "Inspecting an earlier table version." },
+        { url: asset(ASSET_FOLDERS.case04, "Picture15.PNG"), caption: "Restore Previous Version", description: "Recovering the prior valid state." }
+      
       ],
 
       results: [
@@ -833,7 +837,7 @@ const portfolioData = {
       featured: true,
       role: "Lead Data Engineer",
       timeline: "Microsoft Fabric Case Study",
-      image: asset(ASSET_FOLDERS.case05, "Image 1 - Title Image.png"),
+      image: asset(ASSET_FOLDERS.case05, "Picture1.jpg"),
       demoUrl: "",
       githubUrl: "https://github.com/shubhampandey11aug/my-portfolio/tree/main/assets/Case%20Study%2005%20Unified%20Commerce%20Analytics%20(Global%20Freight%20Forwarders)",
       metrics: "Bronze → Silver → Gold → Power BI",
@@ -935,22 +939,21 @@ const portfolioData = {
       ],
 
       gallery: [
-        { url: asset(ASSET_FOLDERS.case05, "Image 1 - Title Image.png"), caption: "Unified Commerce Analytics", description: "Modern retail analytics architecture." },
-        { url: asset(ASSET_FOLDERS.case05, "Image 2 - Bronze-Silver-Gold architecture.png"), caption: "Bronze-Silver-Gold Architecture", description: "Three-layer Lakehouse architecture." },
-        { url: asset(ASSET_FOLDERS.case05, "Image 3 - Look Up Activity.png"), caption: "Lookup Activity", description: "Pipeline lookup configuration." },
-        { url: asset(ASSET_FOLDERS.case05, "Image 3 - For Loop Activity.png"), caption: "For Loop Activity", description: "Iterative table ingestion pattern." },
-        { url: asset(ASSET_FOLDERS.case05, "Image 4 - Activity_Pipleline settings.png"), caption: "Pipeline Settings", description: "Pipeline orchestration configuration." },
-        { url: asset(ASSET_FOLDERS.case05, "Image 5 - For Loop Activity-Copy Data.png"), caption: "Copy Data Loop", description: "Automated source-table ingestion." },
-        { url: asset(ASSET_FOLDERS.case05, "Image 6 - Broze to Silver Table.png"), caption: "Bronze to Silver", description: "PySpark curation stage." },
-        { url: asset(ASSET_FOLDERS.case05, "Image 6 - Save As Silver Table.png"), caption: "Save Silver Table", description: "Silver Delta persistence." },
-        { url: asset(ASSET_FOLDERS.case05, "Image 7 - Silver Table-View.png"), caption: "Silver View", description: "Silver-layer inspection." },
-        { url: asset(ASSET_FOLDERS.case05, "Image 8 - Silver Table.png"), caption: "Silver Table", description: "Curated analytical data." },
-        { url: asset(ASSET_FOLDERS.case05, "Image 9 - Silver Table-1.png"), caption: "Silver Table Detail", description: "Additional Silver view." },
-        { url: asset(ASSET_FOLDERS.case05, "Image 10 - Silver to Gold Table.png"), caption: "Silver to Gold", description: "Gold dimensional transformation." },
-        { url: asset(ASSET_FOLDERS.case05, "Image 11 - Gold Table.png"), caption: "Gold Table", description: "Gold analytical model." },
-        { url: asset(ASSET_FOLDERS.case05, "Image 12 - Gold Table-1.png"), caption: "Gold Table Detail", description: "Gold model view." },
-        { url: asset(ASSET_FOLDERS.case05, "Image 13 - Gold Table-2.png"), caption: "Gold Table Detail", description: "Additional Gold view." },
-        { url: asset(ASSET_FOLDERS.case05, "Image 14 - Gold Table-3.png"), caption: "Gold Table Detail", description: "Final Gold model view." }
+        { url: asset(ASSET_FOLDERS.case05, "Picture1.jpg"), caption: "Unified Commerce Analytics", description: "Modern retail analytics architecture." },
+        { url: asset(ASSET_FOLDERS.case05, "Picture2.png"), caption: "Bronze-Silver-Gold Architecture", description: "Three-layer Lakehouse architecture." },
+        { url: asset(ASSET_FOLDERS.case05, "Picture3.png"), caption: "Lookup Activity", description: "Pipeline lookup configuration." },
+        { url: asset(ASSET_FOLDERS.case05, "Picture4.png"), caption: "For Loop Activity", description: "Iterative table ingestion pattern." },
+        { url: asset(ASSET_FOLDERS.case05, "Picture5.png"), caption: "Pipeline Settings", description: "Pipeline orchestration configuration." },
+        { url: asset(ASSET_FOLDERS.case05, "Picture6.png"), caption: "Copy Data Loop", description: "Automated source-table ingestion." },
+        { url: asset(ASSET_FOLDERS.case05, "Picture7.png"), caption: "Bronze to Silver", description: "PySpark curation stage." },
+        { url: asset(ASSET_FOLDERS.case05, "Picture8.png"), caption: "Save Silver Table", description: "Silver Delta persistence." },
+        { url: asset(ASSET_FOLDERS.case05, "Picture9.png"), caption: "Silver View", description: "Silver-layer inspection." },
+        { url: asset(ASSET_FOLDERS.case05, "Picture10.png"), caption: "Silver Table", description: "Curated analytical data." },
+        { url: asset(ASSET_FOLDERS.case05, "Picture11.png"), caption: "Silver Table Detail", description: "Additional Silver view." },
+        { url: asset(ASSET_FOLDERS.case05, "Picture12.png"), caption: "Silver to Gold", description: "Gold dimensional transformation." },
+        { url: asset(ASSET_FOLDERS.case05, "Picture13.png"), caption: "Gold Table", description: "Gold analytical model." },
+        { url: asset(ASSET_FOLDERS.case05, "Picture14.png"), caption: "Gold Table Detail", description: "Gold model view." }
+      
       ],
 
       results: [
@@ -973,7 +976,7 @@ const portfolioData = {
       featured: false,
       role: "Data Engineer",
       timeline: "Microsoft Fabric Case Study",
-      image: asset(ASSET_FOLDERS.case06, "Image 1 - Title Image.png"),
+      image: asset(ASSET_FOLDERS.case06, "Picture1.jpg"),
       demoUrl: "",
       githubUrl: "https://github.com/shubhampandey11aug/my-portfolio/tree/main/assets/Case%20Study%2006%20Market%20Risk%20Intelligence%20Feed",
       metrics: "Daily FX feed with idempotent historical backfill",
@@ -1072,18 +1075,19 @@ const portfolioData = {
       ],
 
       gallery: [
-        { url: asset(ASSET_FOLDERS.case06, "Image 1 - Title Image.png"), caption: "Market Risk Intelligence Feed", description: "Daily FX ingestion case study." },
-        { url: asset(ASSET_FOLDERS.case06, "Image 2 - Create Schema.png"), caption: "Create Schema", description: "Warehouse schema setup." },
-        { url: asset(ASSET_FOLDERS.case06, "Image 3 - Create Table.png"), caption: "Create FX Table", description: "Target table creation." },
-        { url: asset(ASSET_FOLDERS.case06, "Image 4 - JSON Parsing.png"), caption: "JSON Parsing", description: "OPENJSON transformation." },
-        { url: asset(ASSET_FOLDERS.case06, "Image 5 - Create Stored Procedure.png"), caption: "Stored Procedure", description: "Idempotent ingestion logic." },
-        { url: asset(ASSET_FOLDERS.case06, "Image 6 - Data Pipeline.png"), caption: "Data Pipeline", description: "End-to-end API ingestion." },
-        { url: asset(ASSET_FOLDERS.case06, "Image 7 - Data Pipeline-SP.png"), caption: "Pipeline + Stored Procedure", description: "Procedure-integrated pipeline." },
-        { url: asset(ASSET_FOLDERS.case06, "Image 8 - Data Pipeline-Settings.png"), caption: "Pipeline Settings", description: "Runtime configuration." },
-        { url: asset(ASSET_FOLDERS.case06, "Image 9 - Data Pipeline-Run.png"), caption: "Pipeline Run", description: "Execution result." },
-        { url: asset(ASSET_FOLDERS.case06, "Image 10 - Alter Table.png"), caption: "Alter Table", description: "Table evolution." },
-        { url: asset(ASSET_FOLDERS.case06, "Image 10 - Alter Table-View.png"), caption: "Alter Table View", description: "Updated table structure." },
-        { url: asset(ASSET_FOLDERS.case06, "Image 10 - Alter Stored Procedure-Idempotent.png"), caption: "Idempotent Procedure", description: "Final repeat-safe procedure logic." }
+        { url: asset(ASSET_FOLDERS.case06, "Picture1.jpg"), caption: "Market Risk Intelligence Feed", description: "Daily FX ingestion case study." },
+        { url: asset(ASSET_FOLDERS.case06, "Picture2.png"), caption: "Create Schema", description: "Warehouse schema setup." },
+        { url: asset(ASSET_FOLDERS.case06, "Picture3.png"), caption: "Create FX Table", description: "Target table creation." },
+        { url: asset(ASSET_FOLDERS.case06, "Picture4.png"), caption: "JSON Parsing", description: "OPENJSON transformation." },
+        { url: asset(ASSET_FOLDERS.case06, "Picture5.png"), caption: "Stored Procedure", description: "Idempotent ingestion logic." },
+        { url: asset(ASSET_FOLDERS.case06, "Picture6.png"), caption: "Data Pipeline", description: "End-to-end API ingestion." },
+        { url: asset(ASSET_FOLDERS.case06, "Picture7.png"), caption: "Pipeline + Stored Procedure", description: "Procedure-integrated pipeline." },
+        { url: asset(ASSET_FOLDERS.case06, "Picture8.png"), caption: "Pipeline Settings", description: "Runtime configuration." },
+        { url: asset(ASSET_FOLDERS.case06, "Picture9.png"), caption: "Pipeline Run", description: "Execution result." },
+        { url: asset(ASSET_FOLDERS.case06, "Picture10.png"), caption: "Alter Table", description: "Table evolution." },
+        { url: asset(ASSET_FOLDERS.case06, "Picture11.png"), caption: "Alter Table View", description: "Updated table structure." },
+        { url: asset(ASSET_FOLDERS.case06, "Picture12.png"), caption: "Idempotent Procedure", description: "Final repeat-safe procedure logic." }
+      
       ],
 
       results: [
@@ -1106,7 +1110,7 @@ const portfolioData = {
       featured: true,
       role: "Data Engineer",
       timeline: "Microsoft Fabric Case Study",
-      image: asset(ASSET_FOLDERS.case07, "Image 1 - Title Image.png"),
+      image: asset(ASSET_FOLDERS.case07, "Picture1.png"),
       demoUrl: "",
       githubUrl: "https://github.com/shubhampandey11aug/my-portfolio/tree/main/assets/Case%20Study%2007%20The%20Accountability%20Gap%20.Regulatory%20Data%20Governance%20%26%20Historical%20Accountability",
       metrics: "Five-level accountability chain + SCD Type 2 history",
@@ -1200,21 +1204,23 @@ const portfolioData = {
       ],
 
       gallery: [
-        { url: asset(ASSET_FOLDERS.case07, "Image 1 - Title Image.png"), caption: "The Accountability Gap", description: "Regulatory data governance case study." },
-        { url: asset(ASSET_FOLDERS.case07, "Image 2 - Create Schema.png"), caption: "Create Schema", description: "Warehouse schema setup." },
-        { url: asset(ASSET_FOLDERS.case07, "Image 3 - Copy Data to Warehouse.png"), caption: "Copy Data to Warehouse", description: "Warehouse ingestion." },
-        { url: asset(ASSET_FOLDERS.case07, "Image 4 - Governed Gold View.png"), caption: "Governed Gold View", description: "Defensive governed view." },
-        { url: asset(ASSET_FOLDERS.case07, "Image 5 - RM performance leaderboard.png"), caption: "RM Performance Leaderboard", description: "Relationship Manager performance ranking." },
-        { url: asset(ASSET_FOLDERS.case07, "Image 6 - RM Rank.png"), caption: "RM Rank", description: "Peer-based ranking output." },
-        { url: asset(ASSET_FOLDERS.case07, "Image 7 - Flatten the five-level hierarchy.png"), caption: "Five-Level Hierarchy", description: "Accountability-chain resolution." },
-        { url: asset(ASSET_FOLDERS.case07, "Image 8 - hierarchy level.png"), caption: "Hierarchy Level", description: "Hierarchy-depth output." },
-        { url: asset(ASSET_FOLDERS.case07, "Image 9 - SCD-Type2.png"), caption: "SCD Type 2", description: "Historical tracking model." },
-        { url: asset(ASSET_FOLDERS.case07, "Image 10 - SCD-Type2_View Updated Records.png"), caption: "Updated SCD Records", description: "Historical state view." },
-        { url: asset(ASSET_FOLDERS.case07, "Image 11 - SCD-Type2_Staging Table.png"), caption: "SCD Staging", description: "Incoming roster changes." },
-        { url: asset(ASSET_FOLDERS.case07, "Image 12 - SCD-Type2_ merge.png"), caption: "SCD Merge", description: "Historical merge logic." },
-        { url: asset(ASSET_FOLDERS.case07, "Image 13 - SCD-Type2_ merge-1.png"), caption: "SCD Merge Step 1", description: "Merge implementation detail." },
-        { url: asset(ASSET_FOLDERS.case07, "Image 14 - SCD-Type2_ merge-2.png"), caption: "SCD Merge Step 2", description: "Merge implementation detail." },
-        { url: asset(ASSET_FOLDERS.case07, "Image 15 - SCD-Type2_ merge-3.png"), caption: "SCD Merge Step 3", description: "Final merge implementation detail." }
+        { url: asset(ASSET_FOLDERS.case07, "Picture1.png"), caption: "The Accountability Gap", description: "Regulatory data governance case study." },
+        { url: asset(ASSET_FOLDERS.case07, "Picture2.PNG"), caption: "Create Schema", description: "Warehouse schema setup." },
+        { url: asset(ASSET_FOLDERS.case07, "Picture3.PNG"), caption: "Copy Data to Warehouse", description: "Warehouse ingestion." },
+        { url: asset(ASSET_FOLDERS.case07, "Picture4.PNG"), caption: "Governed Gold View", description: "Defensive governed view." },
+        { url: asset(ASSET_FOLDERS.case07, "Picture5.PNG"), caption: "RM Performance Leaderboard", description: "Relationship Manager performance ranking." },
+        { url: asset(ASSET_FOLDERS.case07, "Picture6.PNG"), caption: "RM Rank", description: "Peer-based ranking output." },
+        { url: asset(ASSET_FOLDERS.case07, "Picture7.PNG"), caption: "Five-Level Hierarchy", description: "Accountability-chain resolution." },
+        { url: asset(ASSET_FOLDERS.case07, "Picture8.PNG"), caption: "Hierarchy Level", description: "Hierarchy-depth output." },
+        { url: asset(ASSET_FOLDERS.case07, "Picture9.PNG"), caption: "SCD Type 2", description: "Historical tracking model." },
+        { url: asset(ASSET_FOLDERS.case07, "Picture10.PNG"), caption: "Updated SCD Records", description: "Historical state view." },
+        { url: asset(ASSET_FOLDERS.case07, "Picture11.PNG"), caption: "SCD Staging", description: "Incoming roster changes." },
+        { url: asset(ASSET_FOLDERS.case07, "Picture12.PNG"), caption: "SCD Merge", description: "Historical merge logic." },
+        { url: asset(ASSET_FOLDERS.case07, "Picture13.PNG"), caption: "SCD Merge Step 1", description: "Merge implementation detail." },
+        { url: asset(ASSET_FOLDERS.case07, "Picture14.PNG"), caption: "SCD Merge Step 2", description: "Merge implementation detail." },
+        { url: asset(ASSET_FOLDERS.case07, "Picture15.PNG"), caption: "SCD Merge Step 3", description: "Final merge implementation detail." },
+        { url: asset(ASSET_FOLDERS.case07, "Picture24.png"), caption: "Picture 24", description: "Additional project screenshot." }
+      
       ],
 
       results: [
@@ -1237,7 +1243,7 @@ const portfolioData = {
       featured: true,
       role: "Data Engineer",
       timeline: "Microsoft Fabric Case Study",
-      image: asset(ASSET_FOLDERS.case08, "Image 1 - Title Image.png"),
+      image: asset(ASSET_FOLDERS.case08, "Picture1.jpg"),
       demoUrl: "",
       githubUrl: "https://github.com/shubhampandey11aug/my-portfolio/tree/main/assets/Case%20Study%2008%20Inventory%20Data%20Migration%20to%20Microsoft%20Fabric%20Lakehouse",
       metrics: "12 warehouses | up to 22,000 transactions/day",
@@ -1338,15 +1344,16 @@ const portfolioData = {
       ],
 
       gallery: [
-        { url: asset(ASSET_FOLDERS.case08, "Image 1 - Title Image.png"), caption: "Inventory Data Migration", description: "On-premises PostgreSQL to Fabric Lakehouse." },
-        { url: asset(ASSET_FOLDERS.case08, "Image 2 - On Premise Gateway.png"), caption: "On-premises Data Gateway", description: "Secure source connectivity." },
-        { url: asset(ASSET_FOLDERS.case08, "Image 3 - Create Schema,Table.png"), caption: "Source Schema and Table", description: "Inventory source setup." },
-        { url: asset(ASSET_FOLDERS.case08, "Image 4 - Table View.png"), caption: "Inventory Table", description: "Source inventory snapshot." },
-        { url: asset(ASSET_FOLDERS.case08, "Image 5 - Data Pipeline.png"), caption: "Data Pipeline", description: "Fabric ingestion pipeline." },
-        { url: asset(ASSET_FOLDERS.case08, "Image 6 - Copy Data-Destination.png"), caption: "Copy Data Destination", description: "Lakehouse destination." },
-        { url: asset(ASSET_FOLDERS.case08, "Image 7 - Copy Data-Source.png"), caption: "Copy Data Source", description: "PostgreSQL source configuration." },
-        { url: asset(ASSET_FOLDERS.case08, "Image 8 - Data Flow.png"), caption: "Data Flow", description: "End-to-end transfer flow." },
-        { url: asset(ASSET_FOLDERS.case08, "Image 9 - Create Audit Logging Table.png"), caption: "Audit Logging Table", description: "Execution and transfer audit structure." }
+        { url: asset(ASSET_FOLDERS.case08, "Picture1.jpg"), caption: "Inventory Data Migration", description: "On-premises PostgreSQL to Fabric Lakehouse." },
+        { url: asset(ASSET_FOLDERS.case08, "Picture2.png"), caption: "On-premises Data Gateway", description: "Secure source connectivity." },
+        { url: asset(ASSET_FOLDERS.case08, "Picture3.png"), caption: "Source Schema and Table", description: "Inventory source setup." },
+        { url: asset(ASSET_FOLDERS.case08, "Picture4.png"), caption: "Inventory Table", description: "Source inventory snapshot." },
+        { url: asset(ASSET_FOLDERS.case08, "Picture5.png"), caption: "Data Pipeline", description: "Fabric ingestion pipeline." },
+        { url: asset(ASSET_FOLDERS.case08, "Picture6.png"), caption: "Copy Data Destination", description: "Lakehouse destination." },
+        { url: asset(ASSET_FOLDERS.case08, "Picture7.png"), caption: "Copy Data Source", description: "PostgreSQL source configuration." },
+        { url: asset(ASSET_FOLDERS.case08, "Picture8.PNG"), caption: "Data Flow", description: "End-to-end transfer flow." },
+        { url: asset(ASSET_FOLDERS.case08, "Picture9.PNG"), caption: "Audit Logging Table", description: "Execution and transfer audit structure." }
+      
       ],
 
       results: [
@@ -1369,7 +1376,7 @@ const portfolioData = {
       featured: false,
       role: "Data Analyst / Data Engineer",
       timeline: "Microsoft Fabric Case Study",
-      image: asset(ASSET_FOLDERS.case09, "Image 1 - Title Image.png"),
+      image: asset(ASSET_FOLDERS.case09, "Picture1.jpg"),
       demoUrl: "",
       githubUrl: "https://github.com/shubhampandey11aug/my-portfolio/tree/main/assets/Case%20Study%2009%20Customer%20Data%20Trust%20Transformation",
       metrics: "Customer_Silver as the trusted analytical contract",
@@ -1470,18 +1477,19 @@ const portfolioData = {
       ],
 
       gallery: [
-        { url: asset(ASSET_FOLDERS.case09, "Image 1 - Title Image.png"), caption: "Customer Data Trust Transformation", description: "Customer 360 data-quality case study." },
-        { url: asset(ASSET_FOLDERS.case09, "Image 2 - Bronze_Customer Table.png"), caption: "Bronze Customer Table", description: "Source customer dataset." },
-        { url: asset(ASSET_FOLDERS.case09, "Image 3 - Customer Table-Promote Herders.png"), caption: "Promote Reference Data", description: "Reference-data preparation." },
-        { url: asset(ASSET_FOLDERS.case09, "Image 4 - Merge State and Customer Table.png"), caption: "Merge State and Customer", description: "Reference-data lookup integration." },
-        { url: asset(ASSET_FOLDERS.case09, "Image 5 - Remove Columns.png"), caption: "Remove Columns", description: "Dataflow field cleanup." },
-        { url: asset(ASSET_FOLDERS.case09, "Image 6 - Split Columns By delimter.png"), caption: "Split Address Columns", description: "Address transformation." },
-        { url: asset(ASSET_FOLDERS.case09, "Image 7 - Split Columns By delimter-1.png"), caption: "Split Columns — Detail", description: "Additional address transformation." },
-        { url: asset(ASSET_FOLDERS.case09, "Image 8 - Merge Address and Customer Table.png"), caption: "Merge Address and Customer", description: "Recombining cleaned customer attributes." },
-        { url: asset(ASSET_FOLDERS.case09, "Image 9 - Expand Table.png"), caption: "Expand Lookup", description: "Expanding reference-data attributes." },
-        { url: asset(ASSET_FOLDERS.case09, "Image 10 - Remove Column.png"), caption: "Final Column Cleanup", description: "Removing unnecessary transformation fields." },
-        { url: asset(ASSET_FOLDERS.case09, "Image 11 - Clean Phone Column.png"), caption: "Clean Phone Column", description: "Digits-only phone standardisation." },
-        { url: asset(ASSET_FOLDERS.case09, "Image 12 - Table View_Clean Data.png"), caption: "Clean Customer Data", description: "Final standardised customer output." }
+        { url: asset(ASSET_FOLDERS.case09, "Picture1.jpg"), caption: "Customer Data Trust Transformation", description: "Customer 360 data-quality case study." },
+        { url: asset(ASSET_FOLDERS.case09, "Picture2.png"), caption: "Bronze Customer Table", description: "Source customer dataset." },
+        { url: asset(ASSET_FOLDERS.case09, "Picture3.png"), caption: "Promote Reference Data", description: "Reference-data preparation." },
+        { url: asset(ASSET_FOLDERS.case09, "Picture4.png"), caption: "Merge State and Customer", description: "Reference-data lookup integration." },
+        { url: asset(ASSET_FOLDERS.case09, "Picture5.png"), caption: "Remove Columns", description: "Dataflow field cleanup." },
+        { url: asset(ASSET_FOLDERS.case09, "Picture6.png"), caption: "Split Address Columns", description: "Address transformation." },
+        { url: asset(ASSET_FOLDERS.case09, "Picture7.png"), caption: "Split Columns — Detail", description: "Additional address transformation." },
+        { url: asset(ASSET_FOLDERS.case09, "Picture8.png"), caption: "Merge Address and Customer", description: "Recombining cleaned customer attributes." },
+        { url: asset(ASSET_FOLDERS.case09, "Picture9.png"), caption: "Expand Lookup", description: "Expanding reference-data attributes." },
+        { url: asset(ASSET_FOLDERS.case09, "Picture10.png"), caption: "Final Column Cleanup", description: "Removing unnecessary transformation fields." },
+        { url: asset(ASSET_FOLDERS.case09, "Picture11.png"), caption: "Clean Phone Column", description: "Digits-only phone standardisation." },
+        { url: asset(ASSET_FOLDERS.case09, "Picture12.png"), caption: "Clean Customer Data", description: "Final standardised customer output." }
+      
       ],
 
       results: [
@@ -1504,7 +1512,7 @@ const portfolioData = {
       featured: true,
       role: "Data Engineer / Analytics Engineer",
       timeline: "Microsoft Fabric Real-Time Intelligence Case Study",
-      image: asset(ASSET_FOLDERS.case10, "Image 1 - Title Image.png"),
+      image: asset(ASSET_FOLDERS.case10, "Picture1.jpg"),
       demoUrl: "",
       githubUrl: "https://github.com/shubhampandey11aug/my-portfolio/tree/main/assets/Case%20Study%2010%20Live%20Market%20Intelligence",
       metrics: "30-second dashboard refresh + automated drawdown alerting",
@@ -1607,21 +1615,22 @@ const portfolioData = {
       ],
 
       gallery: [
-        { url: asset(ASSET_FOLDERS.case10, "Image 1 - Title Image.png"), caption: "Live Market Intelligence", description: "Real-time market-data case study." },
-        { url: asset(ASSET_FOLDERS.case10, "Image 2 - Provision the workspace and Eventhouse.png"), caption: "Workspace & Eventhouse", description: "Real-time environment provisioning." },
-        { url: asset(ASSET_FOLDERS.case10, "Image 3 - Define the KQL Database schemas before any data lands.png"), caption: "KQL Schema Definition", description: "Schema defined before event arrival." },
-        { url: asset(ASSET_FOLDERS.case10, "Image 4 - Connect the governed Eventstream.png"), caption: "Governed Eventstream", description: "Continuous event routing into KQL." },
-        { url: asset(ASSET_FOLDERS.case10, "Image 5 - KQL Query-01.png"), caption: "KQL Query 01", description: "Real-time market analytics." },
-        { url: asset(ASSET_FOLDERS.case10, "Image 6 - KQL Query-02.png"), caption: "KQL Query 02", description: "Real-time market analytics." },
-        { url: asset(ASSET_FOLDERS.case10, "Image 7 - KQL Query-03.png"), caption: "KQL Query 03", description: "Real-time market analytics." },
-        { url: asset(ASSET_FOLDERS.case10, "Image 8 - KQL Query-04.png"), caption: "KQL Query 04", description: "Real-time market analytics." },
-        { url: asset(ASSET_FOLDERS.case10, "Image 9 - KQL Query-05.png"), caption: "KQL Query 05", description: "Real-time market analytics." },
-        { url: asset(ASSET_FOLDERS.case10, "Image 10 - KQL Query-06.png"), caption: "KQL Query 06", description: "Real-time market analytics." },
-        { url: asset(ASSET_FOLDERS.case10, "Image 11 - KQL Query-07.png"), caption: "KQL Query 07", description: "Real-time market analytics." },
-        { url: asset(ASSET_FOLDERS.case10, "Image 12 - Configure the drawdown alert.png"), caption: "Drawdown Alert", description: "Activator drawdown alert configuration." },
-        { url: asset(ASSET_FOLDERS.case10, "Image 13 - Audit Log.png"), caption: "Audit Log", description: "Configuration-change audit log." },
-        { url: asset(ASSET_FOLDERS.case10, "Image 14 - Real Time Dashboard.png"), caption: "Real-Time Dashboard", description: "Live market-price, volatility and volume indicators." },
-        { url: asset(ASSET_FOLDERS.case10, "Image 15 - Real Time Dashboard-1.png"), caption: "Real-Time Dashboard Detail", description: "Additional live dashboard view." }
+        { url: asset(ASSET_FOLDERS.case10, "Picture1.jpg"), caption: "Live Market Intelligence", description: "Real-time market-data case study." },
+        { url: asset(ASSET_FOLDERS.case10, "Picture2.png"), caption: "Workspace & Eventhouse", description: "Real-time environment provisioning." },
+        { url: asset(ASSET_FOLDERS.case10, "Picture3.png"), caption: "KQL Schema Definition", description: "Schema defined before event arrival." },
+        { url: asset(ASSET_FOLDERS.case10, "Picture4.png"), caption: "Governed Eventstream", description: "Continuous event routing into KQL." },
+        { url: asset(ASSET_FOLDERS.case10, "Picture5.png"), caption: "KQL Query 01", description: "Real-time market analytics." },
+        { url: asset(ASSET_FOLDERS.case10, "Picture6.png"), caption: "KQL Query 02", description: "Real-time market analytics." },
+        { url: asset(ASSET_FOLDERS.case10, "Picture7.png"), caption: "KQL Query 03", description: "Real-time market analytics." },
+        { url: asset(ASSET_FOLDERS.case10, "Picture8.png"), caption: "KQL Query 04", description: "Real-time market analytics." },
+        { url: asset(ASSET_FOLDERS.case10, "Picture9.png"), caption: "KQL Query 05", description: "Real-time market analytics." },
+        { url: asset(ASSET_FOLDERS.case10, "Picture10.png"), caption: "KQL Query 06", description: "Real-time market analytics." },
+        { url: asset(ASSET_FOLDERS.case10, "Picture11.png"), caption: "KQL Query 07", description: "Real-time market analytics." },
+        { url: asset(ASSET_FOLDERS.case10, "Picture12.png"), caption: "Drawdown Alert", description: "Activator drawdown alert configuration." },
+        { url: asset(ASSET_FOLDERS.case10, "Picture13.png"), caption: "Audit Log", description: "Configuration-change audit log." },
+        { url: asset(ASSET_FOLDERS.case10, "Picture14.png"), caption: "Real-Time Dashboard", description: "Live market-price, volatility and volume indicators." },
+        { url: asset(ASSET_FOLDERS.case10, "Picture15.png"), caption: "Real-Time Dashboard Detail", description: "Additional live dashboard view." }
+      
       ],
 
       results: [
