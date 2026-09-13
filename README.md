@@ -1,23 +1,30 @@
-# 🚀 Dynamic Modern Portfolio for GitHub Pages
+# 🚀 Modern Dynamic Portfolio & Case Studies for GitHub Pages
 
-A modern, responsive, and data-driven personal portfolio website designed specifically for zero-cost hosting on **GitHub Pages**. 
+A modern, responsive personal portfolio website engineered specifically for 100% free hosting on **GitHub Pages**. 
 
 Featuring:
 - 🌓 **Dark / Light Mode** with automatic system preference detection & localStorage persistence.
 - 🔍 **Live Search & Category Filtering** for projects.
-- 🖼️ **Interactive Project Case Study Modals** with screenshot previews, problem/solution breakdown, architecture highlights, and direct live demo/GitHub links.
+- 📑 **Dedicated Project Case Study Pages (`project.html?id=...`)**:
+  - Automatically opens in a **new tab** (`target="_blank"`) when clicking **"Show Details"** on any project card.
+  - Complete **Executive Summary**, **Problem Statement**, **Core Objectives**, and **Target Audience**.
+  - **Methodology & Architecture**: System architectural breakdowns and technical decision matrices (Decision vs. Rationale).
+  - **Step-by-Step Implementation Guide**: Multi-phase build steps with deliverables, tools, and technical descriptions.
+  - **Interactive Screenshot Gallery**: Responsive gallery cards with a click-to-enlarge **lightbox modal**.
+  - **Measurable Outcomes & Key Metrics**: Highlighting performance wins, uptime, and user adoption.
 - 📄 **Resume Integration**: Work experience timeline, academic background, technical skills matrix, and verified certifications.
-- ⚡ **Zero Framework Dependencies**: Pure modern HTML5, CSS3 (CSS Variables & Glassmorphism), and Vanilla ES6+ JavaScript. Fast load times, 100 Lighthouse performance score, zero build tools needed (`npm run build` not required).
-- 🧩 **100% Data-Driven**: Update your entire portfolio (resume, projects, skills, contacts) simply by editing `data.js`!
+- ⚡ **Zero Framework Dependencies**: Pure modern semantic HTML5, CSS3 (CSS Variables & Glassmorphism), and Vanilla ES6+ JavaScript. Fast load times, 100 Lighthouse performance score, zero build tools needed (`npm run build` not required).
+- 🧩 **100% Data-Driven**: Update your entire portfolio (resume, projects, skills, contacts, deep-dive writeups) simply by editing `data.js`!
 
 ---
 
 ## 📁 Project Structure
 
 ```
-├── index.html         # Main semantic HTML structure & layout
-├── style.css          # Design system, CSS variables, dark/light themes, animations
-├── data.js            # Central data configuration (Resume + Projects + Skills)
+├── index.html         # Main landing page (Hero, About, Skills, Projects Grid, Timeline)
+├── project.html       # Dedicated case study page (Writeup, Methodology, Steps, Gallery)
+├── style.css          # Master stylesheet, CSS design tokens, dark/light themes, animations
+├── data.js            # Central data configuration (Resume + Projects + Case Studies)
 ├── app.js             # Dynamic rendering engine, search/filtering, modal handlers
 ├── assets/            # Folder for your screenshots, avatar photo, and resume.pdf
 └── README.md          # Setup and deployment guide
@@ -31,7 +38,7 @@ Deploying this portfolio to GitHub Pages takes less than 2 minutes:
 
 ### Option A: Via GitHub Web Interface
 1. Create a new public repository on GitHub (e.g., `my-portfolio` or `username.github.io`).
-2. Upload all the files (`index.html`, `style.css`, `data.js`, `app.js`, and `assets` folder) directly into the repository.
+2. Upload all the files (`index.html`, `project.html`, `style.css`, `data.js`, `app.js`, and `assets` folder) directly into the repository root.
 3. Go to **Settings** in your GitHub repository.
 4. In the left sidebar, click on **Pages**.
 5. Under **Build and deployment**:
@@ -74,30 +81,73 @@ personal: {
 }
 ```
 
-### 2. Add Your Projects & Screenshots
-In `data.js`, add or edit objects in the `projects` array:
+### 2. Add Your Projects & Detailed Case Studies
+In `data.js`, add or edit objects in the `projects` array. Each project automatically gets its own case study view when clicking "Show Details":
+
 ```javascript
 {
-  id: "my-awesome-app",
-  title: "App Title",
-  tagline: "A one-line punchy description of what the app does.",
+  id: "my-app",
+  title: "My Awesome App",
+  tagline: "One-line punchy description.",
   category: "fullstack", // Options: 'fullstack', 'frontend', 'ai-ml', 'cloud', 'tools'
-  featured: true,        // Shows a 'Featured' badge
-  image: "assets/projects/app-screenshot.png", // Or web URL
-  demoUrl: "https://my-live-demo.com",
-  githubUrl: "https://github.com/myusername/my-app",
-  metrics: "50k+ active users, 99.9% uptime",
-  tags: ["React", "Node.js", "PostgreSQL", "Docker"],
-  details: {
-    overview: "In-depth overview of what the application achieves...",
-    keyFeatures: [
-      "Key feature 1",
-      "Key feature 2",
-      "Key feature 3"
+  featured: true,
+  role: "Lead Software Architect",
+  timeline: "3 Months (2024)",
+  image: "assets/projects/preview.png",
+  demoUrl: "https://example.com/demo",
+  githubUrl: "https://github.com/yourusername/repo",
+  metrics: "500k+ events/sec",
+  tags: ["TypeScript", "Next.js", "PostgreSQL"],
+
+  // 1. In-depth Writeup
+  writeup: {
+    executiveSummary: "Detailed summary of the application...",
+    problemStatement: "The business or engineering bottleneck you tackled...",
+    objectives: [
+      "Objective 1",
+      "Objective 2"
     ],
-    technicalChallenge: "What engineering challenge did you overcome?",
-    solution: "How did you solve it architecturally?"
-  }
+    targetAudience: "Engineers, users, or clients..."
+  },
+
+  // 2. Methodology & Architecture
+  methodology: {
+    architectureOverview: "How data flows through the system...",
+    technicalDecisions: [
+      {
+        decision: "Used ClickHouse for time-series aggregation",
+        rationale: "Vectorized query engine reduced query response times by 80%."
+      }
+    ],
+    securityAndReliability: "mTLS authentication and tokenized rate limiting."
+  },
+
+  // 3. Step-by-Step Implementation
+  steps: [
+    {
+      stepNumber: 1,
+      phase: "Phase 1: Architecture Planning",
+      title: "Data Modeling & API Contract Design",
+      description: "Defined protobuf schemas and database partition strategies.",
+      deliverables: ["Protobuf schemas", "Architecture diagrams"],
+      tools: ["Protocol Buffers", "Docker"]
+    }
+  ],
+
+  // 4. Image Gallery & Lightbox
+  gallery: [
+    {
+      url: "https://example.com/screenshot1.png",
+      caption: "Live Telemetry Dashboard",
+      description: "Sub-second chart streaming with anomaly detection."
+    }
+  ],
+
+  // 5. Measurable Outcomes
+  results: [
+    { metric: "500k+", label: "Metrics / Sec Processed" },
+    { metric: "< 50ms", label: "Latency" }
+  ]
 }
 ```
 
@@ -107,15 +157,6 @@ In `data.js`, fill in:
 - `experience`: Your previous jobs, roles, bullet points, and technologies.
 - `education`: University, degree, GPA/honors, and relevant coursework.
 - `certifications`: AWS, Kubernetes, Meta, etc.
-
----
-
-## 🌐 Custom Domain (Optional)
-If you own a custom domain (e.g., `johnsmith.dev`):
-1. In your GitHub repository, go to **Settings > Pages > Custom domain**.
-2. Enter your domain name and click **Save**.
-3. In your DNS provider (Cloudflare, Namecheap, GoDaddy), add a `CNAME` record pointing to `<username>.github.io`.
-4. Check **Enforce HTTPS**.
 
 ---
 

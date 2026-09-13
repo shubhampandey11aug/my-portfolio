@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="page-title">Project Details | Case Study</title>
+  <meta name="description" content="In-depth project case study, methodology, build steps, and technical architecture." />
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="project-detail-body">
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-badge">&lt;/&gt;</div>
+        <span id="nav-author-name">Alex Morgan</span>
+      </a>
+
+      <div class="nav-actions">
+        <a href="index.html#projects" class="btn btn-outline btn-sm">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          Back to Portfolio
+        </a>
+
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle Color Theme" title="Toggle Light/Dark Theme">
+          <span id="theme-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="container" style="padding-top: 3rem; padding-bottom: 5rem;">
+
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumb-nav">
+      <a href="index.html" class="breadcrumb-link">Portfolio</a>
+      <span class="breadcrumb-separator">/</span>
+      <a href="index.html#projects" class="breadcrumb-link">Projects</a>
+      <span class="breadcrumb-separator">/</span>
+      <span id="breadcrumb-current" class="breadcrumb-current">Case Study</span>
+    </nav>
+
+    <!-- Project Hero Header -->
+    <div class="project-case-header">
+      <div class="project-meta-badges">
+        <span id="project-category-badge" class="section-badge">Full-Stack</span>
+        <span id="project-featured-tag" class="badge-featured" style="display: none;">★ Featured Project</span>
+      </div>
+
+      <h1 id="project-main-title" class="project-case-title">Loading Project...</h1>
+      <p id="project-main-tagline" class="project-case-subtitle"></p>
+
+      <!-- Meta Info Grid (Role, Timeline, Tech) -->
+      <div class="project-meta-bar">
+        <div class="meta-item">
+          <span class="meta-label">My Role</span>
+          <span id="meta-role" class="meta-value">-</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Timeline</span>
+          <span id="meta-timeline" class="meta-value">-</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Category</span>
+          <span id="meta-category" class="meta-value">-</span>
+        </div>
+        <div class="meta-item meta-item-grow">
+          <span class="meta-label">Core Tech Stack</span>
+          <div id="meta-tags" class="project-tags" style="margin-bottom: 0;"></div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="project-hero-actions">
+        <a id="hero-demo-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+          Launch Live Application
+        </a>
+        <a id="hero-github-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+          </svg>
+          View GitHub Repository
+        </a>
+      </div>
+    </div>
+
+    <!-- Hero Image Banner -->
+    <div class="project-hero-banner-box">
+      <img id="project-hero-image" src="" alt="Project Hero Preview" class="project-hero-banner" />
+    </div>
+
+    <!-- Section 1: Project Writeup & Objectives -->
+    <section class="case-section">
+      <div class="case-section-header">
+        <span class="section-badge">01 • Overview</span>
+        <h2 class="case-heading">Project Writeup & <span class="gradient-text">Core Objectives</span></h2>
+      </div>
+
+      <div class="case-card-grid">
+        <div class="case-card">
+          <h3 class="case-subheading">Executive Summary</h3>
+          <p id="writeup-summary" class="case-text"></p>
+        </div>
+
+        <div class="case-card">
+          <h3 class="case-subheading">Problem Statement</h3>
+          <p id="writeup-problem" class="case-text"></p>
+        </div>
+      </div>
+
+      <div class="case-card" style="margin-top: 1.5rem;">
+        <h3 class="case-subheading">Key Project Objectives</h3>
+        <ul id="writeup-objectives" class="case-bullet-list"></ul>
+      </div>
+
+      <div class="case-card-secondary" style="margin-top: 1.5rem;">
+        <strong>Target Audience & Users:</strong>
+        <span id="writeup-audience" style="color: var(--text-secondary); margin-left: 0.5rem;"></span>
+      </div>
+    </section>
+
+    <!-- Section 2: Methodology & Architecture -->
+    <section class="case-section">
+      <div class="case-section-header">
+        <span class="section-badge">02 • Engineering</span>
+        <h2 class="case-heading">Architecture & <span class="gradient-text">Methodology</span></h2>
+      </div>
+
+      <div class="case-card">
+        <h3 class="case-subheading">System Architecture Overview</h3>
+        <p id="methodology-architecture" class="case-text"></p>
+      </div>
+
+      <h3 style="font-size: 1.3rem; margin: 2rem 0 1rem; font-weight: 700;">Key Technical Decisions & Rationale</h3>
+      <div id="methodology-decisions" class="decisions-grid">
+        <!-- Injected by JS -->
+      </div>
+
+      <div class="case-card-secondary" style="margin-top: 1.5rem;">
+        <h4 style="font-size: 1rem; margin-bottom: 0.35rem; color: var(--text-primary);">Security, Scalability & Performance</h4>
+        <p id="methodology-security" class="case-text"></p>
+      </div>
+    </section>
+
+    <!-- Section 3: Step-by-Step Implementation Guide -->
+    <section class="case-section">
+      <div class="case-section-header">
+        <span class="section-badge">03 • Execution</span>
+        <h2 class="case-heading">Step-by-Step <span class="gradient-text">Build Process</span></h2>
+        <p class="section-subtitle" style="text-align: left; margin: 0.5rem 0 0;">
+          A detailed walk-through of the end-to-end engineering lifecycle from requirements to production deployment.
+        </p>
+      </div>
+
+      <div id="build-steps-container" class="build-steps-timeline">
+        <!-- Steps rendered dynamically by JS -->
+      </div>
+    </section>
+
+    <!-- Section 4: Screenshot Gallery -->
+    <section class="case-section">
+      <div class="case-section-header">
+        <span class="section-badge">04 • Visual Showcase</span>
+        <h2 class="case-heading">Screenshots & <span class="gradient-text">User Interface</span></h2>
+      </div>
+
+      <div id="gallery-grid" class="gallery-grid">
+        <!-- Gallery items rendered by JS -->
+      </div>
+    </section>
+
+    <!-- Section 5: Key Results & Impact Metrics -->
+    <section class="case-section">
+      <div class="case-section-header">
+        <span class="section-badge">05 • Outcome</span>
+        <h2 class="case-heading">Measurable <span class="gradient-text">Results & Impact</span></h2>
+      </div>
+
+      <div id="results-grid" class="results-grid">
+        <!-- Injected by JS -->
+      </div>
+    </section>
+
+    <!-- Next / Previous Project Navigation Banner -->
+    <div class="project-nav-banner">
+      <div>
+        <span style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600;">Want to explore more?</span>
+        <h3 style="font-size: 1.3rem; margin-top: 0.25rem;">Check out other projects in my portfolio</h3>
+      </div>
+      <a href="index.html#projects" class="btn btn-primary">
+        Browse All Projects
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+    </div>
+
+  </main>
+
+  <!-- Lightbox for Image Zoom -->
+  <div id="lightbox" class="lightbox-modal" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Enlarged Screenshot" />
+    <span class="lightbox-close">✕</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-bottom">
+      <p>&copy; <span id="footer-year"></span> Alex Morgan. Designed & built for free hosting on GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Theme Switcher
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      const storedTheme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', storedTheme);
+      updateThemeIcon(storedTheme);
+
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+          const current = document.documentElement.getAttribute('data-theme');
+          const next = current === 'dark' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', next);
+          localStorage.setItem('theme', next);
+          updateThemeIcon(next);
+        });
+      }
+
+      // 2. Scroll Progress Bar
+      const progressBar = document.getElementById('scroll-progress');
+      window.addEventListener('scroll', () => {
+        const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = (window.pageYOffset / totalHeight) * 100;
+        if (progressBar) progressBar.style.width = `${progress}%`;
+      });
+
+      // 3. Extract project ID from URL query parameters (e.g. ?id=devpulse)
+      const urlParams = new URLSearchParams(window.location.search);
+      const projectId = urlParams.get('id');
+
+      const data = window.portfolioData;
+      if (!data) {
+        alert('Data configuration not found.');
+        return;
+      }
+
+      // Update author & footer
+      if (data.personal) {
+        const authorElem = document.getElementById('nav-author-name');
+        if (authorElem) authorElem.textContent = data.personal.name;
+        const yearElem = document.getElementById('footer-year');
+        if (yearElem) yearElem.textContent = new Date().getFullYear();
+      }
+
+      // Find selected project
+      let project = data.projects.find(p => p.id === projectId);
+      if (!project && data.projects.length > 0) {
+        // Fallback to first project if not found
+        project = data.projects[0];
+      }
+
+      if (!project) {
+        document.getElementById('project-main-title').textContent = 'Project Not Found';
+        return;
+      }
+
+      // Render Project Details
+      renderProjectCaseStudy(project);
+    });
+
+    function updateThemeIcon(theme) {
+      const themeIcon = document.getElementById('theme-icon');
+      if (!themeIcon) return;
+      if (theme === 'light') {
+        themeIcon.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`;
+      } else {
+        themeIcon.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`;
+      }
+    }
+
+    function renderProjectCaseStudy(p) {
+      document.title = `${p.title} | In-Depth Case Study`;
+      document.getElementById('breadcrumb-current').textContent = p.title;
+      document.getElementById('project-main-title').textContent = p.title;
+      document.getElementById('project-main-tagline').textContent = p.tagline;
+      document.getElementById('project-category-badge').textContent = p.category.toUpperCase();
+
+      if (p.featured) {
+        document.getElementById('project-featured-tag').style.display = 'inline-flex';
+      }
+
+      // Meta bar
+      document.getElementById('meta-role').textContent = p.role || 'Full-Stack Developer';
+      document.getElementById('meta-timeline').textContent = p.timeline || 'Active Project';
+      document.getElementById('meta-category').textContent = p.category.toUpperCase();
+
+      const tagsContainer = document.getElementById('meta-tags');
+      if (tagsContainer) {
+        tagsContainer.innerHTML = p.tags.map(t => `<span class="tag-pill">${t}</span>`).join('');
+      }
+
+      // Buttons
+      const demoBtn = document.getElementById('hero-demo-btn');
+      if (demoBtn) {
+        if (p.demoUrl) {
+          demoBtn.href = p.demoUrl;
+        } else {
+          demoBtn.style.display = 'none';
+        }
+      }
+
+      const githubBtn = document.getElementById('hero-github-btn');
+      if (githubBtn) {
+        if (p.githubUrl) {
+          githubBtn.href = p.githubUrl;
+        } else {
+          githubBtn.style.display = 'none';
+        }
+      }
+
+      // Hero image
+      const heroImg = document.getElementById('project-hero-image');
+      if (heroImg) {
+        heroImg.src = p.image;
+        heroImg.alt = p.title;
+      }
+
+      // Section 1: Writeup
+      const writeup = p.writeup || {};
+      document.getElementById('writeup-summary').textContent = writeup.executiveSummary || p.tagline;
+      document.getElementById('writeup-problem').textContent = writeup.problemStatement || 'Optimizing modern software architecture to scale efficiently.';
+
+      const objectivesList = document.getElementById('writeup-objectives');
+      if (objectivesList && writeup.objectives) {
+        objectivesList.innerHTML = writeup.objectives.map(obj => `
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>${obj}</span>
+          </li>
+        `).join('');
+      }
+
+      document.getElementById('writeup-audience').textContent = writeup.targetAudience || 'Developers & Engineering Teams';
+
+      // Section 2: Methodology
+      const methodology = p.methodology || {};
+      document.getElementById('methodology-architecture').textContent = methodology.architectureOverview || 'Modular decoupled architecture built with modern frameworks.';
+      document.getElementById('methodology-security').textContent = methodology.securityAndReliability || 'Adheres to industry best practices, tokenized authentication, and automated testing.';
+
+      const decisionsGrid = document.getElementById('methodology-decisions');
+      if (decisionsGrid && methodology.technicalDecisions) {
+        decisionsGrid.innerHTML = methodology.technicalDecisions.map(d => `
+          <div class="decision-card">
+            <div class="decision-title">
+              <span class="decision-icon">✓</span>
+              ${d.decision}
+            </div>
+            <div class="decision-rationale">${d.rationale}</div>
+          </div>
+        `).join('');
+      }
+
+      // Section 3: Build Steps
+      const stepsContainer = document.getElementById('build-steps-container');
+      if (stepsContainer && p.steps) {
+        stepsContainer.innerHTML = p.steps.map(step => `
+          <div class="build-step-item">
+            <div class="build-step-badge">Step ${step.stepNumber}</div>
+            <div class="build-step-content">
+              <span class="build-step-phase">${step.phase || ''}</span>
+              <h3 class="build-step-title">${step.title}</h3>
+              <p class="case-text" style="margin-bottom: 1rem;">${step.description}</p>
+
+              ${step.deliverables ? `
+                <div style="margin-bottom: 0.85rem;">
+                  <span style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted);">Key Deliverables:</span>
+                  <ul class="step-deliverables-list">
+                    ${step.deliverables.map(item => `<li>• ${item}</li>`).join('')}
+                  </ul>
+                </div>
+              ` : ''}
+
+              ${step.tools ? `
+                <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center; margin-top: 0.5rem;">
+                  <span style="font-size: 0.75rem; font-weight: 600; color: var(--text-muted); margin-right: 0.35rem;">Tools:</span>
+                  ${step.tools.map(tool => `<span class="tag-pill">${tool}</span>`).join('')}
+                </div>
+              ` : ''}
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // Section 4: Screenshot Gallery
+      const galleryGrid = document.getElementById('gallery-grid');
+      if (galleryGrid && p.gallery) {
+        galleryGrid.innerHTML = p.gallery.map(img => `
+          <div class="gallery-card" onclick="openLightbox('${img.url}')">
+            <div class="gallery-img-wrapper">
+              <img src="${img.url}" alt="${img.caption}" class="gallery-image" loading="lazy" />
+              <div class="gallery-hover-overlay">
+                <span>🔍 Click to Enlarge</span>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <div class="gallery-caption">${img.caption}</div>
+              <div class="gallery-desc">${img.description}</div>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // Section 5: Results & Key Metrics
+      const resultsGrid = document.getElementById('results-grid');
+      if (resultsGrid && p.results) {
+        resultsGrid.innerHTML = p.results.map(res => `
+          <div class="result-card">
+            <div class="result-metric gradient-text">${res.metric}</div>
+            <div class="result-label">${res.label}</div>
+          </div>
+        `).join('');
+      }
+    }
+
+    // Lightbox functions
+    function openLightbox(url) {
+      const box = document.getElementById('lightbox');
+      const img = document.getElementById('lightbox-img');
+      img.src = url;
+      box.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const box = document.getElementById('lightbox');
+      box.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  </script>
+</body>
+</html>

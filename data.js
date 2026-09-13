@@ -2,28 +2,29 @@
  * ====================================================================
  * PORTFOLIO DATA CONFIGURATION
  * ====================================================================
- * Easily customize your portfolio by editing the fields below.
- * You can paste your resume details directly into this file.
- * All sections (Hero, About, Skills, Experience, Education, Projects)
- * will update automatically on your website!
+ * All portfolio information, resume details, and in-depth project
+ * case studies are defined here.
  */
 
 const portfolioData = {
   // --- Personal & Contact Information ---
   personal: {
-    name: "Shubham Pandey",
-    role: "DATA, ANALYTICS & AI ENGINEER",
-    tagline: "From raw data to intelligent insights — building scalable data platforms, analytics, and AI solutions that drive business impact.",
-    location: "Gurgaon, IN",
-    email: "shubhampandey11aug@gmail.com",
-    github: "https://github.com/shubhampandey11aug",
-    linkedin: "https://www.linkedin.com/in/shubhampandey08/",
-    resumePdf: "assets/resume.pdf", // Place your resume PDF in the assets folder
-    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=80", // Replace with your profile photo URL or local path
+    name: "Alex Morgan",
+    role: "Full-Stack Software Engineer & System Architect",
+    tagline: "Building scalable, high-performance web applications and intuitive digital experiences with modern technologies.",
+    location: "San Francisco, CA / Remote",
+    email: "alex.morgan.dev@example.com",
+    github: "https://github.com/yourusername",
+    linkedin: "https://linkedin.com/in/yourprofile",
+    twitter: "https://twitter.com/yourhandle",
+    resumePdf: "assets/resume.pdf",
+    availability: "Available for new opportunities",
+    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=80",
     stats: [
-      { label: "Years Experience", value: "12+" },
-      { label: "Projects Completed", value: "15+" },
-     
+      { label: "Years Experience", value: "4+" },
+      { label: "Projects Completed", value: "25+" },
+      { label: "Open Source Stars", value: "1.2k" },
+      { label: "Code Commits (Year)", value: "1,400+" }
     ]
   },
 
@@ -31,694 +32,723 @@ const portfolioData = {
   about: {
     heading: "Passionate about transforming complex challenges into elegant solutions",
     paragraphs: [
-      "I am a results-driven Data, Analytics & AI Engineer with hands-on experience designing and delivering modern data platforms, analytics solutions, and scalable data engineering architectures. My expertise spans Microsoft Fabric, Databricks, Power BI, PySpark, SQL, and cloud-based data ecosystems, helping organizations transform complex data into trusted insights and measurable business outcomes.",
-      "My journey began with a passion for understanding how data powers business decisions, which evolved into building end-to-end data solutions—from ingestion and transformation pipelines to lakehouse architectures, semantic models, interactive dashboards, and AI-enabled analytics. I enjoy solving complex data challenges and creating scalable systems that empower organizations to make faster, smarter decisions.",
-      "When I'm not developing data pipelines or optimizing analytics workloads, I explore emerging AI technologies, modern data architecture patterns, and automation opportunities that enhance productivity and decision-making. I am continuously learning, experimenting, and sharing knowledge to stay at the forefront of the rapidly evolving data and AI landscape."
+      "I am a results-driven Full-Stack Engineer with over 4 years of hands-on experience designing and building production-grade web applications, microservices, and distributed cloud architectures.",
+      "My journey started with a curiosity about how the web functions under the hood, which evolved into leading product development sprints and architecting real-time systems serving hundreds of thousands of users.",
+      "When I'm not writing clean, maintainable code or tuning database queries, you can find me contributing to open-source developer tooling, exploring AI agent workflows, and writing technical deep-dives."
     ],
     highlights: [
-      "Specialized in Microsoft Fabric, Databricks, Power BI, PySpark, SQL, Azure, and modern data engineering ecosystems",
-      "Experienced in building scalable data pipelines, lakehouse architectures, ETL/ELT workflows, and analytics solutions for complex business requirements.",
-      "Focused on performance & reliability, optimizing data transformations, Spark workloads, SQL queries, and data pipelines for efficient processing.",
-      "Strong advocate for data quality & governance, with an emphasis on reliable, trusted, and decision-ready data."
-      "Hands-on with AI & GenAI, exploring intelligent automation, AI-powered analytics, and modern agentic data workflows."
-      "End-to-end problem solver, connecting data engineering, business intelligence, and AI to deliver measurable business outcomes."
+      "Specialized in TypeScript, React, Next.js, Node.js, and Python ecosystems.",
+      "Track record of improving API latency by up to 60% via caching and query optimization.",
+      "Strong advocate for automated testing (Jest, Playwright) and robust CI/CD pipelines.",
+      "Proven experience collaborating across cross-functional product, design, and QA teams."
     ]
   },
 
   // --- Technical Skills Matrix ---
-skills: [
-  {
-    category: "Data Engineering",
-    icon: "database",
-    items: [
-      { name: "PySpark / Apache Spark", level: "Advanced" },
-      { name: "SQL / T-SQL", level: "Expert" },
-      { name: "ETL / ELT Pipelines", level: "Advanced" },
-      { name: "Data Transformation & Optimization", level: "Advanced" },
-      { name: "Data Modeling & Dimensional Design", level: "Advanced" },
-      { name: "Delta Lake / Lakehouse Architecture", level: "Advanced" }
-    ]
-  },
-  {
-    category: "Microsoft Fabric",
-    icon: "layers",
-    items: [
-      { name: "Microsoft Fabric", level: "Advanced" },
-      { name: "Data Factory & Pipelines", level: "Advanced" },
-      { name: "Lakehouse & OneLake", level: "Advanced" },
-      { name: "Fabric Notebooks / PySpark", level: "Advanced" },
-      { name: "Data Warehouse", level: "Advanced" },
-      { name: "Dataflows Gen2", level: "Intermediate" }
-    ]
-  },
-  {
-    category: "Databricks & Cloud Data",
-    icon: "cloud",
-    items: [
-      { name: "Databricks", level: "Advanced" },
-      { name: "Apache Spark", level: "Advanced" },
-      { name: "Delta Lake", level: "Advanced" },
-      { name: "Azure Data Services", level: "Advanced" },
-      { name: "Data Lake / Cloud Storage", level: "Advanced" },
-      { name: "Medallion Architecture", level: "Advanced" }
-    ]
-  },
-  {
-    category: "Business Intelligence",
-    icon: "bar-chart",
-    items: [
-      { name: "Power BI", level: "Advanced" },
-      { name: "DAX", level: "Advanced" },
-      { name: "Power Query / M", level: "Advanced" },
-      { name: "Semantic Models", level: "Advanced" },
-      { name: "Data Visualization & Storytelling", level: "Advanced" },
-      { name: "KPI & Executive Dashboards", level: "Advanced" }
-    ]
-  },
-  {
-    category: "AI & GenAI",
-    icon: "sparkles",
-    items: [
-      { name: "Generative AI", level: "Intermediate" },
-      { name: "LLM Applications", level: "Intermediate" },
-      { name: "AI-Powered Analytics", level: "Intermediate" },
-      { name: "AI Agents & Automation", level: "Intermediate" },
-      { name: "RAG & Vector Search", level: "Intermediate" },
-      { name: "Prompt Engineering", level: "Advanced" }
-    ]
-  },
-  {
-    category: "Data Quality & Governance",
-    icon: "shield-check",
-    items: [
-      { name: "Data Quality & Validation", level: "Advanced" },
-      { name: "Data Governance", level: "Intermediate" },
-      { name: "Data Lineage", level: "Intermediate" },
-      { name: "Performance Optimization", level: "Advanced" },
-      { name: "Error Handling & Monitoring", level: "Advanced" },
-      { name: "CI/CD & Version Control", level: "Advanced" }
-    ]
-  }
-],
-
-// --- Work Experience Timeline ---
-experience: [
-  {
-    role: "Data, Analytics & AI Engineer",
-    company: "Your Current Organization",
-    period: "2023 - Present",
-    location: "India",
-    description:
-      "Designing and delivering modern data engineering and analytics solutions that transform complex business data into scalable platforms, trusted insights, and intelligent decision-making.",
-    achievements: [
-      "Designed and implemented scalable data pipelines using Microsoft Fabric, PySpark, SQL, and Lakehouse architecture to support enterprise analytics workloads.",
-      "Built medallion-based data architectures across Bronze, Silver, and Gold layers, improving data reliability, reusability, and downstream reporting.",
-      "Developed Power BI semantic models and executive dashboards, translating complex business requirements into actionable KPIs and decision-ready insights.",
-      "Optimized Spark and SQL workloads through efficient transformations, partitioning, query optimization, and incremental processing to improve pipeline performance.",
-      "Explored AI and GenAI use cases including intelligent analytics, workflow automation, and AI-assisted data solutions."
-    ],
-    technologies: [
-      "Microsoft Fabric",
-      "Databricks",
-      "PySpark",
-      "SQL",
-      "Power BI",
-      "Azure",
-      "Delta Lake",
-      "Python"
-    ]
-  },
-  {
-    role: "Data Engineer / Analytics Developer",
-    company: "Previous Organization",
-    period: "2021 - 2023",
-    location: "India",
-    description:
-      "Developed data pipelines, analytical solutions, and business intelligence applications supporting operational and management reporting.",
-    achievements: [
-      "Developed end-to-end ETL/ELT pipelines to ingest, transform, validate, and prepare data from multiple business sources.",
-      "Implemented scalable PySpark and SQL transformations for large datasets, focusing on performance, data quality, and maintainability.",
-      "Created Power BI dashboards and analytical models that converted operational data into meaningful business insights and performance indicators.",
-      "Designed reusable data models and transformation frameworks to standardize reporting and reduce manual data preparation.",
-      "Collaborated with business stakeholders to translate complex requirements into reliable data and analytics solutions."
-    ],
-    technologies: [
-      "Python",
-      "PySpark",
-      "SQL",
-      "Power BI",
-      "Azure",
-      "Databricks",
-      "ETL / ELT",
-      "Data Modeling"
-    ]
-  },
-  {
-    role: "Data Analyst / BI Developer",
-    company: "Early Career Experience",
-    period: "2020 - 2021",
-    location: "India",
-    description:
-      "Worked on data analysis, reporting, visualization, and business intelligence initiatives to improve visibility into operational performance.",
-    achievements: [
-      "Developed interactive Power BI dashboards and reports to track business performance, operational metrics, and key KPIs.",
-      "Performed data extraction, cleansing, transformation, and analysis using SQL, Excel, Power Query, and Python.",
-      "Built reusable Power Query transformations and analytical datasets to streamline recurring reporting processes.",
-      "Collaborated with stakeholders to identify reporting requirements, define KPIs, and translate business questions into data-driven insights."
-    ],
-    technologies: [
-      "Power BI",
-      "SQL",
-      "Power Query",
-      "DAX",
-      "Python",
-      "Excel",
-      "Data Analysis"
-    ]
-  }
-],
-
- // --- Education & Academic Background ---
-education: [
-  {
-    degree: "Bachelor's Degree",
-    institution: "Gautam Buddh Technical University",
-    period: "2008 - 2012",
-    location: "India",
-    honors: "Electrical & Electronics Engineering",
-    ]
-  }
-],
-  // --- Certifications ---
-certifications: [
-  {
-    name: "Data Analytics Certification",
-    issuer: "INSAID",
-    year: "Completed",
-   
-  },
-  {
-    name: "Electrical Design",
-    issuer: "AEDEI",
-    year: "Completed",
-    
-  }
-],
-
-// --- Current Professional Upskilling ---
-upskilling: [
-  {
-    name: "Microsoft Fabric Analytics Engineer — DP-600",
-    issuer: "Microsoft",
-    status: "In Progress",
-    focus: "Fabric Analytics, Dataflows, Lakehouse & Power BI"
-  },
-  {
-    name: "Microsoft Fabric Data Engineer — DP-700",
-    issuer: "Microsoft",
-    status: "In Progress",
-    focus: "Data Engineering, Pipelines, Lakehouse & ETL/ELT"
-  },
-  {
-    name: "Databricks & Data Engineering",
-    issuer: "Self-Directed Learning",
-    status: "In Progress",
-    focus: "Spark, Data Pipelines & Lakehouse Architecture"
-  },
-  {
-    name: "Generative AI",
-    issuer: "Professional Upskilling",
-    status: "In Progress",
-    focus: "GenAI, AI-powered analytics & intelligent data workflows"
-  }
-],
-
- // --- Featured & Detailed Projects ---
-// Users can filter by category:
-// 'all', 'fabric', 'databricks', 'power-bi', 'data-engineering', 'energy'
-
-projects: [
-  {
-    id: "project-1",
-    title: "Global Listing Intelligence Initiative",
-    tagline:
-      "Automated Microsoft Fabric Lakehouse ingestion for trusted, governed real-estate intelligence.",
-    category: "fabric",
-    featured: true,
-    image:
-      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&auto=format&fit=crop&q=80",
-    demoUrl: "",
-    githubUrl: "",
-    metrics:
-      "Replaced 24–48 hour manual CSV consolidation with trusted data available by 7:00 AM daily",
-    tags: [
-      "Microsoft Fabric",
-      "Lakehouse",
-      "OneLake",
-      "Data Pipelines",
-      "ETL/ELT",
-      "Data Engineering"
-    ],
-    details: {
-      overview:
-        "An automated Microsoft Fabric Lakehouse ingestion solution for an ultra-luxury real estate firm operating across London, Dubai, and New York. The solution replaced manual CSV consolidation with a governed and trusted data foundation.",
-      keyFeatures: [
-        "Automated ingestion into a Microsoft Fabric Lakehouse.",
-        "Governed and standardized data processing.",
-        "Automated replacement of manual CSV consolidation workflows.",
-        "Daily trusted data availability by 7:00 AM."
-      ],
-      technicalChallenge:
-        "Replacing a time-consuming manual CSV consolidation process while establishing a reliable and governed data foundation for a multi-continent operation.",
-      solution:
-        "Designed an automated Microsoft Fabric Lakehouse ingestion pipeline that streamlined data ingestion and created a trusted dataset for downstream analytics."
+  skills: [
+    {
+      category: "Frontend Development",
+      icon: "code",
+      items: [
+        { name: "React / Next.js", level: "Expert" },
+        { name: "TypeScript / JavaScript", level: "Expert" },
+        { name: "HTML5 / CSS3 / SCSS", level: "Expert" },
+        { name: "Tailwind CSS", level: "Expert" },
+        { name: "Vue.js", level: "Intermediate" },
+        { name: "Redux Toolkit / Zustand", level: "Advanced" }
+      ]
+    },
+    {
+      category: "Backend & APIs",
+      icon: "server",
+      items: [
+        { name: "Node.js / Express", level: "Expert" },
+        { name: "Python / FastAPI / Django", level: "Advanced" },
+        { name: "RESTful & GraphQL APIs", level: "Expert" },
+        { name: "WebSockets & SSE", level: "Advanced" },
+        { name: "Microservices Architecture", level: "Advanced" },
+        { name: "gRPC & Protocol Buffers", level: "Intermediate" }
+      ]
+    },
+    {
+      category: "Databases & Storage",
+      icon: "database",
+      items: [
+        { name: "PostgreSQL & Prisma / TypeORM", level: "Expert" },
+        { name: "MongoDB & Mongoose", level: "Advanced" },
+        { name: "Redis (Caching & Queues)", level: "Advanced" },
+        { name: "Vector DBs (Pinecone / Chroma)", level: "Intermediate" },
+        { name: "Supabase & Firebase", level: "Advanced" }
+      ]
+    },
+    {
+      category: "DevOps, Cloud & Tools",
+      icon: "cloud",
+      items: [
+        { name: "Docker & Containerization", level: "Advanced" },
+        { name: "AWS (S3, EC2, Lambda, CloudFront)", level: "Advanced" },
+        { name: "GitHub Actions & CI/CD", level: "Expert" },
+        { name: "Git & Version Control", level: "Expert" },
+        { name: "Jest / Vitest / Playwright", level: "Advanced" },
+        { name: "Linux & Bash Scripting", level: "Advanced" }
+      ]
     }
-  },
+  ],
 
-  {
-    id: "project-2",
-    title: "Incremental Data Ingestion Pipeline",
-    tagline:
-      "State-aware Microsoft Fabric pipeline for scalable, auditable Delta Lake ingestion.",
-    category: "fabric",
-    featured: true,
-    image:
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format&fit=crop&q=80",
-    demoUrl: "",
-    githubUrl: "",
-    metrics:
-      "Automated incremental JSON ingestion using watermark-based state management",
-    tags: [
-      "Microsoft Fabric",
-      "Data Pipelines",
-      "Delta Lake",
-      "JSON",
-      "Incremental Load",
-      "ETL"
-    ],
-    details: {
-      overview:
-        "A watermark-based, state-aware Microsoft Fabric pipeline designed for a multi-continent logistics provider. The solution replaced manual JSON file identification with a scalable and auditable ingestion framework.",
-      keyFeatures: [
-        "Watermark-based incremental ingestion.",
-        "State-aware pipeline processing.",
-        "Automated JSON file ingestion.",
-        "Auditable Delta Lake data framework."
+  // --- Work Experience Timeline ---
+  experience: [
+    {
+      role: "Senior Full-Stack Engineer",
+      company: "Nexus Cloud Systems",
+      period: "2023 - Present",
+      location: "San Francisco, CA (Hybrid)",
+      description: "Leading the core platform engineering team building enterprise analytics and real-time collaboration dashboards.",
+      achievements: [
+        "Architected and deployed a real-time event streaming pipeline processing 2M+ daily events using Node.js, Redis Pub/Sub, and WebSockets.",
+        "Refactored legacy monolith into modular Next.js micro-frontends, reducing page load times by 45% and Lighthouse performance scores to 98+.",
+        "Mentored 5 junior and mid-level engineers, instituted rigorous code review standards, and created internal reusable UI component libraries."
       ],
-      technicalChallenge:
-        "Eliminating manual file hunting while ensuring that only required incremental data is processed reliably.",
-      solution:
-        "Implemented a watermark-based state management approach within Microsoft Fabric to automate incremental JSON ingestion into a Delta Lake architecture."
-    }
-  },
-
-  {
-    id: "project-3",
-    title: "Workforce Intelligence — Azure SQL to Lakehouse",
-    tagline:
-      "A governed Bronze-to-Silver employee data pipeline built with Microsoft Fabric.",
-    category: "fabric",
-    featured: true,
-    image:
-      "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&auto=format&fit=crop&q=80",
-    demoUrl: "",
-    githubUrl: "",
-    metrics:
-      "Produced a trusted HR reporting layer across London, New York and Singapore",
-    tags: [
-      "Microsoft Fabric",
-      "Azure SQL",
-      "Lakehouse",
-      "PySpark",
-      "Data Quality",
-      "Data Engineering"
-    ],
-    details: {
-      overview:
-        "A Microsoft Fabric Bronze-to-Silver pipeline that moves employee data from Azure SQL into a governed Lakehouse and prepares a trusted HR reporting layer.",
-      keyFeatures: [
-        "Azure SQL to Fabric Lakehouse ingestion.",
-        "Bronze-to-Silver data transformation.",
-        "Invalid-record quarantine.",
-        "Record deduplication.",
-        "Department-context enrichment.",
-        "Trusted HR reporting layer."
+      technologies: ["TypeScript", "Next.js", "Node.js", "PostgreSQL", "Redis", "Docker", "AWS"]
+    },
+    {
+      role: "Full-Stack Software Developer",
+      company: "Apex Digital Solutions",
+      period: "2021 - 2023",
+      location: "Austin, TX (Remote)",
+      description: "Developed and maintained full-stack web applications for FinTech and eCommerce enterprise clients.",
+      achievements: [
+        "Designed and implemented high-volume payment processing workflows integrated with Stripe and PayPal APIs, handling $4M+ monthly volume.",
+        "Engineered REST and GraphQL endpoints backed by PostgreSQL with query optimization that cut database response times by 35%.",
+        "Set up automated CI/CD pipelines via GitHub Actions, automating testing and zero-downtime deployment to AWS ECS clusters.",
       ],
-      technicalChallenge:
-        "Transforming operational employee data into a reliable reporting foundation while handling invalid and duplicate records.",
-      solution:
-        "Built a governed Bronze-to-Silver pipeline that quarantines invalid records, deduplicates data, enriches employee information, and produces a trusted reporting layer."
-    }
-  },
-
-  {
-    id: "project-4",
-    title: "Financial Data Transformation with PySpark & Delta Lake",
-    tagline:
-      "Optimized enterprise financial data processing using PySpark and Delta Lake.",
-    category: "data-engineering",
-    featured: true,
-    image:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&auto=format&fit=crop&q=80",
-    demoUrl: "",
-    githubUrl: "",
-    metrics:
-      "Focused on performance, data quality, recovery, and scalable financial reporting",
-    tags: [
-      "Microsoft Fabric",
-      "PySpark",
-      "Delta Lake",
-      "SQL",
-      "Data Quality",
-      "Lakehouse"
-    ],
-    details: {
-      overview:
-        "A financial data processing solution designed in Microsoft Fabric using PySpark and Delta Lake, focused on building a scalable architecture for enterprise-scale financial reporting.",
-      keyFeatures: [
-        "PySpark-based financial data transformation.",
-        "Delta Lake architecture.",
-        "Data quality enforcement.",
-        "Pipeline performance optimization.",
-        "Data recovery capabilities.",
-        "Scalable financial reporting foundation."
+      technologies: ["React", "TypeScript", "Python/FastAPI", "PostgreSQL", "Stripe API", "AWS ECS", "Jest"]
+    },
+    {
+      role: "Frontend Engineer Intern",
+      company: "Vanguard Media Labs",
+      period: "2020 - 2021",
+      location: "Seattle, WA",
+      description: "Contributed to responsive customer-facing web apps and internal content management systems.",
+      achievements: [
+        "Built 20+ responsive web components adhering to WCAG 2.1 AA accessibility guidelines.",
+        "Collaborated with UX/UI designers in Figma to translate interactive wireframes into pixel-perfect CSS and React components.",
+        "Improved bundle size by 30% through code-splitting and dynamic asset loading techniques."
       ],
-      technicalChallenge:
-        "Designing a scalable financial data processing architecture while maintaining data quality, recoverability, and efficient processing.",
-      solution:
-        "Designed and optimized a Microsoft Fabric pipeline using PySpark and Delta Lake with dedicated approaches for data quality, recovery, and performance."
+      technologies: ["JavaScript (ES6+)", "React", "CSS3 / Sass", "Webpack", "Git"]
     }
-  },
+  ],
 
-  {
-    id: "project-5",
-    title: "Global Freight Forwarders — Logistics Data Modernization",
-    tagline:
-      "Modernizing high-volume logistics data ingestion with incremental Microsoft Fabric pipelines.",
-    category: "fabric",
-    featured: true,
-    image:
-      "https://images.unsplash.com/photo-1586528116493-da8b0b1a3b0e?w=800&auto=format&fit=crop&q=80",
-    demoUrl: "",
-    githubUrl: "",
-    metrics:
-      "Automated high-volume JSON shipment-log ingestion and reduced reporting latency",
-    tags: [
-      "Microsoft Fabric",
-      "Delta Lake",
-      "JSON",
-      "Data Pipelines",
-      "Incremental Load",
-      "Logistics Analytics"
-    ],
-    details: {
-      overview:
-        "A Microsoft Fabric data modernization solution for a global freight company, automating the ingestion of high-volume JSON shipment logs into a reliable Delta Lake architecture.",
-      keyFeatures: [
-        "Automated JSON shipment-log ingestion.",
-        "Watermark-based state management.",
-        "Incremental data processing.",
-        "Delta Lake-based architecture.",
-        "Reliable and auditable ingestion.",
-        "Reduced dependency on manual file selection."
+  // --- Education & Academic Background ---
+  education: [
+    {
+      degree: "Bachelor of Science in Computer Science",
+      institution: "University of California, Berkeley",
+      period: "2017 - 2021",
+      location: "Berkeley, CA",
+      honors: "Magna Cum Laude (GPA: 3.85 / 4.0)",
+      coursework: [
+        "Data Structures & Algorithms",
+        "Distributed Systems & Cloud Computing",
+        "Database Architecture",
+        "Artificial Intelligence & Machine Learning",
+        "Computer Networks & Security"
+      ]
+    }
+  ],
+
+  // --- Certifications & Accreditations ---
+  certifications: [
+    {
+      name: "AWS Certified Solutions Architect - Associate",
+      issuer: "Amazon Web Services (AWS)",
+      year: "2023",
+      verifyUrl: "https://aws.amazon.com/verification"
+    },
+    {
+      name: "Certified Kubernetes Application Developer (CKAD)",
+      issuer: "Cloud Native Computing Foundation (CNCF)",
+      year: "2024",
+      verifyUrl: "https://www.cncf.io/certification/ckad/"
+    },
+    {
+      name: "Meta Front-End Developer Professional Certificate",
+      issuer: "Meta / Coursera",
+      year: "2022",
+      verifyUrl: "https://www.coursera.org"
+    }
+  ],
+
+  // --- Comprehensive Projects with In-Depth Writeups & Build Steps ---
+  projects: [
+    {
+      id: "devpulse",
+      title: "DevPulse - Realtime Cloud Monitor & Telemetry Dashboard",
+      tagline: "Enterprise-grade server monitoring, alerting, and telemetry visualizer with sub-second latency.",
+      category: "fullstack",
+      featured: true,
+      role: "Lead Full-Stack Architect",
+      timeline: "3 Months (Q3 2024)",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80",
+      demoUrl: "https://example.com/demo/devpulse",
+      githubUrl: "https://github.com/yourusername/devpulse",
+      metrics: "Processes 500k+ metrics/sec with < 50ms latency",
+      tags: ["TypeScript", "Next.js", "FastAPI", "ClickHouse", "WebSockets", "TailwindCSS", "Docker"],
+
+      // Detailed Writeup Sections
+      writeup: {
+        executiveSummary: "DevPulse is an end-to-end cloud infrastructure monitoring platform engineered to give DevOps and SRE teams live, sub-second visibility into server fleet health, memory leaks, CPU spikes, and network throughput bottlenecks.",
+        problemStatement: "Traditional monitoring platforms are often bloated, expensive, and impose noticeable agent overhead on monitored hosts. Engineering teams needed a lightweight, self-hostable monitoring solution capable of ingesting high-cardinality telemetry data without UI slowdowns or multi-second latency lags.",
+        objectives: [
+          "Maintain an agent memory footprint under 15MB on monitored instances.",
+          "Ingest and query over 500,000 metrics per second with low computational overhead.",
+          "Render real-time 60fps streaming time-series graphs in client web browsers.",
+          "Provide flexible webhook alerting integrations (Slack, Discord, PagerDuty, Email)."
+        ],
+        targetAudience: "Cloud Engineers, Site Reliability Engineers (SREs), DevOps Leads, and Full-Stack Developers managing distributed microservice clusters."
+      },
+
+      methodology: {
+        architectureOverview: "The system utilizes a decoupled, event-driven streaming architecture. Edge agents push telemetry over gRPC to an ingestion gateway, which buffers records into a high-speed ClickHouse columnar database while broadcasting real-time deltas to client browser sessions over WebSockets.",
+        technicalDecisions: [
+          {
+            decision: "ClickHouse instead of PostgreSQL for time-series storage",
+            rationale: "ClickHouse provides 10x-50x superior data compression for sequential time-series data and supports lightning-fast vectorized aggregation queries over billions of metric rows."
+          },
+          {
+            decision: "Protocol Buffers (Protobuf) over JSON for agent communication",
+            rationale: "Binary encoding reduced bandwidth consumption by 68% and eliminated JSON parsing bottlenecks on constrained edge servers."
+          },
+          {
+            decision: "WebGL Canvas Rendering for charts",
+            rationale: "Standard SVG chart libraries choked on 10,000+ continuous data points; uPlot and WebGL canvas maintained buttery-smooth 60fps frame rates."
+          }
+        ],
+        securityAndReliability: "Agent authentication is enforced via mutual TLS (mTLS) with automated token rotation. Rate limiting and circuit breakers prevent database saturation during cascading network incidents."
+      },
+
+      steps: [
+        {
+          stepNumber: 1,
+          phase: "Phase 1: Architecture & Schema Planning",
+          title: "Telemetry Data Modeling & Protocol Design",
+          description: "Defined protobuf schemas for CPU, RAM, disk I/O, network bandwidth, and custom container health checks. Designed the ClickHouse schema utilizing MergeTree engines with monthly partitioning.",
+          deliverables: ["Protobuf schema definitions", "ClickHouse partition strategy documentation", "System architecture diagrams"],
+          tools: ["Protocol Buffers", "ClickHouse", "Figma / Eraser.io"]
+        },
+        {
+          stepNumber: 2,
+          phase: "Phase 2: Ingestion & Backend Pipeline",
+          title: "High-Throughput Ingestion Engine & WebSocket Server",
+          description: "Developed the core ingestion service in Python/FastAPI and Go. Integrated Redis Pub/Sub channels to broadcast live streaming metrics directly to subscribed user dashboards.",
+          deliverables: ["FastAPI ingestion gateway", "Redis Pub/Sub cluster", "WebSocket connection pool manager"],
+          tools: ["Python", "FastAPI", "Go", "Redis", "Docker"]
+        },
+        {
+          stepNumber: 3,
+          phase: "Phase 3: Frontend Dashboard & Visualization",
+          title: "Realtime Next.js UI & WebGL Visualizer",
+          description: "Built the responsive single-page dashboard in Next.js and TypeScript. Implemented customizable widget layouts, time-range scrubbing, anomaly heatmaps, and dark mode interface.",
+          deliverables: ["Interactive Next.js dashboard", "WebGL chart components", "Custom alert rule builder UI"],
+          tools: ["Next.js", "TypeScript", "Tailwind CSS", "uPlot", "Zustand"]
+        },
+        {
+          stepNumber: 4,
+          phase: "Phase 4: Alerting, Testing & Cloud Deployment",
+          title: "Automated Incident Alerting & Production CI/CD",
+          description: "Implemented threshold-based and anomaly-detection alerting triggers. Established end-to-end integration test suites and Docker Compose / Helm charts for 1-click cloud deployment.",
+          deliverables: ["Multi-channel notification dispatcher", "Playwright E2E test suite", "Docker & Kubernetes Helm packages"],
+          tools: ["GitHub Actions", "Docker", "Kubernetes", "Playwright", "Jest"]
+        }
       ],
-      technicalChallenge:
-        "Managing high-volume shipment data while eliminating manual file selection and ensuring reliable incremental processing.",
-      solution:
-        "Implemented a watermark-based incremental ingestion pipeline in Microsoft Fabric to automate shipment-log processing and deliver reliable data into Delta Lake."
-    }
-  },
 
-  {
-    id: "project-6",
-    title: "Unified Commerce Analytics Platform",
-    tagline:
-      "Modernizing retail analytics with a Bronze–Silver–Gold Lakehouse and Power BI.",
-    category: "power-bi",
-    featured: true,
-    image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format&fit=crop&q=80",
-    demoUrl: "",
-    githubUrl: "",
-    metrics:
-      "Unified modern Lakehouse architecture with Power BI star-schema analytics",
-    tags: [
-      "Microsoft Fabric",
-      "Lakehouse",
-      "Power BI",
-      "Star Schema",
-      "Data Modeling",
-      "Analytics"
-    ],
-    details: {
-      overview:
-        "A modern retail analytics platform designed to replace legacy analytics approaches with a structured Bronze–Silver–Gold Lakehouse architecture and Power BI analytical model.",
-      keyFeatures: [
-        "Bronze–Silver–Gold Lakehouse architecture.",
-        "Structured data transformation layers.",
-        "Power BI integration.",
-        "Star-schema analytical modeling.",
-        "Modernized retail analytics foundation."
+      gallery: [
+        {
+          url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&auto=format&fit=crop&q=80",
+          caption: "Live Telemetry Dashboard Overview",
+          description: "Real-time streaming charts with CPU, RAM, and Disk I/O telemetry."
+        },
+        {
+          url: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=900&auto=format&fit=crop&q=80",
+          caption: "Alert Rule Builder & Webhook Manager",
+          description: "Custom threshold triggers and multi-channel notification routing."
+        },
+        {
+          url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&auto=format&fit=crop&q=80",
+          caption: "Historical Log & Trace Inspector",
+          description: "Sub-second search queries over hundreds of thousands of historical logs."
+        }
       ],
-      technicalChallenge:
-        "Modernizing legacy retail analytics while establishing a scalable architecture for business intelligence.",
-      solution:
-        "Designed a layered Lakehouse architecture and Power BI star schema to provide a structured foundation for retail analytics and reporting."
-    }
-  },
 
-  {
-    id: "project-7",
-    title: "Live Market Intelligence",
-    tagline:
-      "Transforming batch market data into governed real-time intelligence for algorithmic trading.",
-    category: "energy",
-    featured: true,
-    image:
-      "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&auto=format&fit=crop&q=80",
-    demoUrl: "",
-    githubUrl: "",
-    metrics:
-      "Modernized batch market-data processing toward real-time intelligence",
-    tags: [
-      "Real-Time Analytics",
-      "Market Data",
-      "Data Engineering",
-      "Microsoft Fabric",
-      "Trading Analytics",
-      "Data Governance"
-    ],
-    details: {
-      overview:
-        "A market intelligence solution focused on transforming batch market data into a governed real-time intelligence platform supporting algorithmic trading use cases.",
-      keyFeatures: [
-        "Real-time market intelligence architecture.",
-        "Governed market-data processing.",
-        "Transformation of batch workflows.",
-        "Support for algorithmic trading analytics.",
-        "Structured data foundation for market insights."
+      results: [
+        { metric: "500,000+", label: "Metrics Processed Per Second" },
+        { metric: "< 50ms", label: "End-to-End Delivery Latency" },
+        { metric: "12MB", label: "Average Agent RAM Footprint" },
+        { metric: "99.99%", label: "Production Ingestion Uptime" }
+      ]
+    },
+
+    {
+      id: "omniai",
+      title: "OmniAI - Context-Aware Multimodal RAG Assistant",
+      tagline: "Intelligent document retrieval, semantic search, and interactive conversational AI assistant.",
+      category: "ai-ml",
+      featured: true,
+      role: "AI / Full-Stack Engineer",
+      timeline: "2 Months (Q2 2024)",
+      image: "https://images.unsplash.com/photo-1677442136019-21780efad99a?w=800&auto=format&fit=crop&q=80",
+      demoUrl: "https://example.com/demo/omniai",
+      githubUrl: "https://github.com/yourusername/omniai-assistant",
+      metrics: "94% semantic query retrieval accuracy over 100k+ docs",
+      tags: ["Python", "LangChain", "OpenAI / Claude API", "FastAPI", "Pinecone", "React", "TailwindCSS"],
+
+      writeup: {
+        executiveSummary: "OmniAI is an advanced Retrieval-Augmented Generation (RAG) conversational platform that transforms raw enterprise documentation (PDFs, Notion exports, Markdown codebases) into an intelligent, citation-accurate knowledge base.",
+        problemStatement: "Standard Large Language Models frequently suffer from hallucinations and lack domain-specific knowledge about private company repositories. Generic vector search often yields imprecise context chunks, leading to misleading answers.",
+        objectives: [
+          "Achieve > 90% accuracy on domain-specific question answering with verbatim citations.",
+          "Support asynchronous parsing and chunking of complex documents containing tables and code.",
+          "Keep response latency under 1.5 seconds for complete synthesized answers.",
+          "Ensure enterprise data privacy through tenant isolation and customer-managed encryption."
+        ],
+        targetAudience: "Engineering teams, legal researchers, and enterprise knowledge managers requiring trustworthy AI-powered semantic search."
+      },
+
+      methodology: {
+        architectureOverview: "OmniAI employs a hybrid search strategy pairing dense vector embeddings (OpenAI text-embedding-3-large stored in Pinecone) with sparse BM25 lexical keyword matching. A secondary Cohere Re-ranker filters top candidate chunks before feeding them to Claude/GPT-4o.",
+        technicalDecisions: [
+          {
+            decision: "Hybrid Dense + Sparse Vector Search (BM25 + Dense)",
+            rationale: "Pure vector search struggles with exact alphanumeric identifiers (e.g. error codes or SKU IDs); combining BM25 boosted precision by 24%."
+          },
+          {
+            decision: "Recursive Character + Markdown Document Chunking",
+            rationale: "Preserved hierarchical header context and code blocks intact, preventing fragmented code snippets."
+          },
+          {
+            decision: "Streaming Server-Sent Events (SSE) for Responses",
+            rationale: "Allowed users to read immediate generated tokens without waiting for the complete multi-paragraph output."
+          }
+        ],
+        securityAndReliability: "Uploaded files are encrypted in Amazon S3 presigned storage. Vector namespaces enforce strict tenant separation."
+      },
+
+      steps: [
+        {
+          stepNumber: 1,
+          phase: "Phase 1: Ingestion & Parsing Pipeline",
+          title: "Multimodal Document Ingestion & Optical Chunking",
+          description: "Engineered background Celery workers to parse PDFs, docx, and code repositories into structured ASTs, extracting tables and images with OCR.",
+          deliverables: ["Document parsing worker", "OCR table extraction module", "Chunking pipeline"],
+          tools: ["Python", "PyMuPDF", "LangChain", "Celery", "Redis"]
+        },
+        {
+          stepNumber: 2,
+          phase: "Phase 2: Embedding & Retrieval Engine",
+          title: "Hybrid Vector Storage & Cohere Re-Ranking",
+          description: "Built vector indexing workflows in Pinecone with metadata filtering. Implemented two-stage retrieval combining dense vector similarity with Cohere reranking.",
+          deliverables: ["Pinecone index configuration", "Hybrid search orchestrator", "Reranker pipeline"],
+          tools: ["Pinecone", "Cohere API", "OpenAI Embeddings"]
+        },
+        {
+          stepNumber: 3,
+          phase: "Phase 3: Conversational Frontend & Citations",
+          title: "Interactive React Chat Interface & Citation Viewer",
+          description: "Developed a sleek chat interface with real-time markdown streaming, syntax highlighting, and interactive badge popovers linking directly to original PDF page snippets.",
+          deliverables: ["Streaming chat UI", "Document citation popover", "Document upload dropzone"],
+          tools: ["React", "TypeScript", "Tailwind CSS", "SSE"]
+        },
+        {
+          stepNumber: 4,
+          phase: "Phase 4: Evaluation & Hallucination Guardrails",
+          title: "Automated Evaluation Framework & Deployment",
+          description: "Integrated RAGAS evaluation framework to benchmark context precision, faithfulness, and answer relevancy across test datasets.",
+          deliverables: ["RAGAS test harness", "Guardrail verification prompts", "Docker deployment"],
+          tools: ["RAGAS", "FastAPI", "Docker", "AWS S3"]
+        }
       ],
-      technicalChallenge:
-        "Moving from batch-oriented market data processing toward a more responsive and governed intelligence platform.",
-      solution:
-        "Designed a modern data architecture focused on real-time market intelligence, governance, and analytics for algorithmic trading scenarios."
-    }
-  },
 
-  {
-    id: "project-8",
-    title: "Customer Data Trust Transformation",
-    tagline:
-      "Building a standardized Customer 360 foundation from inconsistent enterprise data.",
-    category: "data-engineering",
-    featured: false,
-    image:
-      "https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=800&auto=format&fit=crop&q=80",
-    demoUrl: "",
-    githubUrl: "",
-    metrics:
-      "Established a trusted and standardized Customer 360 data foundation",
-    tags: [
-      "Customer 360",
-      "Data Quality",
-      "Data Standardization",
-      "Data Engineering",
-      "Lakehouse",
-      "Analytics"
-    ],
-    details: {
-      overview:
-        "A data trust transformation initiative focused on converting inconsistent customer information into a trusted and standardized Customer 360 foundation.",
-      keyFeatures: [
-        "Customer data standardization.",
-        "Data quality improvement.",
-        "Unified customer foundation.",
-        "Preparation for Customer 360 analytics.",
-        "Trusted data architecture."
+      gallery: [
+        {
+          url: "https://images.unsplash.com/photo-1677442136019-21780efad99a?w=900&auto=format&fit=crop&q=80",
+          caption: "Conversational RAG Chat Interface",
+          description: "Streaming answers with inline source citations and verified quotes."
+        },
+        {
+          url: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&auto=format&fit=crop&q=80",
+          caption: "Document Knowledge Hub & Chunk Visualizer",
+          description: "Manage uploaded PDFs, documentation collections, and vector status."
+        }
       ],
-      technicalChallenge:
-        "Addressing inconsistent customer data and creating a reliable foundation for unified customer analytics.",
-      solution:
-        "Designed a standardized data foundation focused on improving consistency, trust, and usability of customer information."
-    }
-  },
 
-  {
-    id: "project-9",
-    title: "Inventory Data Migration to Microsoft Fabric",
-    tagline:
-      "Migrating on-premise PostgreSQL inventory data into a governed Fabric Lakehouse.",
-    category: "fabric",
-    featured: false,
-    image:
-      "https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&auto=format&fit=crop&q=80",
-    demoUrl: "",
-    githubUrl: "",
-    metrics:
-      "Automated on-premise PostgreSQL inventory migration into a governed Lakehouse",
-    tags: [
-      "Microsoft Fabric",
-      "PostgreSQL",
-      "Lakehouse",
-      "Data Migration",
-      "ETL/ELT",
-      "Data Engineering"
-    ],
-    details: {
-      overview:
-        "A data migration solution focused on moving on-premise PostgreSQL inventory data into a governed Microsoft Fabric Lakehouse.",
-      keyFeatures: [
-        "On-premise PostgreSQL integration.",
-        "Automated inventory-data migration.",
-        "Fabric Lakehouse architecture.",
-        "Governed data storage.",
-        "Modernized inventory analytics foundation."
+      results: [
+        { metric: "94%", label: "Semantic Retrieval Accuracy" },
+        { metric: "1.2s", label: "Average First-Token Latency" },
+        { metric: "100k+", label: "Indexed Document Corpus" },
+        { metric: "0%", label: "Data Leakage Across Tenants" }
+      ]
+    },
+
+    {
+      id: "flowboard",
+      title: "FlowBoard - Collaborative Workspace & Kanban Suite",
+      tagline: "Ultra-responsive project management canvas with live multiplayer cursors and offline sync.",
+      category: "frontend",
+      featured: true,
+      role: "Frontend Lead & UI Engineer",
+      timeline: "2.5 Months (Q1 2024)",
+      image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&auto=format&fit=crop&q=80",
+      demoUrl: "https://example.com/demo/flowboard",
+      githubUrl: "https://github.com/yourusername/flowboard",
+      metrics: "Sub-16ms smooth drag-and-drop 60fps animations",
+      tags: ["React", "TypeScript", "Zustand", "Yjs (CRDTs)", "TailwindCSS", "WebRTC"],
+
+      writeup: {
+        executiveSummary: "FlowBoard is a high-performance, offline-first agile project management tool featuring real-time multiplayer collaboration, Kanban boards, Gantt charts, and custom workflow automations.",
+        problemStatement: "Most cloud project management apps become sluggish with large boards and completely fail when users lose internet connectivity. Teams needed a tool with desktop-grade responsiveness and zero sync conflicts.",
+        objectives: [
+          "Guarantee 60fps fluid animations during complex multi-column card drags.",
+          "Enable offline edits with zero-conflict automatic sync upon reconnection.",
+          "Render live multiplayer cursors with under 30ms peer-to-peer latency.",
+          "Support keyboard-first workflows with a Cmd+K command palette."
+        ],
+        targetAudience: "Agile software teams, product designers, and remote squads requiring rapid, frictionless task coordination."
+      },
+
+      methodology: {
+        architectureOverview: "FlowBoard utilizes Conflict-free Replicated Data Types (CRDTs) powered by Yjs. Updates are saved locally to IndexedDB immediately and broadcast peer-to-peer via WebRTC and fallback WebSockets.",
+        technicalDecisions: [
+          {
+            decision: "Yjs CRDTs over Central Lock Server",
+            rationale: "CRDTs mathematically resolve concurrent conflicting edits locally without requiring server-side locking or rollback dialogs."
+          },
+          {
+            decision: "Virtual scrolling for large lists",
+            rationale: "Enabled boards with over 5,000 tasks to render in under 100ms with constant low memory usage."
+          }
+        ],
+        securityAndReliability: "End-to-end encryption across WebRTC data channels ensures workspace data is never readable in transit."
+      },
+
+      steps: [
+        {
+          stepNumber: 1,
+          phase: "Phase 1: State Architecture",
+          title: "CRDT Model & Local IndexedDB Persistence",
+          description: "Structured Yjs shared types for boards, columns, and cards. Configured local persistence with y-indexeddb.",
+          deliverables: ["Yjs data schemas", "Local offline storage layer"],
+          tools: ["Yjs", "IndexedDB", "TypeScript"]
+        },
+        {
+          stepNumber: 2,
+          phase: "Phase 2: Drag & Drop UI",
+          title: "Accessible 60fps Drag-and-Drop Interaction",
+          description: "Engineered high-performance physics-based drag-and-drop using `@dnd-kit` with keyboard accessibility and collision detection.",
+          deliverables: ["Kanban column components", "Card reordering logic"],
+          tools: ["React", "@dnd-kit", "Tailwind CSS"]
+        },
+        {
+          stepNumber: 3,
+          phase: "Phase 3: Realtime Multiplayer",
+          title: "WebRTC Peer Discovery & Presence Tracking",
+          description: "Implemented live multiplayer cursor positions, avatar halo presence indicators, and ephemeral typing indicators.",
+          deliverables: ["WebRTC signaling server", "Multiplayer cursor visualizer"],
+          tools: ["WebRTC", "WebSockets", "Zustand"]
+        },
+        {
+          stepNumber: 4,
+          phase: "Phase 4: Command Palette & Polish",
+          title: "Cmd+K Command Palette & Export Utilities",
+          description: "Added fuzzy-search command palette for keyboard shortcuts, task filtering, and CSV/PDF export engines.",
+          deliverables: ["Cmd+K command center", "PDF/CSV exporters", "Unit tests"],
+          tools: ["cmdk", "Vitest", "Playwright"]
+        }
       ],
-      technicalChallenge:
-        "Modernizing an on-premise inventory data source while establishing a governed cloud-based data foundation.",
-      solution:
-        "Designed an automated migration approach to bring PostgreSQL inventory data into a Microsoft Fabric Lakehouse for scalable analytics."
-    }
-  },
 
-  {
-    id: "project-10",
-    title: "Market Risk Intelligence",
-    tagline:
-      "Automating daily FX market-data ingestion with Microsoft Fabric Warehouse and T-SQL.",
-    category: "fabric",
-    featured: false,
-    image:
-      "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=800&auto=format&fit=crop&q=80",
-    demoUrl: "",
-    githubUrl: "",
-    metrics:
-      "Automated daily FX market-data ingestion for market-risk intelligence",
-    tags: [
-      "Microsoft Fabric",
-      "Fabric Warehouse",
-      "T-SQL",
-      "FX Data",
-      "Market Risk",
-      "Data Engineering"
-    ],
-    details: {
-      overview:
-        "A market-risk intelligence solution designed to automate daily foreign-exchange market-data ingestion using Microsoft Fabric Warehouse and T-SQL.",
-      keyFeatures: [
-        "Automated daily FX data ingestion.",
-        "Microsoft Fabric Warehouse.",
-        "T-SQL-based data processing.",
-        "Structured market-risk data foundation.",
-        "Repeatable analytical workflow."
+      gallery: [
+        {
+          url: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=900&auto=format&fit=crop&q=80",
+          caption: "Live Kanban Board View",
+          description: "Fluid card drag-and-drop with custom tags and priority flags."
+        },
+        {
+          url: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=900&auto=format&fit=crop&q=80",
+          caption: "Multiplayer Presence & Live Cursors",
+          description: "Real-time collaborative editing with peer tracking."
+        }
       ],
-      technicalChallenge:
-        "Creating a repeatable and reliable process for bringing daily FX market data into an analytical environment.",
-      solution:
-        "Implemented a Microsoft Fabric Warehouse and T-SQL-based architecture to automate daily FX market-data ingestion and support market-risk analytics."
-    }
-  },
 
-  {
-    id: "project-11",
-    title: "Regulatory Data Governance & Historical Accountability",
-    tagline:
-      "Closing the regulatory accountability gap with governed T-SQL architecture and historical tracking.",
-    category: "data-engineering",
-    featured: true,
-    image:
-      "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&auto=format&fit=crop&q=80",
-    demoUrl: "",
-    githubUrl: "",
-    metrics:
-      "Resilient data preparation with recursive hierarchy resolution and SCD Type 2 tracking",
-    tags: [
-      "Microsoft Fabric",
-      "T-SQL",
-      "Data Governance",
-      "SCD Type 2",
-      "Data Quality",
-      "Regulatory Analytics"
-    ],
-    details: {
-      overview:
-        "A governed Microsoft Fabric T-SQL architecture designed to address regulatory accountability through resilient data preparation, recursive hierarchy resolution, and historical tracking.",
-      keyFeatures: [
-        "Governed T-SQL architecture.",
-        "Resilient data preparation.",
-        "Recursive hierarchy resolution.",
-        "Historical SCD Type 2 tracking.",
-        "Regulatory accountability framework.",
-        "Improved historical data traceability."
+      results: [
+        { metric: "60 FPS", label: "Animation Performance" },
+        { metric: "100%", label: "Offline Availability" },
+        { metric: "< 25ms", label: "P2P Sync Latency" },
+        { metric: "0", label: "Merge Conflicts on Reconnect" }
+      ]
+    },
+
+    {
+      id: "hyperpay",
+      title: "HyperPay - Microservice Payment Gateway Engine",
+      tagline: "High-throughput, idempotent payment processing engine built for global SaaS platforms.",
+      category: "fullstack",
+      featured: false,
+      role: "Backend Systems Engineer",
+      timeline: "3 Months (Q4 2023)",
+      image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&auto=format&fit=crop&q=80",
+      demoUrl: "https://example.com/demo/hyperpay",
+      githubUrl: "https://github.com/yourusername/hyperpay-engine",
+      metrics: "99.999% uptime with automated circuit breaker failovers",
+      tags: ["Go", "Node.js", "PostgreSQL", "Redis", "Docker", "Stripe SDK"],
+
+      writeup: {
+        executiveSummary: "HyperPay is a fault-tolerant payment gateway microservice handling multi-currency subscriptions, automated dunning, intelligent failover routing, and tax calculations.",
+        problemStatement: "Duplicate payment charges and third-party gateway downtime cost e-commerce platforms millions in refunds and lost conversions. A distributed, idempotent billing service was essential.",
+        objectives: [
+          "Eliminate double-charging through strict idempotency locks.",
+          "Provide automatic failover across multiple payment providers (Stripe, Adyen, PayPal).",
+          "Process ledger transactions adhering to double-entry accounting principles."
+        ],
+        targetAudience: "FinTech companies, global SaaS enterprises, and high-volume marketplace platforms."
+      },
+
+      methodology: {
+        architectureOverview: "Built with Go and Node.js microservices communicating via asynchronous RabbitMQ event buses. PostgreSQL transactions handle immutable ledger accounts with Redis distributed mutex locks.",
+        technicalDecisions: [
+          {
+            decision: "PostgreSQL Two-Phase Commit with Double-Entry Ledger",
+            rationale: "Guaranteed absolute financial accounting integrity where total debits always equal credits."
+          },
+          {
+            decision: "Redis Redlock Distributed Mutex",
+            rationale: "Prevented race conditions on simultaneous identical charge API requests."
+          }
+        ],
+        securityAndReliability: "Zero-trust tokenization; PCI-DSS compliance scope minimized by using hosted token vaults."
+      },
+
+      steps: [
+        {
+          stepNumber: 1,
+          phase: "Phase 1: Ledger & API Design",
+          title: "Double-Entry Ledger & Idempotency Specifications",
+          description: "Designed the financial database schema, idempotency key middleware, and webhook verification contracts.",
+          deliverables: ["Ledger schema", "API contract documentation"],
+          tools: ["PostgreSQL", "Go", "OpenAPI"]
+        },
+        {
+          stepNumber: 2,
+          phase: "Phase 2: Provider Integration",
+          title: "Multi-Gateway Adapter & Smart Routing",
+          description: "Created standardized gateway abstraction interfaces for Stripe, Adyen, and PayPal with automatic fallback on gateway 5xx errors.",
+          deliverables: ["Gateway adapter interfaces", "Circuit breaker rules"],
+          tools: ["Stripe API", "Go", "Resilience4j concepts"]
+        },
+        {
+          stepNumber: 3,
+          phase: "Phase 3: Webhook & Retry Engine",
+          title: "Reliable Event Dispatcher & Dunning Automation",
+          description: "Built exponential-backoff retry queues for webhook delivery to client applications.",
+          deliverables: ["RabbitMQ worker cluster", "Dunning email triggers"],
+          tools: ["RabbitMQ", "Node.js", "Redis"]
+        },
+        {
+          stepNumber: 4,
+          phase: "Phase 4: Load Testing & Security Audit",
+          title: "Chaos Engineering & PCI Compliance Verification",
+          description: "Conducted simulated gateway outages and high-load stress testing (10,000 req/sec) using k6.",
+          deliverables: ["k6 load test scripts", "Security compliance report"],
+          tools: ["k6", "Docker", "Grafana"]
+        }
       ],
-      technicalChallenge:
-        "Maintaining historical accountability while resolving complex hierarchies and preparing resilient regulatory data.",
-      solution:
-        "Designed a governed Microsoft Fabric T-SQL architecture incorporating recursive hierarchy resolution and SCD Type 2 historical tracking."
-    }
-  },
 
-  {
-    id: "project-12",
-    title: "Energy Generation & DSM Analytics",
-    tagline:
-      "Power BI analytics for generation, forecasting accuracy, DSM impact, and financial performance.",
-    category: "energy",
-    featured: true,
-    image:
-      "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&auto=format&fit=crop&q=80",
-    demoUrl: "",
-    githubUrl: "",
-    metrics:
-      "Analytics across a 50+ GW portfolio with 15% improvement in forecasting accuracy",
-    tags: [
-      "Power BI",
-      "Energy Analytics",
-      "DSM",
-      "Forecasting",
-      "SQL",
-      "Power Query"
-    ],
-    details: {
-      overview:
-        "An energy analytics initiative focused on generation trends, forecasting accuracy, deviation settlement mechanism (DSM), revenue, and operational performance.",
-      keyFeatures: [
-        "Power BI dashboards for generation monitoring.",
-        "Forecast accuracy analysis.",
-        "DSM impact analysis.",
-        "Revenue and financial-performance tracking.",
-        "KPI development and trend analysis.",
-        "Data-driven operational insights."
+      gallery: [
+        {
+          url: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=900&auto=format&fit=crop&q=80",
+          caption: "Transaction Flow & Settlement Dashboard",
+          description: "Real-time payment volume monitoring, dispute tracking, and gateway health."
+        }
       ],
-      technicalChallenge:
-        "Converting large-scale generation and deviation data into actionable insights for forecasting, trading, and operational decision-making.",
-      solution:
-        "Combined data analysis, Power BI dashboards, historical datasets, and analytical workflows to track KPIs, identify performance gaps, and support improved forecasting and operational decisions."
-    }
-  }
-]
 
-// Export to global scope for browser usage
+      results: [
+        { metric: "99.999%", label: "Platform Uptime" },
+        { metric: "$4M+", label: "Monthly Processed Volume" },
+        { metric: "0", label: "Duplicate Billing Incidents" },
+        { metric: "18ms", label: "Average API Response Time" }
+      ]
+    },
+
+    {
+      id: "cloudvault",
+      title: "CloudVault - End-to-End Encrypted File Sharing",
+      tagline: "Zero-knowledge cryptographic storage platform with granular expiration and revokable links.",
+      category: "cloud",
+      featured: false,
+      role: "Security & Cloud Developer",
+      timeline: "2 Months (Q4 2023)",
+      image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&auto=format&fit=crop&q=80",
+      demoUrl: "https://example.com/demo/cloudvault",
+      githubUrl: "https://github.com/yourusername/cloudvault",
+      metrics: "AES-256-GCM client-side encryption before upload",
+      tags: ["TypeScript", "Web Crypto API", "AWS S3 Presigned URLs", "Next.js", "TailwindCSS"],
+
+      writeup: {
+        executiveSummary: "CloudVault enables secure, zero-knowledge sharing of sensitive files, credentials, and documents with client-side encryption and self-destructing links.",
+        problemStatement: "Traditional cloud storage providers hold encryption keys, leaving sensitive corporate documents vulnerable to server breaches or rogue employees.",
+        objectives: [
+          "Encrypt files entirely inside the user's browser using AES-256-GCM.",
+          "Ensure servers never receive plaintext data or encryption keys.",
+          "Support large files up to 2GB via streaming encryption in Web Workers."
+        ],
+        targetAudience: "Security teams, lawyers, journalists, and companies sharing confidential deliverables."
+      },
+
+      methodology: {
+        architectureOverview: "Utilizes the browser's native Web Crypto API. Encryption keys are generated locally and embedded exclusively in the URL hash fragment (which is never sent to the server). Uploads stream directly to AWS S3 using presigned URLs.",
+        technicalDecisions: [
+          {
+            decision: "URL Hash Fragment Key Storage (#key=...)",
+            rationale: "Per HTTP standards, URL hashes are processed strictly client-side and never transmitted in HTTP headers to server logs."
+          },
+          {
+            decision: "Web Worker Stream Chunking",
+            rationale: "Prevented browser freezing during heavy AES encryption of multi-gigabyte files."
+          }
+        ],
+        securityAndReliability: "Passkey (WebAuthn) biometric authentication and automated S3 lifecycle deletion policies."
+      },
+
+      steps: [
+        {
+          stepNumber: 1,
+          phase: "Phase 1: Cryptographic Engine",
+          title: "Web Crypto API Streaming Implementation",
+          description: "Implemented chunked AES-GCM-256 encryption in dedicated Web Workers.",
+          deliverables: ["Encryption Web Worker", "Key generation module"],
+          tools: ["Web Crypto API", "TypeScript"]
+        },
+        {
+          stepNumber: 2,
+          phase: "Phase 2: Cloud Storage Pipeline",
+          title: "S3 Presigned Multi-Part Direct Uploads",
+          description: "Constructed secure backend endpoints issuing temporary AWS S3 presigned upload tokens.",
+          deliverables: ["Presigned URL generator", "Direct S3 uploader"],
+          tools: ["AWS S3", "Next.js API Routes"]
+        },
+        {
+          stepNumber: 3,
+          phase: "Phase 3: User Interface & Decryption",
+          title: "Secure Shareable Links & Decryption Player",
+          description: "Designed clean download page that automatically parses hash key, streams chunks, and triggers browser downloads.",
+          deliverables: ["Decryption UI", "Expiration timer countdown"],
+          tools: ["Next.js", "Tailwind CSS"]
+        },
+        {
+          stepNumber: 4,
+          phase: "Phase 4: Security Audit",
+          title: "Cryptographic Peer Review & Penetration Testing",
+          description: "Audited network payloads to mathematically confirm zero leakage of keys or plaintext data.",
+          deliverables: ["Security audit report", "Production release"],
+          tools: ["Wireshark", "OWASP ZAP"]
+        }
+      ],
+
+      gallery: [
+        {
+          url: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=900&auto=format&fit=crop&q=80",
+          caption: "Secure Drag-and-Drop Encryption Portal",
+          description: "Client-side AES-256 key generation with configurable expiry."
+        }
+      ],
+
+      results: [
+        { metric: "100%", label: "Zero-Knowledge Guarantee" },
+        { metric: "2 GB", label: "Max File Size Supported" },
+        { metric: "AES-256", label: "Military Grade Encryption" },
+        { metric: "0", label: "Keys Stored on Server" }
+      ]
+    },
+
+    {
+      id: "cliforge",
+      title: "CLI-Forge - Developer Terminal Productivity Tool",
+      tagline: "Blazing fast Rust CLI tool for scaffolding full-stack monorepos and generating typed APIs.",
+      category: "tools",
+      featured: false,
+      role: "Creator & Maintainer",
+      timeline: "1.5 Months (Q1 2024)",
+      image: "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=800&auto=format&fit=crop&q=80",
+      demoUrl: "https://example.com/demo/cliforge",
+      githubUrl: "https://github.com/yourusername/cliforge",
+      metrics: "50k+ downloads on crates.io / npm",
+      tags: ["Rust", "CLI", "Shell", "Docker", "GraphQL", "Monorepo"],
+
+      writeup: {
+        executiveSummary: "CLI-Forge is an open-source terminal utility compiled to native static binaries that scaffolds production-ready full-stack applications and auto-generates TypeScript types from SQL schemas in seconds.",
+        problemStatement: "Setting up modern developer toolchains (linters, formatters, Docker compose databases, type generators) is tedious and error-prone.",
+        objectives: [
+          "Scaffold a complete full-stack environment in under 5 seconds.",
+          "Zero runtime dependencies (compiled single binary in Rust).",
+          "Cross-platform support for macOS, Linux, and Windows."
+        ],
+        targetAudience: "Full-stack engineers, backend developers, and software architecture leads."
+      },
+
+      methodology: {
+        architectureOverview: "Written in Rust using `clap` for CLI argument parsing, `dialoguer` for interactive terminal menus, and `tera` for template rendering.",
+        technicalDecisions: [
+          {
+            decision: "Rust over Node.js for CLI executable",
+            rationale: "Instant startup (< 5ms) and no requirement for the end-user to have Node or Python pre-installed."
+          }
+        ],
+        securityAndReliability: "Automated multi-target cross-compilation pipeline with cryptographic SHA256 checksums on all release assets."
+      },
+
+      steps: [
+        {
+          stepNumber: 1,
+          phase: "Phase 1: CLI Core & Interactive Prompts",
+          title: "Terminal UI & Template Engine Setup",
+          description: "Engineered interactive fuzzy-search prompts and dynamic Jinja/Tera templating engine.",
+          deliverables: ["Rust CLI core", "Interactive menu system"],
+          tools: ["Rust", "clap", "dialoguer", "tera"]
+        },
+        {
+          stepNumber: 2,
+          phase: "Phase 2: Database Schema Introspection",
+          title: "SQL Parser & Type Generator",
+          description: "Wrote SQL schema parser that automatically generates TypeScript types and Prisma schemas.",
+          deliverables: ["Type generator engine", "Docker Compose templates"],
+          tools: ["Rust", "sqlparser-rs"]
+        },
+        {
+          stepNumber: 3,
+          phase: "Phase 3: CI/CD & Cross-Compilation",
+          title: "Automated Cross-Platform Releases",
+          description: "Set up GitHub Actions to compile native binaries for x86_64 and ARM64 architectures.",
+          deliverables: ["Cross-compilation pipeline", "Homebrew tap & npm wrapper"],
+          tools: ["GitHub Actions", "cross-rs", "Homebrew"]
+        }
+      ],
+
+      gallery: [
+        {
+          url: "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=900&auto=format&fit=crop&q=80",
+          caption: "Terminal Interactive Scaffold Menu",
+          description: "Interactive fuzzy prompts with colorized terminal output."
+        }
+      ],
+
+      results: [
+        { metric: "50,000+", label: "Community Downloads" },
+        { metric: "< 5ms", label: "CLI Startup Time" },
+        { metric: "100%", label: "Native Rust Static Binary" },
+        { metric: "4.9/5", label: "Community Rating" }
+      ]
+    }
+  ]
+};
+
+// Export to global scope
 if (typeof window !== "undefined") {
   window.portfolioData = portfolioData;
 }

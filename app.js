@@ -325,12 +325,14 @@ function renderProjectsGrid(projects) {
 
   grid.innerHTML = projects.map(p => `
     <div class="project-card" data-project-id="${p.id}">
-      <div class="project-image-container">
+      <a href="project.html?id=${p.id}" target="_blank" rel="noopener noreferrer" class="project-image-container" style="display: block; text-decoration: none;" title="View ${p.title} Case Study">
         <img class="project-image" src="${p.image}" alt="${p.title}" loading="lazy" />
         ${p.featured ? `<span class="project-featured-badge">Featured</span>` : ''}
-      </div>
+      </a>
       <div class="project-content">
-        <h3 class="project-title">${p.title}</h3>
+        <h3 class="project-title">
+          <a href="project.html?id=${p.id}" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">${p.title}</a>
+        </h3>
         <p class="project-tagline">${p.tagline}</p>
         ${p.metrics ? `<div class="project-metric-pill"><span>⚡</span> ${p.metrics}</div>` : ''}
 
@@ -352,10 +354,10 @@ function renderProjectsGrid(projects) {
                 Code
               </a>` : ''}
           </div>
-          <button class="view-details-btn" onclick="openProjectModal('${p.id}')">
-            Details
+          <a href="project.html?id=${p.id}" target="_blank" rel="noopener noreferrer" class="view-details-btn" title="Open full case study in a new tab">
+            Show Details
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </button>
+          </a>
         </div>
       </div>
     </div>
@@ -364,7 +366,7 @@ function renderProjectsGrid(projects) {
 
 /* ==========================================================================
    8. Project Deep Dive Modal
-   ========================================================================= */
+   ========================================================================== */
 function initProjectModal() {
   const modalBackdrop = document.getElementById('project-modal');
   const closeBtn = document.getElementById('modal-close-btn');
